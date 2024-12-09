@@ -33,6 +33,8 @@ build-staging:
       - pandoc -v
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
+      # get collaborative ToDo from HackMD
+      - wget -O TODO.md "https://${TODO_URL}"
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
@@ -95,7 +97,7 @@ build:
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
       # get collaborative ToDo from HackMD
-      - wget -O TODO.md https://notepad.ad.ioer.info/JdVBLimATqW8h6R6sJvwEA/download
+      - wget -O TODO.md "https://${TODO_URL}"
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
