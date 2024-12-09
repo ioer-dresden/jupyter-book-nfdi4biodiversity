@@ -1,0 +1,14 @@
+.ipynb_checkpoints
+*.pyc
+*.pdf
+.env
+data/
+!py/modules/
+.empty
+tmp/
+_build/
+conf.py
+temp/
+00_data/
+00_archive/
+TODO.md

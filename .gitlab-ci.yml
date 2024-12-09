@@ -1,0 +1,145 @@
+stages:
+  - build-staging
+  - build
+  - deploy
+  - deploy-staging
+  
+build-staging:
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.7.6"
+  stage: build
+  variables:
+      GIT_FETCH_EXTRA_FLAGS: --tags
+      GIT_STRATEGY: clone
+  before_script:
+       # initialize conda shell
+      - conda init bash
+      - source ~/.bashrc
+      # activate default ci_env from registry image
+      # contains anybadge
+      - conda activate ci_env
+  script:
+      # checkout to release branch
+      - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
+      # create staging badges with version from latest tag
+      - version_str=$(git describe --tags $(git rev-list --tags --max-count=1))
+      - version_var="$(echo $version_str | cut -c2-)-staging"
+      - echo "Version for badges $version_var"
+      - anybadge -l version --value="${version_var}" --file=version.svg --color=green
+      - anybadge -l pipeline --value="passed (staging)" --file=pipeline.svg --color=green
+      # convert readme to index.html and contributing.md and copy to webroot
+      # use intermediate step to include mermaid conversion
+      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
+      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
+      - pandoc -v
+      - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
+      - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
+      # create book
+      - jupyter-book config sphinx .
+      - jupyter-book build .
+      # replace version badge with staging path
+      - sed -i -e 's|https://training.fdz.ioer.info/version.svg|https://stag.training.fdz.ioer.info/version.svg|g' _build/html/intro.html
+      # custom ugly fix for header style of "welcome" page (shown in red)
+      - sed -i -e 's|<h1>Welcome 🎉<a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|<h1><span style="font-size:60px; font-weight:bold; color:red; font-family:"Comic Sans MS";">Welcome <span style="font-family:unset;">🎉</span></span><a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|g' _build/html/notebooks/01_introduction.html
+      # collect artifacts
+      - mkdir ._site
+      - cp *.svg ._site
+      # copy book files
+      - cp -r _build/html/* ._site/.
+      - cp .pandoc/*.css ._site
+      - cp .pandoc/*.png ._site
+      - cp *.html ._site
+      - cp -r resources/* ._site
+      - mv ._site _site
+  artifacts:
+    name: _site
+    paths:
+      - _site
+  only:
+    - staging
+    
+build:
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.7.6"
+  stage: build
+  variables:
+      GIT_FETCH_EXTRA_FLAGS: --tags
+      GIT_STRATEGY: clone
+  before_script:
+       # initialize conda shell
+      - conda init bash
+      - source ~/.bashrc
+      # activate default ci_env from registry image
+      # contains anybadge
+      - conda activate ci_env
+      - conda install jupyter-book -c conda-forge
+  script:
+      # checkout to release branch
+      - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
+      - git config --global user.name "semantic-release (via GitlabCI)"
+      - git config --global user.email "semantic-release@gitlab"
+      # create release version
+      - url_host=`git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g"`
+      - git remote set-url origin "https://gitlab-ci-token:${GL_TOKEN}@${url_host}"
+      - semantic-release version
+      - semantic-release publish
+      - git push origin main --follow-tags
+      # create badges with version from latest tag
+      - version_str=$(git describe --tags $(git rev-list --tags --max-count=1))
+      - version_var=$(echo $version_str | cut -c2-)
+      - echo "Version for badges $version_var"
+      - anybadge -l version --value="${version_var}" --file=version.svg --color=green
+      - anybadge -l pipeline --value="passed" --file=pipeline.svg --color=green
+      # convert readme to index.html and contributing.md and copy to webroot
+      # use intermediate step to include mermaid conversion
+      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
+      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
+      - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
+      - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
+      # get collaborative ToDo from HackMD
+      - wget -O TODO.md https://notepad.ad.ioer.info/JdVBLimATqW8h6R6sJvwEA/download
+      # create book
+      - jupyter-book config sphinx .
+      - jupyter-book build .
+      # custom ugly fix for header style of "welcome" page (shown in red)
+      - sed -i -e 's|<h1>Welcome 🎉<a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|<h1><span style="font-size:60px; font-weight:bold; color:red; font-family:"Comic Sans MS";">Welcome <span style="font-family:unset;">🎉</span></span><a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|g' _build/html/notebooks/01_introduction.html
+      # collect artifacts
+      - mkdir ._site
+      - cp *.svg ._site
+      # copy book files
+      - cp -r _build/html/* ._site/.
+      - cp .pandoc/*.css ._site
+      - cp .pandoc/*.png ._site
+      - cp *.html ._site
+      - cp -r resources/* ._site
+      - mv ._site _site
+  artifacts:
+    name: _site
+    paths:
+      - _site
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  image: "registry.gitlab.vgiscience.org/tud_ifk/rsync-ssh-alpine:alpine3.17-r0-v4"
+  before_script:
+  - eval $(ssh-agent -s)
+  - echo "${SSH_PRIVKEY}" | ssh-add -
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+  - rsync -avu -zz --no-perms --omit-dir-times --chown=www-data:www-data --chmod=D775,F664 _site/ "${PRODUCTION_DESTINATION}"/public/jupyter-book/
+  only:
+    - main
+
+deploy-staging:
+  stage: deploy
+  image: "registry.gitlab.vgiscience.org/tud_ifk/rsync-ssh-alpine:alpine3.17-r0-v4"
+  before_script:
+  - eval $(ssh-agent -s)
+  - echo "${SSH_PRIVKEY}" | ssh-add -
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\tLogLevel QUIET\n\n" > ~/.ssh/config'
+  script:
+  - rsync -avu -zz --no-perms --omit-dir-times --chown=www-data:www-data --chmod=D775,F664 _site/ "${PRODUCTION_DESTINATION}"/public/jupyter-book-staging/
+  only:
+    - staging

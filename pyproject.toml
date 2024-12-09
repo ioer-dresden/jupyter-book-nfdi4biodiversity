@@ -1,0 +1,25 @@
+[tool.semantic_release]
+assets = []
+version_variables = [
+    ".version:__version__",]
+version_source = "tag"
+commit_version_number = "true"
+branch = "main"
+
+[tool.semantic_release.branches.main]
+match = "(main)"
+
+[tool.semantic_release.remote]
+name = "origin"
+type = "gitlab"
+ignore_token_for_push = false
+domain = "gitlab.hrz.tu-chemnitz.de"
+api_domain = "gitlab.hrz.tu-chemnitz.de//api/v4"
+
+[tool.semantic_release.remote.token]
+env = "GL_TOKEN"
+
+[tool.semantic_release.publish]
+dist_glob_patterns = []
+upload_to_vcs_release = false
+build_command = false
