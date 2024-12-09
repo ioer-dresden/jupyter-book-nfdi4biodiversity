@@ -20,13 +20,6 @@ nav.bd-links li > a {
     scrollbar-width: thin;
 }
 
-/* Change width to full page size */
-@media (min-width: 960px) {
-    .bd-page-width {
-        width: 100%;
-    }
-}
-
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
