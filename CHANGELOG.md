@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.2.2 (2024-12-10)
+
+### Bug Fixes
+
+- Version in ci
+  ([`ea61ef4`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ea61ef479ec8ce28eaeba19023bdfc48003a515a))
+
+
 ## v0.2.1 (2024-12-10)
 
 ### Bug Fixes
