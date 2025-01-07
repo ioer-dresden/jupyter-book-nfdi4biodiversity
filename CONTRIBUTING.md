@@ -74,8 +74,11 @@ Join a collaborative Jupyter session in your browser.
 
 ## 4.1 Start with editing a Jupyter notebook
 
-![01_edit_files.gif](resources/01_edit_files.gif)
-_Fig.: Start with editing a Jupyter notebook._
+```{figure} resources/01_edit_files.gif
+:name: edit-files
+
+Start with editing a Jupyter notebook.
+```
 
 Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
