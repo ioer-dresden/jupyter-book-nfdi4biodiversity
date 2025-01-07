@@ -238,7 +238,7 @@ Callout Text
 ``````
 
 :::{tip}
-It is up to use whether you use `:::` or ``````.
+It is up to use whether you use `:::` or <code>```</code>.
 :::
 
 If you want to further replace the **title**:
