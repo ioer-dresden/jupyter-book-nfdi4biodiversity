@@ -74,6 +74,7 @@ Join a collaborative Jupyter session in your browser.
 ## 4.1 Start with editing a Jupyter notebook
 
 ![01_edit_files.gif](resources/01_edit_files.gif)
+_Fig.: Start with editing a Jupyter notebook._
 
 Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
@@ -82,6 +83,7 @@ Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 ## 4.2 Open the Jupyter git extension
 
 ![02_git_extension.gif](resources/02_git_extension.gif)
+_Fig.: Find the JupyterLab Git extension._
 
 Note that we are on the git branch called `staging`. We can also see that the notebook `01_introduction.ipynb` has changes that are not yet commited.
 
@@ -90,6 +92,7 @@ Note that we are on the git branch called `staging`. We can also see that the no
 ## 4.3 Commit changes
 
 ![03_stage_changes.gif](resources/03_stage_changes.gif)
+_Fig.: "Staging" changes._
 
 For all changed files you want to update, click the `+` icon. This is called `staging` in git.
 
@@ -98,6 +101,7 @@ For all changed files you want to update, click the `+` icon. This is called `st
 ## 4.4 Write a commit message
 
 ![04_commit_message.gif](resources/04_commit_message.gif)
+_Fig.: Write a commit message._
 
 Write a short description of what the changes are, then click `commit`. You may be asked to enter your name and email once.
 
@@ -107,10 +111,11 @@ Write a short description of what the changes are, then click `commit`. You may 
 
 If you see an orange dot next to the left icon, click to first `pull` changes:
 ![05_pull_changes.gif](resources/05_pull_changes.gif)
+_Fig.: Click on "Pull changes from remote"._
 
 Afterwards, `push` your changes to the remote.
 ![06_push_changes.gif](resources/06_push_changes.gif)
-
+_Fig.: Click on "Push changes to remote"._
 
 
 ## 4.6 Wait for the website to update
@@ -120,13 +125,14 @@ Head to https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversit
 This will take about 1-2 Minutes.
 
 ![07_ci_pipeline.webp](resources/07_ci_pipeline.webp)
+_Fig.: A passed pipeline with two stages (green checkmarks)._
 
 Once you see two green checkmarks, open the staging website and have a look at the updated website.
 
 https://stag.training.fdz.ioer.info/
 
 ![08_observe_changes.gif](resources/08_observe_changes.gif)
-
+_Fig.: The rendered training materials with the changed text._
 
 
 # 5. Git best practices
@@ -216,3 +222,26 @@ Optionally replace "English Sparrow" with another location above
 
 See in [action](201_example_introduction#nfdi-api).
 
+## Admonitions
+
+Admonitions can ease reading flows by highlighting certain paragraphs differently. 
+
+![admonition.webp](resources/admonition.webp)
+_Fig.: Two admonitions (with the drop-down feature enabled)._
+
+In Markdown, formatting looks like this:
+``````
+:::{note}
+Callout Text
+:::
+``````
+
+If you want to further replace the **title**:
+``````
+```{admonition} Use your own title
+:class: note
+Callout Text
+```
+``````
+
+The full list of available admonitions can be found [in the sphinx-docs](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html).
