@@ -100,7 +100,7 @@ For all changed files you want to update, click the `+` icon. This is called `st
 
 ## 4.4 Write a commit message
 
-![04_commit_message.gif](resources/04_commit_message.gif)
+![04_commit_message.gif](resources/04_commit_message.gif)  
 _Fig.: Write a commit message._
 
 Write a short description of what the changes are, then click `commit`. You may be asked to enter your name and email once.
