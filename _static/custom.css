@@ -25,6 +25,10 @@ nav.bd-links li > a {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 }
 
+/* Custom class to selectively unset drop-shadow */
+.fig-no-shadow {
+    box-shadow: none;
+}
 /* Make image captions slightly larger" */
 div.figure span {
 	font-size: 1.15rem;
