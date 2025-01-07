@@ -85,7 +85,7 @@ Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
 ## 4.2 Open the Jupyter git extension
 
-```{figure} resources/resources/02_git_extension.gif
+```{figure} resources/02_git_extension.gif
 :name: edit-files
 
 Find the JupyterLab Git extension.
