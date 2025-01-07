@@ -213,6 +213,23 @@ Words convey meaning, so it is best to use simple and easy to understand sentenc
 ![linguee.webp](resources/linguee.webp)
 _Fig.: Linguee DeepL Grammar Check._
 
+## Cross-refererences
+
+In order to not break cross-references, whenever using those, add an explicit cross-references anchor.
+These will stay the same even if headers (etc.) change:
+
+```
+(content:references:explitanchor)=
+## Reference section labels
+```
+
+Then use the anchor to create a cross-reference
+```
+[Link Text](content:references:explitanchor)
+```
+
+See [the docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels)
+
 ## Requires user action (attention call)
 
 Our goal is to make the training material interactive. The user can change certain parts of the code and this will affect the results of further processing.
@@ -226,7 +243,7 @@ Optionally replace "English Sparrow" with another location above
 ```
 ``````
 
-See in [action](201_example_introduction#nfdi-api).
+See in [action](content:references:admonition).
 
 ## Admonitions
 
