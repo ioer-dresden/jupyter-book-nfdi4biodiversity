@@ -237,6 +237,10 @@ Callout Text
 :::
 ``````
 
+:::{tip}
+It is up to use whether you use `:::` or `````.
+:::
+
 If you want to further replace the **title**:
 ``````
 ```{admonition} Use your own title
