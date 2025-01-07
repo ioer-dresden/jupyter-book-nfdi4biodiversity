@@ -83,44 +83,53 @@ Start with editing a Jupyter notebook.
 Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
 
-
 ## 4.2 Open the Jupyter git extension
 
-![02_git_extension.gif](resources/02_git_extension.gif)
-_Fig.: Find the JupyterLab Git extension._
+```{figure} resources/resources/02_git_extension.gif
+:name: edit-files
+
+Find the JupyterLab Git extension.
+```
 
 Note that we are on the git branch called `staging`. We can also see that the notebook `01_introduction.ipynb` has changes that are not yet commited.
 
 
-
 ## 4.3 Commit changes
 
-![03_stage_changes.gif](resources/03_stage_changes.gif)
-_Fig.: "Staging" changes._
+```{figure} resources/03_stage_changes.gif
+:name: edit-files
+
+"Staging" changes
+```
 
 For all changed files you want to update, click the `+` icon. This is called `staging` in git.
 
 
-
 ## 4.4 Write a commit message
 
-![04_commit_message.gif](resources/04_commit_message.gif)  
-_Fig.: Write a commit message._
+```{figure} resources/04_commit_message.gif
+:name: staging-changes
+
+Write a commit message.
+```
 
 Write a short description of what the changes are, then click `commit`. You may be asked to enter your name and email once.
-
 
 
 ## 4.5 Push changes to remote
 
 If you see an orange dot next to the left icon, click to first `pull` changes:
-![05_pull_changes.gif](resources/05_pull_changes.gif)
-_Fig.: Click on "Pull changes from remote"._
+```{figure} resources/05_pull_changes.gif
+:name: pull-changes
 
-Afterwards, `push` your changes to the remote.
-![06_push_changes.gif](resources/06_push_changes.gif)
-_Fig.: Click on "Push changes to remote"._
+Click on "Pull changes from remote"
+```
 
+```{figure} resources/06_push_changes.gif
+:name: push-changes
+
+Click on "Push changes to remote".
+```
 
 ## 4.6 Wait for the website to update
 
@@ -128,16 +137,21 @@ Head to https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversit
 
 This will take about 1-2 Minutes.
 
-![07_ci_pipeline.webp](resources/07_ci_pipeline.webp)
-_Fig.: A passed pipeline with two stages (green checkmarks)._
+```{figure} resources/07_ci_pipeline.webp
+:name: pipeline-passed
+
+A passed pipeline with two stages (green checkmarks).
+```
 
 Once you see two green checkmarks, open the staging website and have a look at the updated website.
 
 https://stag.training.fdz.ioer.info/
 
-![08_observe_changes.gif](resources/08_observe_changes.gif)
-_Fig.: The rendered training materials with the changed text._
+```{figure} resources/08_observe_changes.gif
+:name: observe-changes
 
+The rendered training materials with the changed text.
+```
 
 # 5. Git best practices
 
@@ -213,8 +227,16 @@ General conventions are:
 
 Words convey meaning, so it is best to use simple and easy to understand sentences. Tools like [Grammarly](https://app.grammarly.com/) or [Linguee DeepL](https://www.deepl.com/) can help with this. Be sure to use American English for training materials.
 
-![linguee.webp](resources/linguee.webp)
-_Fig.: Linguee DeepL Grammar Check._
+```{figure} resources/linguee.webp
+:name: linguee-grammarly
+
+Linguee DeepL Grammar Check.
+```
+
+
+## Figure and Table formatting
+
+See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) for how to create Figures and Tables with caption.
 
 ## Cross-refererences
 
@@ -252,8 +274,11 @@ See in [action](content:references:admonition).
 
 Admonitions can ease reading flows by highlighting certain paragraphs differently. 
 
-![admonition.webp](resources/admonition.webp)
-_Fig.: Two admonitions (with the drop-down feature enabled)._
+```{figure} resources/admonition.webp
+:name: admonition-example
+
+Two admonitions (with the drop-down feature enabled).
+```
 
 In Markdown, formatting looks like this:
 ``````
