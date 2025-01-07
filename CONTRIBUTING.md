@@ -38,10 +38,14 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
 - [11_geosocialmedia.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/11_geosocialmedia.ipynb)
 
 
-
 # 2. Publishing process
 
 Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://knowledge.fdz.ioer.info (git branch `main`) and https://stag.knowledge.fdz.ioer.info/ (git branch `staging`).
+
+```{admonition} Request access to the Gitlab Chemnitz
+:class: dropdown, attention
+For IOER-Internal use only: In order to participate, [request access to the Gitlab Chemnitz Group](https://campus.fdz.ioer.info/sessions/2024-12-18_gitlab.html#workflow).
+```
 
 These two sites help to incrementally improve the training materials:
 - https://stag.training.fdz.ioer.info/ - always up-to-date, see documentation changes immediately 
@@ -62,14 +66,11 @@ You _can_ edit these files from anywhere. However, depending on your knowledge o
 
 1. Use a common Jupyter Server for collaborative editing and follow the steps outlined under [4: Jupyter Collaborative Editing](#jupyter-collaborative-editing).
 2. Edit files directly in [the Gitlab Repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/)
-
 3. Clone [the repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/) locally and edit the Jupyter notebook files directly using your preferred environment. Only use this option if you are familiar with git!
 
 # 4. Jupyter Collaborative Editing
 
 Join a collaborative Jupyter session in your browser.
-
-
 
 ## 4.1 Start with editing a Jupyter notebook
 
