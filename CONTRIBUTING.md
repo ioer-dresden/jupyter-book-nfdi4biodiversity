@@ -201,6 +201,11 @@ and can be used if it fits.
 
 We want to make sure that we systematically reuse certain visual elements in the training materials. This is a collection of agreed style conventions.
 
+General conventions are:
+- Use short sentences. As a guide, use no more than 10 to 15 words.
+- Add a caption to Figures, e.g. `_Fig.: Linguee DeepL Grammar Check._`
+- Use the `.webp` format for figures. [Irfanview](https://www.irfanview.com/plugins.htm) with plugins comes with `webp` support, so it is easy to capture and save webp files.
+
 ## Check language and spelling (DeepL check)
 
 Words convey meaning, so it is best to use simple and easy to understand sentences. Tools like [Grammarly](https://app.grammarly.com/) or [Linguee DeepL](https://www.deepl.com/) can help with this. Be sure to use American English for training materials.
@@ -238,7 +243,7 @@ Callout Text
 ``````
 
 :::{tip}
-It is up to use whether you use `:::` or <code>```</code>.
+It is up to you whether you use `:::` or <code class="docutils literal notranslate"><span class="pre">```</span></code>.
 :::
 
 If you want to further replace the **title**:
