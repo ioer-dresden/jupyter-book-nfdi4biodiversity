@@ -65,7 +65,12 @@ repository:
   path_to_book              : ""  # A path to your book's folder, relative to the repository root.
   branch                    : main  # Which branch of the repository should be used when creating links
 
+#######################################################################################
+# Bibliography
 
+bibtex_reference_style: author_year
+bibtex_bibfiles: "references.bib"
+    
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
@@ -75,5 +80,4 @@ sphinx:
     suppress_warnings: [
       'nbsphinx',
       ]
-    bibtex_reference_style: author_year
-    bibtex_bibfiles: "references.bib"
+    
