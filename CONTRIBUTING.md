@@ -190,3 +190,29 @@ These changes will not result in any version bump, but they will be listed as im
 There are a number of other message types, such as `refactor`, `style', (etc.). All of these will not cause a version bump and can be used if
 and can be used if it fits.
 
+# 7. Formatting conventions
+
+We want to make sure that we systematically reuse certain visual elements in the training materials. This is a collection of agreed style conventions.
+
+## Check language and spelling (DeepL check)
+
+Words convey meaning, so it is best to use simple and easy to understand sentences. Tools like [Grammarly](https://app.grammarly.com/) or [Linguee DeepL](https://www.deepl.com/) can help with this. Be sure to use American English for training materials.
+
+![linguee.webp](resources/linguee.webp)
+_Fig.: Linguee DeepL Grammar Check._
+
+## Requires user action (attention call)
+
+Our goal is to make the training material interactive. The user can change certain parts of the code and this will affect the results of further processing.
+
+To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention' flag. These callouts are highlighted in orange.
+Below is an example that uses a `dropdown' in addition to the `attention' to further pique the user's curiosity.
+``````
+```{admonition} Use your own common name!
+:class: dropdown, attention
+Optionally replace "English Sparrow" with another location above
+```
+``````
+
+See in [action](201_example_introduction#nfdi-api).
+
