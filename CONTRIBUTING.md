@@ -211,7 +211,7 @@ These changes will not result in any version bump, but they will be listed as im
 
 ## Other commit messages
 
-There are a number of other message types, such as `refactor`, `style', (etc.). All of these will not cause a version bump and can be used if
+There are a number of other message types, such as `refactor`, `style`, (etc.). All of these will not cause a version bump and can be used if
 and can be used if it fits.
 
 # 7. Formatting conventions
@@ -273,8 +273,8 @@ See [the docs](https://jupyterbook.org/en/stable/content/references.html#referen
 
 Our goal is to make the training material interactive. The user can change certain parts of the code and this will affect the results of further processing.
 
-To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention' flag. These callouts are highlighted in orange.
-Below is an example that uses a `dropdown' in addition to the `attention' to further pique the user's curiosity.
+To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention` flag. These callouts are highlighted in orange.
+Below is an example that uses a `dropdown` in addition to the `attention` to further pique the user's curiosity.
 
 ```````{admonition} See example
 :class: dropdown, hint
