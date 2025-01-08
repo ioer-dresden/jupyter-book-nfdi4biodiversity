@@ -238,6 +238,21 @@ Linguee DeepL Grammar Check.
 
 See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) for how to create Figures and Tables with caption.
 
+There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
+
+```{admonition} Like so
+:class: dropdown, info
+``````
+```{figure} https://techdocs.gbif.org/en/data-processing/_images/data-processing.png
+:name: gbif-graphic
+:figclass: fig-no-shadow
+
+GBIF Data Processing Documentation (https://techdocs.gbif.org/en/data-processing/).
+```
+``````
+```
+
+
 ## Cross-refererences
 
 In order to not break cross-references, whenever using those, add an explicit cross-references anchor.
