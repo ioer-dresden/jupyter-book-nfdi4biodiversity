@@ -26,9 +26,10 @@ nav.bd-links li > a {
 }
 
 /* Custom class to selectively unset drop-shadow */
-.fig-no-shadow {
-    box-shadow: none;
+.fig-no-shadow img {
+	box-shadow: none;
 }
+
 /* Make image captions slightly larger" */
 div.figure span {
 	font-size: 1.15rem;
