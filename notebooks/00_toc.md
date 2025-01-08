@@ -27,10 +27,10 @@ jupyter:
 ## Part II: Workflow
 
 - [A data example from the IOER-RDC Dataverse](201_example_introduction)
-- [Adding data to the Notebook](102_data_retrieval)
-- [Working with Data / Data Analysis](103_analysis)
-- [Visualization](104_visualizing)
-- [Publishing](105_publish)
+- [Adding data to the Notebook](202_data_retrieval)
+- [Working with Data / Data Analysis](203_analysis)
+- [Visualization](204_visualizing)
+- [Publishing](205_publish)
 
 ## Part III: Reference documentation
 

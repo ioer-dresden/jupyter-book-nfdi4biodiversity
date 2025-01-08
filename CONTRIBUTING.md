@@ -38,7 +38,6 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
 - [11_geosocialmedia.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/11_geosocialmedia.ipynb)
 
 
-
 # 2. Publishing process
 
 Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://knowledge.fdz.ioer.info (git branch `main`) and https://stag.knowledge.fdz.ioer.info/ (git branch `staging`).
@@ -53,65 +52,84 @@ The process for a single notebook change:
 ```mermaid 
 %%{init: { 'theme':'forest', 'securityLevel': 'loose', 'sequence': {'useMaxWidth':false} } }%%
 flowchart LR;
-   notebooks/01_introduction.ipynb-->01_introduction.md-->HTML-->Gitlab-CI-->Webserver-->'training.fdz.ioer.info'
+   notebooks/01_introduction.ipynb-->01_introduction.md-->HTML-->Gitlab-CI-->Webserver-->target[Rendered Website]
 ```
 
 # 3. Editing files
 
 You _can_ edit these files from anywhere. However, depending on your knowledge of git, we suggest one of the following:
 
+```{admonition} Request access to the Gitlab Chemnitz
+:class: dropdown, attention
+For IOER-Internal use only: In order to participate, [request access to the Gitlab Chemnitz Group](https://campus.fdz.ioer.info/sessions/2024-12-18_gitlab.html#workflow).
+```
+
 1. Use a common Jupyter Server for collaborative editing and follow the steps outlined under [4: Jupyter Collaborative Editing](#jupyter-collaborative-editing).
 2. Edit files directly in [the Gitlab Repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/)
-
 3. Clone [the repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/) locally and edit the Jupyter notebook files directly using your preferred environment. Only use this option if you are familiar with git!
 
 # 4. Jupyter Collaborative Editing
 
 Join a collaborative Jupyter session in your browser.
 
-
-
 ## 4.1 Start with editing a Jupyter notebook
 
-![01_edit_files.gif](resources/01_edit_files.gif)
+```{figure} resources/01_edit_files.gif
+:name: edit-files
+
+Start with editing a Jupyter notebook.
+```
 
 Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
 
-
 ## 4.2 Open the Jupyter git extension
 
-![02_git_extension.gif](resources/02_git_extension.gif)
+```{figure} resources/02_git_extension.gif
+:name: edit-files
+
+Find the JupyterLab Git extension.
+```
 
 Note that we are on the git branch called `staging`. We can also see that the notebook `01_introduction.ipynb` has changes that are not yet commited.
 
 
-
 ## 4.3 Commit changes
 
-![03_stage_changes.gif](resources/03_stage_changes.gif)
+```{figure} resources/03_stage_changes.gif
+:name: edit-files
+
+"Staging" changes
+```
 
 For all changed files you want to update, click the `+` icon. This is called `staging` in git.
 
 
-
 ## 4.4 Write a commit message
 
-![04_commit_message.gif](resources/04_commit_message.gif)
+```{figure} resources/04_commit_message.gif
+:name: staging-changes
+
+Write a commit message.
+```
 
 Write a short description of what the changes are, then click `commit`. You may be asked to enter your name and email once.
-
 
 
 ## 4.5 Push changes to remote
 
 If you see an orange dot next to the left icon, click to first `pull` changes:
-![05_pull_changes.gif](resources/05_pull_changes.gif)
+```{figure} resources/05_pull_changes.gif
+:name: pull-changes
 
-Afterwards, `push` your changes to the remote.
-![06_push_changes.gif](resources/06_push_changes.gif)
+Click on "Pull changes from remote"
+```
 
+```{figure} resources/06_push_changes.gif
+:name: push-changes
 
+Click on "Push changes to remote".
+```
 
 ## 4.6 Wait for the website to update
 
@@ -119,15 +137,21 @@ Head to https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversit
 
 This will take about 1-2 Minutes.
 
-![07_ci_pipeline.webp](resources/07_ci_pipeline.webp)
+```{figure} resources/07_ci_pipeline.webp
+:name: pipeline-passed
+
+A passed pipeline with two stages (green checkmarks).
+```
 
 Once you see two green checkmarks, open the staging website and have a look at the updated website.
 
 https://stag.training.fdz.ioer.info/
 
-![08_observe_changes.gif](resources/08_observe_changes.gif)
+```{figure} resources/08_observe_changes.gif
+:name: observe-changes
 
-
+The rendered training materials with the changed text.
+```
 
 # 5. Git best practices
 
@@ -187,6 +211,111 @@ These changes will not result in any version bump, but they will be listed as im
 
 ## Other commit messages
 
-There are a number of other message types, such as `refactor`, `style', (etc.). All of these will not cause a version bump and can be used if
+There are a number of other message types, such as `refactor`, `style`, (etc.). All of these will not cause a version bump and can be used if
 and can be used if it fits.
 
+# 7. Formatting conventions
+
+We want to make sure that we systematically reuse certain visual elements in the training materials. This is a collection of agreed style conventions.
+
+General conventions are:
+- Use short sentences. As a guide, use no more than 10 to 15 words.
+- Use the `.webp` format for figures. [Irfanview](https://www.irfanview.com/plugins.htm) with plugins comes with `webp` support, so it is easy to capture and save webp files.
+
+## Check language and spelling (DeepL/Grammarly check)
+
+Words convey meaning, so it is best to use simple and easy to understand sentences. Tools like [Grammarly](https://app.grammarly.com/) or [Linguee DeepL](https://www.deepl.com/) can help with this. Be sure to use American English for training materials.
+
+```{figure} resources/linguee.webp
+:name: linguee-grammarly
+
+Linguee DeepL Grammar Check.
+```
+
+
+## Figure and Table formatting
+
+See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) for how to create Figures and Tables with caption.
+
+There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
+
+```````{admonition} Like so
+:class: dropdown, hint
+``````
+```{figure} ../resources/data-processing.png
+:name: gbif-graphic
+:figclass: fig-no-shadow
+
+GBIF Data Processing Documentation 
+```
+``````
+```````
+
+
+## Cross-refererences
+
+In order to not break cross-references, whenever using those, add an explicit cross-references anchor.
+These will stay the same even if headers (etc.) change:
+
+```
+(content:references:explitanchor)=
+## Reference section labels
+```
+
+Then use the anchor to create a cross-reference
+```
+[Link Text](content:references:explitanchor)
+```
+
+See [the docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels)
+
+## Requires user action (attention call)
+
+Our goal is to make the training material interactive. The user can change certain parts of the code and this will affect the results of further processing.
+
+To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention` flag. These callouts are highlighted in orange.
+Below is an example that uses a `dropdown` in addition to the `attention` to further pique the user's curiosity.
+
+```````{admonition} See example
+:class: dropdown, hint
+``````
+```{admonition} Use your own common name!
+:class: dropdown, attention
+Optionally replace "English Sparrow" with another location above
+```
+``````
+
+See in [action](content:references:admonition).
+
+```````
+
+## Admonitions
+
+Admonitions can ease reading flows by highlighting certain paragraphs differently. 
+
+```{figure} resources/admonition.webp
+:name: admonition-example
+
+Two admonitions (with the drop-down feature enabled).
+```
+
+In Markdown, formatting looks like this:
+``````
+:::{note}
+Callout Text
+:::
+``````
+
+:::{tip}
+It is up to you whether you use `:::` or <code class="docutils literal notranslate"><span class="pre">```</span></code>.
+:::
+
+If you want to further replace the **title**:
+``````
+```{admonition} Use your own title
+:class: note
+Callout Text
+```
+``````
+
+The full list of available admonitions can be found [in the sphinx-docs](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html).

@@ -20,6 +20,21 @@ nav.bd-links li > a {
     scrollbar-width: thin;
 }
 
+/* Add drop-shadow to images in articlwes */
+.bd-article img {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+/* Custom class to selectively unset drop-shadow */
+.fig-no-shadow img {
+	box-shadow: none;
+}
+
+/* Make image captions slightly larger" */
+div.figure span {
+	font-size: 1.15rem;
+}
+
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 

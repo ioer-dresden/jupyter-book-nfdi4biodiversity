@@ -68,9 +68,9 @@ repository:
 #######################################################################################
 # Bibliography
 
-bibtex_bibfiles:
-    - references.bib
-
+bibtex_reference_style: author_year
+bibtex_bibfiles: "references.bib"
+    
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
@@ -80,3 +80,4 @@ sphinx:
     suppress_warnings: [
       'nbsphinx',
       ]
+    

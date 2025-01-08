@@ -6,7 +6,7 @@
 # Home
 ## IOER RDC Training materials for spatial data with
 
-<img src="/_static/images/jupyter.svg" alt="Jupyter Logo" style="width: 200px;"/>
+<img src="/_static/images/jupyter.svg" alt="Jupyter Logo" style="width: 200px;box-shadow: none;"/>
 
 You can download a PDF of this book [here](...).
 
