@@ -241,7 +241,7 @@ See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references
 There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
 
 ```````{admonition} Like so
-:class: dropdown, info
+:class: dropdown, hint
 ``````
 ```{figure} https://techdocs.gbif.org/en/data-processing/_images/data-processing.png
 :name: gbif-graphic
@@ -276,6 +276,9 @@ Our goal is to make the training material interactive. The user can change certa
 
 To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention' flag. These callouts are highlighted in orange.
 Below is an example that uses a `dropdown' in addition to the `attention' to further pique the user's curiosity.
+
+```````{admonition} See example
+:class: dropdown, hint
 ``````
 ```{admonition} Use your own common name!
 :class: dropdown, attention
@@ -284,6 +287,8 @@ Optionally replace "English Sparrow" with another location above
 ``````
 
 See in [action](content:references:admonition).
+
+```````
 
 ## Admonitions
 
