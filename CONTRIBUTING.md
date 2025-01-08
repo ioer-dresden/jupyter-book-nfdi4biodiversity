@@ -240,7 +240,7 @@ See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references
 
 There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
 
-```{admonition} Like so
+```````{admonition} Like so
 :class: dropdown, info
 ``````
 ```{figure} https://techdocs.gbif.org/en/data-processing/_images/data-processing.png
@@ -250,7 +250,7 @@ There is a `box-shadow` effect shown around figures by default. If you want to d
 GBIF Data Processing Documentation (https://techdocs.gbif.org/en/data-processing/).
 ```
 ``````
-```
+```````
 
 
 ## Cross-refererences
