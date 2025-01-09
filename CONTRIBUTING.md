@@ -322,7 +322,7 @@ The full list of available admonitions can be found [in the sphinx-docs](https:/
 
 ## Hide to much information
 
-Admonitions with drop-down are a good way to hide too much information in Markdown cells.
+Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
 
 Another way to hide information in input and output cells are [cell tags](https://jupyterbook.org/en/stable/content/metadata.html).
 
