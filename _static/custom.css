@@ -43,6 +43,7 @@ div.figure span {
 /* Use green as background color in keyboard-key formattings */
 kbd {
 	background-color: #70A401;
+    color: white;
 }
 
 /* Import ET Book styles
