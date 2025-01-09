@@ -320,7 +320,7 @@ Callout Text
 
 The full list of available admonitions can be found [in the sphinx-docs](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html).
 
-## Hide to much information
+## Overview first, details on demand
 
 Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
 
