@@ -30,6 +30,11 @@ nav.bd-links li > a {
 	box-shadow: none;
 }
 
+/* Disable shadow effect on graphics shown from Jupyter cell output */
+.cell_output img {
+	box-shadow: none;
+}
+
 /* Make image captions slightly larger" */
 div.figure span {
 	font-size: 1.15rem;
