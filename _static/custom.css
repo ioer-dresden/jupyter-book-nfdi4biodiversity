@@ -40,6 +40,11 @@ div.figure span {
 	font-size: 1.15rem;
 }
 
+/* Use green as background color in keyboard-key formattings */
+kbd {
+	background-color: #70A401;
+}
+
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
