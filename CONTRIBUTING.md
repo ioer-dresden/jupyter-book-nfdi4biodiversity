@@ -319,3 +319,17 @@ Callout Text
 ``````
 
 The full list of available admonitions can be found [in the sphinx-docs](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html).
+
+## Hide to much information
+
+Admonitions with drop-down are a good way to hide too much information in Markdown cells.
+
+Another way to hide information in input and output cells are [cell tags](https://jupyterbook.org/en/stable/content/metadata.html).
+
+For example, to hide a long cell output, add `hide-output` to cell metadata. You can find cell metadata on the upper-right corner in Jupyter.
+
+```{figure} resources/hide-tag.webp
+:name: hide-example
+
+Add `hide-output` to a cell's metadata to hide its output with a drop-down link.
+```
