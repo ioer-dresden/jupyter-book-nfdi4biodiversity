@@ -30,9 +30,14 @@ nav.bd-links li > a {
 	box-shadow: none;
 }
 
-/* Disable shadow effect on graphics shown from Jupyter cell output */
+/* Disable shadow effect on graphics shown from Jupyter cell output ;
+   center image
+   */
+
 .cell_output img {
 	box-shadow: none;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Make image captions slightly larger" */
