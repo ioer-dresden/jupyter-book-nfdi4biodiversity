@@ -333,8 +333,9 @@ Optionally replace "English Sparrow" with another location above
 ```
 ````
 ``````
+```````
 
-In oother cases, you may want to show images or other output rendered in a cell inside admonitions (e.g.). This is done with the `glue`-directive. See the [Jupyter book docs](https://jupyterbook.org/en/stable/content/executable/output-insert.html). There is also an example in the file `202_data_retrieval.ipynb`, [see here](content:references:glue-example).
+In other cases, you may want to show images or other output rendered in a cell inside admonitions (e.g.). This is done with the `glue`-directive. See the [Jupyter book docs](https://jupyterbook.org/en/stable/content/executable/output-insert.html). There is also an example in the file `202_data_retrieval.ipynb`, [see here](content:references:glue-example).
 
 ## Overview first, details on demand
 
