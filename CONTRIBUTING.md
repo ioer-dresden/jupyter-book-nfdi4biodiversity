@@ -320,6 +320,22 @@ Callout Text
 
 The full list of available admonitions can be found [in the sphinx-docs](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html).
 
+The use of admonitions sometimes requires to _nest_ different outputs. For example, maybe you want to show a code block inside an admonition. In this case, adding backticks (\`) to the outer block need to be used.
+
+```````{admonition} See example
+:class: dropdown, hint
+``````
+````{admonition} Use your own common name!
+:class: dropdown, attention
+Optionally replace "English Sparrow" with another location above
+```python
+# code block
+```
+````
+``````
+
+In oother cases, you may want to show images or other output rendered in a cell inside admonitions (e.g.). This is done with the `glue`-directive. See the [Jupyter book docs](https://jupyterbook.org/en/stable/content/executable/output-insert.html). There is also an example in the file `202_data_retrieval.ipynb`, [see here](content:references:glue-example).
+
 ## Overview first, details on demand
 
 Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
