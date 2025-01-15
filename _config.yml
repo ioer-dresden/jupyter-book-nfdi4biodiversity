@@ -76,9 +76,7 @@ bibtex_bibfiles: "references.bib"
 sphinx:
   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration   
-    html_show_copyright: false
-    html_extra_path: resources/html
-    suppress_warnings: [
-      'nbsphinx',
-      ]
+    html_show_copyright     : false
+    html_extra_path         : ['resources/html',]
+    suppress_warnings       : ['nbsphinx',]
     
