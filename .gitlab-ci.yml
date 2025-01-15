@@ -24,8 +24,8 @@ build-staging:
       - version_str=$(git describe --tags $(git rev-list --tags --max-count=1))
       - version_var="$(echo $version_str | cut -c2-)-staging"
       - echo "Version for badges $version_var"
-      - anybadge -l version --value="${version_var}" --file=version.svg --color=green
-      - anybadge -l pipeline --value="passed (staging)" --file=pipeline.svg --color=green
+      - anybadge -l version --value="${version_var}" --file=version.svg --color=#70A401
+      - anybadge -l pipeline --value="passed (staging)" --file=pipeline.svg --color=#70A401
       # convert readme to index.html and contributing.md and copy to webroot
       # use intermediate step to include mermaid conversion
       - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
