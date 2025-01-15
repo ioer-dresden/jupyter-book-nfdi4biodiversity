@@ -30,9 +30,25 @@ nav.bd-links li > a {
 	box-shadow: none;
 }
 
+/* Disable shadow effect on graphics shown from Jupyter cell output ;
+   center image
+   */
+
+.cell_output img {
+	box-shadow: none;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Make image captions slightly larger" */
 div.figure span {
 	font-size: 1.15rem;
+}
+
+/* Use green as background color in keyboard-key formattings */
+kbd {
+	background-color: #70A401;
+    color: white;
 }
 
 /* Import ET Book styles
