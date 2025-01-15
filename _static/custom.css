@@ -3,7 +3,7 @@
 /* Color overrides for left navbar */
 nav.bd-links .current > a {
     box-shadow: inset max(3px,.1875rem,.12em) 0 0 #70A401;
-    color: #70A401;
+    color: white;
 }
 
 nav.bd-links p.caption {
@@ -49,6 +49,11 @@ div.figure span {
 kbd {
 	background-color: #70A401;
     color: white;
+}
+
+/* Use green as background color for current active toc-tree element */
+li.toctree-l1.current.active  {
+    background-color: #70A401;
 }
 
 /* Import ET Book styles
