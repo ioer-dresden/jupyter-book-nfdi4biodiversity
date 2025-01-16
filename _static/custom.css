@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html[data-theme="dark"], html[data-theme="light"] {
-    --pst-color-secondary: #e89217;
+    --pst-color-secondary: white;
 }
 
 /* Color overrides for left navbar */
