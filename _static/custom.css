@@ -59,6 +59,10 @@ nav.bd-links li > a {
 	box-shadow: none;
 }
 
+div.figure span {
+    font-size: 1.1rem;
+}
+
 /* Disable shadow effect on graphics shown from Jupyter cell output ;
    center image
    */
