@@ -142,5 +142,5 @@ tbody {
 h1, h2, h3 {
     font-family: Inter, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-weight: 700;
-    font-style: italic;
+    /* font-style: italic; */
 }
