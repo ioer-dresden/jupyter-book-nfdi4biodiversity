@@ -1,21 +1,23 @@
 @charset "UTF-8";
 
 /* Fix link/hover colors for IOER-override scheme */
-html[data-theme="light"], html[data-theme="dark"] {
+html[data-theme="light"],
+html[data-theme="dark"] {
     --pst-color-secondary: black;
 
     .bd-docs-nav {
         --pst-color-link-hover: white;
     }
-    
+
 }
 
 html[data-theme="dark"] {
     --pst-color-secondary: white;
     --pst-color-link-hover: white;
-    
-    .hide.below-input > summary {
-     color: black;
+
+    .hide.below-input>summary,
+    .hide.above-input>summary {
+        color: black;
     }
 }
 
@@ -24,22 +26,22 @@ html[data-theme="dark"] {
 }
 
 /* Color overrides (background) for left navbar */
-nav.bd-links .current > a {
-    box-shadow: inset max(3px,.1875rem,.12em) 0 0 #70A401;
+nav.bd-links .current>a {
+    box-shadow: inset max(3px, .1875rem, .12em) 0 0 #70A401;
     color: white;
 }
 
 nav.bd-links p.caption {
-    color: white; 
+    color: white;
 }
 
-/* Test adjusting font weight for figure captions, according to Nicolaas 
+/* Test adjusting font weight for figure captions, according to Nicolaas
 figure {
     --pst-font-weight-caption: 400;
     --pst-font-weight-heading: 700;
 }*/
 
-nav.bd-links li > a {
+nav.bd-links li>a {
     color: white;
 }
 
@@ -51,12 +53,12 @@ nav.bd-links li > a {
 
 /* Add drop-shadow to images in articlwes */
 .bd-article img {
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 }
 
 /* Custom class to selectively unset drop-shadow */
 .fig-no-shadow img {
-	box-shadow: none;
+    box-shadow: none;
 }
 
 div.figure span {
@@ -68,13 +70,13 @@ div.figure span {
    */
 
 .cell_output img {
-	box-shadow: none;
+    box-shadow: none;
     display: block;
     margin: 0 auto;
 }
 
 /* Below disabled based on Nicolaas comments */
-/* Make image captions slightly larger" 
+/* Make image captions slightly larger"
 
 div.figure span {
 	font-size: 1.15rem;
@@ -83,12 +85,12 @@ div.figure span {
 
 /* Use green as background color in keyboard-key formattings */
 kbd {
-	background-color: #70A401;
+    background-color: #70A401;
     color: white;
 }
 
 /* Use green as background color for current active toc-tree element */
-li.toctree-l1.current.active  {
+li.toctree-l1.current.active {
     background-color: #70A401;
 }
 
@@ -98,7 +100,7 @@ li.toctree-l1.current.active  {
 @font-face {
     font-family: "Inter";
     src: url("inter/Inter-Regular.woff2") format("woff2"),
-         url("inter/Inter-Regular.woff") format("woff");
+        url("inter/Inter-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -107,7 +109,7 @@ li.toctree-l1.current.active  {
 @font-face {
     font-family: "Inter";
     src: url("inter/Inter-Bold.woff2") format("woff2"),
-         url("inter/Inter-Bold.woff") format("woff");
+        url("inter/Inter-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -116,7 +118,7 @@ li.toctree-l1.current.active  {
 @font-face {
     font-family: "Inter";
     src: url("inter/Inter-Bold.woff2") format("woff2"),
-         url("inter/Inter-Bold.woff") format("woff");
+        url("inter/Inter-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -125,7 +127,7 @@ li.toctree-l1.current.active  {
 @font-face {
     font-family: "Inter";
     src: url("inter/Inter-Regular.woff2") format("woff2"),
-         url("inter/Inter-Regular.woff") format("woff");
+        url("inter/Inter-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -143,7 +145,9 @@ tbody {
     font-family: monospace;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: Inter, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-weight: 700;
     /* font-style: italic; */
