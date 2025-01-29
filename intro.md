@@ -3,11 +3,7 @@
     <div style="width:100%;text-align:right;margin-top:0px;margin-right:10px"><a href="https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity" style="float:right"><img src="https://training.fdz.ioer.info/version.svg" alt="Version Reference" style="float:left"></a></div>
 </div>
 
-# H# Exploring Spatial and Biodiversity Data with Python and Jupyter Notebooka with
-
-<img src="/_static/images/jupyter.svg" alt="Jupyter Logo" style="width: 200px;box-shadow: none;"/>
-
-You can download a PDF of this book [her### Introduction
+# H# Exploring Spatial and Biodiversity Data with Python and Jupyter Notebooka ### Introduction
 
 Welcome to this guide on spatial and biodiversity data! 🎉
 
@@ -41,6 +37,7 @@ The instructional material of this Jupyter Book is made available under the [Cre
 This includes all text and drawings unless otherwise noted.
 
 Except where otherwise noted, the codes provided by this Jupyter Book are made available under the [MIT license](https://spdx.org/licenses/MIT.html). 
+
 
  ```{admonition} Recommended citation
 :class: attention
