@@ -2,8 +2,12 @@
 <div style="width: 100%;text-align:right;display: flex; align-items: top;">
     <div style="width:100%;text-align:right;margin-top:0px;margin-right:10px"><a href="https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity" style="float:right"><img src="https://training.fdz.ioer.info/version.svg" alt="Version Reference" style="float:left"></a></div>
 </div>
+ome 
 
-# H# Exploring Spatial and Biodiversity Data with Python and Jupyter Notebooka ### Introduction
+#
+# H# Exploring Spatial and Biodiversity Data with Python and Jupyter Notb
+
+ooka ### Introduction
 
 Welcome to this guide on spatial and biodiversity data! 🎉
 
@@ -50,7 +54,4 @@ Dworczyk, Claudia; Dunkel, Alexander; Rafiei, Fatemeh (2025): Exploring Spatial 
 <div class="fig-no-shadow" style="text-align: center;">
     <img src="../_static/images/ioer-rdc.svg" width="300" style="display: inline-block">
     <img src="https://www.nfdi4biodiversity.org/documents/18/NFDI_4_Biodiversity___Logo_Positiv_Kopie.png" width="400" style="display: inline-block; margin-right: 20px;">
-</div>
-
-
-lity science.
+<ence.
