@@ -1,11 +1,11 @@
 
 <div style="width: 100%;text-align:right;display: flex; align-items: top;">
     <div style="width:100%;text-align:right;margin-top:0px;margin-right:10px"><a href="https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity" style="float:right"><img src="https://training.fdz.ioer.info/version.svg" alt="Version Reference" style="float:left"></a></div>
-</div>
-ome 
+</diome Home
+ 
 
-#
-# H# Exploring Spatial and Biodiversity Data with Python and Jupyter Notb
+# H# Exploring Spatial and Biodiversity Data with Python and Jupyteerotb
+
 
 ooka ### Introduction
 
