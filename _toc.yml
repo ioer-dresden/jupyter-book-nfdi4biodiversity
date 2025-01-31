@@ -7,9 +7,8 @@ parts:
 
 - caption: Part I - Introduction
   chapters:
-  - file: notebooks/101_introduction
-  - file: notebooks/102_theory_chapters
-  - file: notebooks/103_jupyter_notebooks
+  - file: notebooks/101_theory_chapters
+  - file: notebooks/102_jupyter_notebooks
 
 - caption: Part II - Workflow
   chapters:
@@ -24,11 +23,11 @@ parts:
   - file: notebooks/301_accessing_data
     title: Accessing data
   - file: notebooks/302_file_formats
-  - file: notebooks/303_mapping
-  - file: notebooks/304_projections
-  - file: notebooks/305_statistics
-    title: Descriptive statistics
-  - file: notebooks/306_selecting_and_filtering
+  - file: notebooks/303_selecting_and_filtering
+  - file: notebooks/304_statistics
+    title: Descriptive statistics 
+  - file: notebooks/305_projections
+  - file: notebooks/306_mapping
   - file: notebooks/307_spatial_clipping
   - file: notebooks/308_spatial_overlays
   - file: notebooks/309_merging_data
