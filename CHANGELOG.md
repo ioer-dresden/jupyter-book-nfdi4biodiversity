@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v0.2.5 (2025-01-31)
+
+### Bug Fixes
+
+- Replace introduction, move to intro-notebook (root)
+  ([`1a663dd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1a663dda340e3426d1d833a0f1ae3bfa2bbd83c5))
+
+### Refactoring
+
+- Change to remove input
+  ([`5cdd0b1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5cdd0b1450d227771e5045f48285408fb731e330))
+
+- Move imports to top and add version output
+  ([`42951d9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/42951d9a9d5753ffc123f7902b5bdd7538b96130))
+
+- Overhaul notebook, improve code legibility
+  ([`d6d88e2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d6d88e2fe19e6c30ec48e6aefaa2475b27ea81fa))
+
+
 ## v0.2.4 (2025-01-16)
 
 ### Bug Fixes
