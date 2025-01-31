@@ -7,9 +7,8 @@ parts:
 
 - caption: Part I - Introduction
   chapters:
-  - file: notebooks/101_introduction
-  - file: notebooks/102_theory_chapters
-  - file: notebooks/103_jupyter_notebooks
+  - file: notebooks/101_theory_chapters
+  - file: notebooks/102_jupyter_notebooks
 
 - caption: Part II - Workflow
   chapters:

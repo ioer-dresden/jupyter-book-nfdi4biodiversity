@@ -40,8 +40,6 @@ build-staging:
       - jupyter-book build .
       # replace version badge with staging path
       - sed -i -e 's|https://training.fdz.ioer.info/version.svg|https://stag.training.fdz.ioer.info/version.svg|g' _build/html/intro.html
-      # custom ugly fix for header style of "welcome" page (shown in red)
-      - sed -i -e 's|<h1>Welcome 🎉<a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|<h1><span style="font-size:60px; font-weight:bold; color:#FF4D00; font-family:"Comic Sans MS";">Welcome <span style="font-family:unset;">🎉</span></span><a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|g' _build/html/notebooks/101_introduction.html
       # collect artifacts
       - mkdir ._site
       - cp *.svg ._site
@@ -101,8 +99,6 @@ build:
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
-      # custom ugly fix for header style of "welcome" page (shown in red)
-      - sed -i -e 's|<h1>Welcome 🎉<a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|<h1><span style="font-size:60px; font-weight:bold; color:#FF4D00; font-family:"Comic Sans MS";">Welcome <span style="font-family:unset;">🎉</span></span><a class="headerlink" href="#welcome" title="Permalink to this heading">#</a></h1>|g' _build/html/notebooks/101_introduction.html
       # collect artifacts
       - mkdir ._site
       - cp *.svg ._site
