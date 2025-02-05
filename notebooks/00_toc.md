@@ -6,7 +6,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.4
+      jupytext_version: 1.16.6
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -29,17 +29,16 @@ jupyter:
 - [A data example from the IOER-RDC Dataverse](201_example_introduction)
 - [Adding data to the Notebook](202_data_retrieval)
 - [Working with Data / Data Analysis](203_analysis)
-- [Visualization](204_visualizing)
-- [Publishing](205_publish)
+- [Publishing](204_publish)
 
 ## Part III: Reference documentation
 
 - [Accessing Data](301_accessing_data)
 - [File formats](302_file_formats)
-- [Creating maps](303_mapping)
-- [Projections](304_projections)
-- [Statistics](305_statistics)
-- [Selecting and filtering](306_selecting_and_filtering)
+- [Creating maps](303_selecting_and_filtering)
+- [Projections](304_statistics)
+- [Statistics](305_projections)
+- [Selecting and filtering](306_mapping)
 - [Spatial clipping](307_spatial_clipping)
 - [Spatial overlays](308_spatial_overlays)
 - [Merging data](309_merging_data)
