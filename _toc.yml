@@ -15,8 +15,7 @@ parts:
   - file: notebooks/201_example_introduction
   - file: notebooks/202_data_retrieval
   - file: notebooks/203_analysis
-  - file: notebooks/204_visualizing
-  - file: notebooks/205_publish
+  - file: notebooks/204_publish
 
 - caption: Part III - Reference documentation
   chapters:
