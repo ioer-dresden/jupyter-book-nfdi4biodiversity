@@ -27,8 +27,7 @@ from pathlib import Path
 from collections import namedtuple
 from IPython.display import clear_output
 from typing import List, Optional, Dict, Tuple
-from IPython.core import display
-from IPython.display import HTML
+from IPython.display import HTML, display
 from IPython.display import Markdown as md
 from datetime import date
 from adjustText import adjust_text

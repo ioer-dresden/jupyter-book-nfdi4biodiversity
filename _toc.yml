@@ -13,9 +13,10 @@ parts:
 - caption: Part II - Workflow
   chapters:
   - file: notebooks/201_example_introduction
-  - file: notebooks/202_data_retrieval
-  - file: notebooks/203_analysis
-  - file: notebooks/204_publish
+  - file: notebooks/202_data_retrieval_gbif
+  - file: notebooks/203_data_retrieval_monitor
+  - file: notebooks/204_analysis
+  - file: notebooks/205_publish
 
 - caption: Part III - Reference documentation
   chapters:
