@@ -43,11 +43,6 @@ jupyter:
 - [Spatial overlays](308_spatial_overlays)
 - [Buffering](309_buffering)
 - [Statistics](310_statistics)
-- 
-- 
-- 
-- 
-- 
 
 ## Further Reading
 
