@@ -5,7 +5,7 @@ stages:
   - deploy-staging
   
 build-staging:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.7.6"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags
@@ -60,7 +60,7 @@ build-staging:
     - staging
     
 build:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.7.6"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags
