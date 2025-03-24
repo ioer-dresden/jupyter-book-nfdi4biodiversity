@@ -81,7 +81,7 @@ build:
       # create release version
       - url_host=`git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g"`
       - git remote set-url origin "https://gitlab-ci-token:${GL_TOKEN}@${url_host}"
-      - semantic-release version
+      - semantic-release version -vv
       - semantic-release publish
       - git push origin main --follow-tags
       # create badges with version from latest tag
