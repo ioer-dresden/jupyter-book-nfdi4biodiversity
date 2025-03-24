@@ -6,14 +6,14 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.6
+      jupytext_version: 1.16.7
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region slideshow={"slide_type": ""} editable=true -->
 # Table of Contents
 
 - [Preface](../intro)
@@ -35,14 +35,14 @@ jupyter:
 
 - [Accessing Data](301_accessing_data)
 - [File formats](302_file_formats)
-- [Creating maps](303_selecting_and_filtering)
-- [Projections](304_statistics)
-- [Statistics](305_projections)
-- [Selecting and filtering](306_mapping)
-- [Spatial clipping](307_spatial_clipping)
+- [Projections](303_projections)
+- [Selecting and filtering](304_selecting_and_filtering)
+- [Creating maps](305_mapping)
+- [Spatial clipping](306_spatial_clipping)
+- [Merging data](307_merging_data)
 - [Spatial overlays](308_spatial_overlays)
-- [Merging data](309_merging_data)
-- [Buffering](310_buffering)
+- [Buffering](309_buffering)
+- [Statistics](310_statistics)
 
 ## Further Reading
 
