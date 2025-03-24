@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.6.2 (2025-03-24)
+
+### Bug Fixes
+
+- Cleanup
+  ([`64e5315`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/64e5315fdc7d4ac86b101c2e77379362033c4f16))
+
+
 ## v0.6.1 (2025-03-24)
 
 ### Bug Fixes
