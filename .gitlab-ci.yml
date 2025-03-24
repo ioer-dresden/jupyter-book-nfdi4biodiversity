@@ -73,6 +73,8 @@ build:
       # contains anybadge
       - conda activate ci_env
       - conda install jupyter-book -c conda-forge
+      # Ensure full git history (fetch all commits and tags)
+      - git fetch --unshallow || git fetch --all --tags
   script:
       # checkout to release branch
       - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
@@ -81,6 +83,7 @@ build:
       # create release version
       - url_host=`git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g"`
       - git remote set-url origin "https://gitlab-ci-token:${GL_TOKEN}@${url_host}"
+      - git fetch --unshallow || git fetch --all --tags
       - semantic-release -vv version
       - semantic-release publish
       - git push origin main --follow-tags
