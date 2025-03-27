@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.6.4 (2025-03-27)
+
+### Code Style
+
+- Add ladybug to header
+  ([`3fd8402`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3fd8402c15a4bd4474973de7ddee186cc64bc176))
+
+### Performance Improvements
+
+- Use git shallow clone
+  ([`0549a2f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/0549a2f3085b2466bd15c352c1d1c4d7c5e24858))
+
+
 ## v0.6.3 (2025-03-27)
 
 ### Bug Fixes
