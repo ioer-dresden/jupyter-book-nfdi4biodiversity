@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.6.5 (2025-03-27)
+
+### Bug Fixes
+
+- Typo
+  ([`cc90316`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cc9031695bfbe89fdfd06b685ec37f27a70a4568))
+
+### Code Style
+
+- Fix color green in main version badge
+  ([`d6406ca`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d6406cae67a1826b72436613fabb3322681717cb))
+
+
 ## v0.6.4 (2025-03-27)
 
 ### Code Style
