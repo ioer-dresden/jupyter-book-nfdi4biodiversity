@@ -31,7 +31,7 @@ parts:
   - file: notebooks/308_spatial_overlays
   - file: notebooks/309_buffering
   - file: notebooks/310_statistics
-    title: Descriptive statistics
+    title: Descriptive Statistics
   
 - caption: Further Reading
   chapters:
