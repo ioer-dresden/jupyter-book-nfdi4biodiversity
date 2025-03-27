@@ -1,6 +1,93 @@
 # CHANGELOG
 
 
+## v0.6.3 (2025-03-27)
+
+### Bug Fixes
+
+- --
+  ([`06abc66`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/06abc6638a1634dfea8c99ce88c583a48c968054))
+
+- Add code to download the data; fix distance between map & cmap
+  ([`6f049a8`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/6f049a8161a500c52d40f3d6cc0b28e60a4f5fd4))
+
+- Admonition adding
+  ([`5c36af1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5c36af1559aecb5cca2bb58d94323666648789b8))
+
+- Admonition moved to other sections
+  ([`2c0b193`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2c0b1935204405d275996bf047401644d54c88a5))
+
+- Admonitions
+  ([`e222a4a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e222a4a8a1b9af228bf0df54b3798c4700e58d7e))
+
+- Caption
+  ([`e4af55d`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e4af55dac427bf68a1a14ea06da1752af2c768c0))
+
+- Caption of image
+  ([`55b3449`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/55b34498a69779359ff0f162eb1937e6e40011f2))
+
+- Correct color in header
+  ([`c8ef9f3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c8ef9f30f644418b1d90d6b602e49e4892fbb9ae))
+
+- Gcs and pcs image
+  ([`92f113f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/92f113f5b80629db66dd2c690c1f2311cd8ffca3))
+
+- Hide output
+  ([`5e7032f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5e7032ffb3eee9fedc399f7ae19820e465229004))
+
+- Image for projection
+  ([`505d0d9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/505d0d94c51e7f4d3d7c242f6cf1735e8ac8fd9d))
+
+- Image showing
+  ([`8c80dcb`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8c80dcbf3fa4df19e529f161630c9b8227cc9e3f))
+
+- Increase text size in header graphic
+  ([`91941e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/91941e3565d2d187de8f64b5a71d7036fbaa8ecd))
+
+- Ioerdata url
+  ([`45d74f8`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/45d74f88d1962d421d4736dc915a3b9a437b373f))
+
+- Link of the image
+  ([`b6b3513`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b6b35139e4b57d1c0926f8a9d048157ec2f44dd5))
+
+- Not showing image
+  ([`52f9ed1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/52f9ed144fcc74eb604f197eb4b572ca80e09d79))
+
+- Original image
+  ([`feb96d3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/feb96d3165083a9b84a1f08004eb4f82a3cc867e))
+
+- Projection image
+  ([`e2f1ccf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e2f1ccf93073e6785a6ab2d3f413e7aa38a9ab24))
+
+- Quality of photo
+  ([`8cd9eff`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8cd9effd1b60ed21eb3647b68976846a4a996b13))
+
+- Reduce padding around header image
+  ([`9e3d489`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9e3d4896122e2a74fe6c372a5dc4f2374be5a252))
+
+- Removing image
+  ([`7c98f8a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7c98f8ae188b1f009b6f4aee1e8028483aaea4c1))
+
+- Reordering the formats chapter
+  ([`242d6a9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/242d6a9ddb1d41f7adf1d0dd5bd0dab449c3672c))
+
+- Titles
+  ([`3ba2a8d`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3ba2a8d0aafe48fb193d5ef50dcc2d1355e2631c))
+
+- Url
+  ([`0dd082a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/0dd082ace1570b30300dab1e787b95a3847d5150))
+
+### Code Style
+
+- Add header graphic
+  ([`bc115f6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bc115f6a9f3f0296716062253fcc744479bf6922))
+
+### Documentation
+
+- Adding image for the projection
+  ([`2480102`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2480102ff6169396c5f2cd6590d5afa6064e90dd))
+
+
 ## v0.6.2 (2025-03-24)
 
 ### Bug Fixes
