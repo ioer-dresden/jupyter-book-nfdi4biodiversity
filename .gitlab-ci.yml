@@ -33,8 +33,6 @@ build-staging:
       - pandoc -v
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
-      # get collaborative ToDo from HackMD
-      - wget -O TODO.md "https://${TODO_URL}"
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
@@ -97,8 +95,6 @@ build:
       - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
-      # get collaborative ToDo from HackMD
-      - wget -O TODO.md "https://${TODO_URL}"
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .

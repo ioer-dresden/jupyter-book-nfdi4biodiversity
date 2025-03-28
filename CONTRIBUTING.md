@@ -21,30 +21,20 @@ This project is a collaborative team effort, and we want to make contributing as
 - 
 # 1. Overview of files
 
-All documents are edited as Jupyter notebooks and can be found in the subfolder `notebooks/`:
+All documents are edited as Jupyter notebooks and can be found in the subfolder `notebooks/`, e.g.:
 
 - [00_toc.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/00_toc.ipynb)
-- [01_introduction.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/01_introduction.ipynb)
-- [02_theory_chapters.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/02_theory_chapters.ipynb)
-- [03_jupyter_notebooks.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/03_jupyter_notebooks.ipynb)
-- [04_example_introduction.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/04_example_introduction.ipynb)
-- [05_data_retrieval.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/05_data_retrieval.ipynb)
-- [06_analysis.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/06_analysis-Copy1.ipynb)
-- [07_visualizing.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/07_visualizing.ipynb)
-- [08_publish.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/08_publish.ipynb)
-- [09_endmatter-links.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/09_endmatter-links.ipynb)
-- [09_endmatter-thanks.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/09_endmatter-thanks.ipynb)
-- [10_milvus_maps.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/10_milvus_maps.ipynb)
-- [11_geosocialmedia.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/11_geosocialmedia.ipynb)
-
+- [101_theory_chapters.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/101_theory_chapters.ipynb)
+- [102_jupyter_notebooks.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/102_jupyter_notebooks.ipynb)
+- [201_example_introduction.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/201_example_introduction.ipynb)
 
 # 2. Publishing process
 
-Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://knowledge.fdz.ioer.info (git branch `main`) and https://stag.knowledge.fdz.ioer.info/ (git branch `staging`).
+Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://training.fdz.ioer.info (git branch `main`) and https://stag.training.fdz.ioer.info/ (git branch `staging`).
 
 These two sites help to incrementally improve the training materials:
-- https://stag.training.fdz.ioer.info/ - always up-to-date, see documentation changes immediately 
-- https://training.fdz.ioer.info - a "production" version that looks more polished; changes from the staging branch are selectively merged in
+- https://stag.training.fdz.ioer.info/ - always up-to-date, see documentation changes immediately. **This page is only visible from the IOER Intranet**
+- https://training.fdz.ioer.info - a "production" version that looks more polished; changes from the staging branch are selectively merged in. This page is **publicly visible**
 
 Start working on the `staging` branch. We pull changes that are ready into the main (production) branch.
 
