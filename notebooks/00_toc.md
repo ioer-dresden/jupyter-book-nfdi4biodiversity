@@ -20,16 +20,16 @@ jupyter:
 
 ## Part I: Introduction
 
-- [Welcome](101_introduction)
-- [Theory chapters](102_theory_chapters)
-- [Getting familiar with Jupyter Notebook](103_jupyter_notebooks)
+- [Theory chapters](101_theory_chapters)
+- [Setup & Getting familiar with Jupyter](102_jupyter_notebooks)
 
 ## Part II: Workflow
 
-- [A data example from the IOER-RDC Dataverse](201_example_introduction)
-- [Adding data to the Notebook](202_data_retrieval)
-- [Working with Data / Data Analysis](203_analysis)
-- [Publishing](204_publish)
+- [Exploring spatial and biodiversity data](201_example_introduction)
+- [Data Retrieval: GBIF & LAND](202_data_retrieval_gbif)
+- [Data Retrieval: IOER Monitor](203_data_retrieval_monitor)
+- [Data Analysis & Visualization](204_analysis)
+- [Publishing](205_publish)
 
 ## Part III: Reference documentation
 
@@ -46,17 +46,17 @@ jupyter:
 
 ## Further Reading
 
-- [Links for more information](401_endmatter-links)
-- [Thank You](402_endmatter-thanks)
+- [Thank You](401_endmatter-thanks)
 
 ## Datasets
 
 - [Maps for Milvus milvus](10_milvus_maps)
 - [Exploration of geosocial patterns (Germany)](11_geosocialmedia)
 
-- [References](references)
-
 ## Developers
+
+- [Contributing](../CONTRIBUTING)
+- [Changelog](../CHANGELOG)
 <!-- #endregion -->
 
 ```python
