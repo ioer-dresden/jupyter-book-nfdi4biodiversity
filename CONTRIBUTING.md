@@ -33,8 +33,8 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
 Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://training.fdz.ioer.info (git branch `main`) and https://stag.training.fdz.ioer.info/ (git branch `staging`).
 
 These two sites help to incrementally improve the training materials:
-- https://stag.training.fdz.ioer.info/ - always up-to-date, see documentation changes immediately 
-- https://training.fdz.ioer.info - a "production" version that looks more polished; changes from the staging branch are selectively merged in
+- https://stag.training.fdz.ioer.info/ - always up-to-date, see documentation changes immediately. **This page is only visible from the IOER Intranet**
+- https://training.fdz.ioer.info - a "production" version that looks more polished; changes from the staging branch are selectively merged in. This page is **publicly visible**
 
 Start working on the `staging` branch. We pull changes that are ready into the main (production) branch.
 
