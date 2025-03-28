@@ -21,6 +21,22 @@ html[data-theme="dark"] {
     }
 }
 
+/* this part for logo images in intro only */
+/* Hide dark images by default */
+.dark-img {
+    display: none;
+}
+
+/* When dark mode is active, hide light images and show dark ones */
+html[data-theme="dark"] .light-img {
+    display: none;
+}
+
+html[data-theme="dark"] .dark-img {
+    display: inline-block;
+}
+/* ENDE: this part for logo images in intro only */
+
 .bd-docs-nav {
     font-weight: 400;
 }
