@@ -47,7 +47,5 @@ parts:
   chapters:
   - file: CONTRIBUTING
     title: Contributing
-  - file: TODO
-    title: ToDo
   - file: CHANGELOG
     title: Changelog
