@@ -35,6 +35,12 @@ html[data-theme="dark"] .light-img {
 html[data-theme="dark"] .dark-img {
     display: inline-block;
 }
+
+/* Override the global rule for logos */
+html[data-theme="dark"] .logo-img {
+    background-color: transparent !important;
+    border-radius: 0 !important; /* Optional: Remove rounding if not needed */
+}
 /* ENDE: this part for logo images in intro only */
 
 .bd-docs-nav {
