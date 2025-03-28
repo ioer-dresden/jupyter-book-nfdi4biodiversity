@@ -35,8 +35,7 @@ parts:
   
 - caption: Further Reading
   chapters:
-  - file: notebooks/401_endmatter-links
-  - file: notebooks/402_endmatter-thanks
+  - file: notebooks/401_endmatter-thanks
 
 
 - caption: Datasets
