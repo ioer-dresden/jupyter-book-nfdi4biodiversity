@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v0.7.1 (2025-03-28)
+
+### Bug Fixes
+
+- Css
+  ([`548ce0c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/548ce0cc54ffd88c30ce205a7ac099185d4b296f))
+
+- Css logo images white background in dark mode
+  ([`fa6bac1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/fa6bac13212fadc18176f52a10f2c14e9ae3d60e))
+
+- Ioer-fdz and nfdi logo in dark theme
+  ([`5ba89e6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5ba89e6d20b52ebd3a10b920a339e9c7dcfd4ac9))
+
+- Logo CSS
+  ([`9aad9b4`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9aad9b4fcf630f88285840aedf1fea0fd1e960ca))
+
+
 ## v0.7.0 (2025-03-28)
 
 
