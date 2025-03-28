@@ -38,7 +38,7 @@ parts:
   - file: notebooks/401_endmatter-thanks
 
 
-- caption: Datasets
+- caption: Further Datasets
   chapters:
   - file: notebooks/501_milvus_maps
   - file: notebooks/502_geosocialmedia
