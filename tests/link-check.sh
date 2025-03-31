@@ -1,8 +1,7 @@
 #!/bin/bash
 
-LOCAL_HOST="http://localhost:8000/"
+LOCAL_HOST="http://localhost:8000/intro.html"
 MAX_WAIT_TIME=60 # 30 sec
-BUFFER_SIZE=16384 # default: 4096, increase required for github-gists
 OPTIONS="--exclude 'reddit.com' \
          --exclude 'anaconda.org' \
          --exclude 'arxiv.org' \
@@ -26,10 +25,10 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'https://wwwpub.zih.tu-dresden.de' \
          --exclude 'https://doi.org' \
          --exclude 'https://www.preprints.org' \
-         --ignore-fragments \
-         --buffer-size $BUFFER_SIZE \
-         --crawl \
          --color=always \
+         --buffer-size=16384 \
+         --max-connections=10 \
+         --verbose \
          --header='User-Agent:curl/7.54.0' \
          --skip-tls-verification \
          --max-response-body-size 100000000 \
