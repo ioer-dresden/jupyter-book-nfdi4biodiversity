@@ -32,15 +32,27 @@ OPTIONS="--exclude 'reddit.com' \
          --junit > rspec.xml"
 
 # Wait for server to respond
+# for i in $(seq 1 60); do
+#     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
+#     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
+#         echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
+#         eval muffet "${OPTIONS}" ${LOCAL_HOST} && \
+#         echo "Muffet ran successfully" && exit 0 || \
+#         echo "Muffet failed"
+#         Run Muffet and output detailed logs
+#     fi
+#     sleep 1
+# done
+
+# Wait for the server to respond
 for i in $(seq 1 60); do
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
-        # echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
-        # eval muffet "${OPTIONS}" ${LOCAL_HOST} && \
-        # echo "Muffet ran successfully" && exit 0 || \
-        # echo "Muffet failed"
-        # Run Muffet and output detailed logs
-        eval muffet "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
+        # Server is running, now run Muffet once
+        echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
+        
+        # Run Muffet and capture output
+        eval muffet --verbose "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
         
         # Check Muffet output
         cat muffet_output.log
@@ -52,8 +64,10 @@ for i in $(seq 1 60); do
             echo "rspec.xml was not generated. Muffet might have failed."
             exit 1
         fi
+        
+        break  # Exit the loop after Muffet runs successfully
     fi
-    sleep 1
+    sleep 1  # Wait 1 second before retrying
 done
 
 echo "error: Server is not up after 60 seconds"
