@@ -18,8 +18,12 @@ test:
     - conda install -yq jupyter-book -c conda-forge
     - pip install --no-input sphinx-autobuild
   script:
+    - jupyter-book config sphinx .
     - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
+    - BUILD_PID=$!
+    - sleep 15 # wait until book is build
     - /bin/bash tests/link-check.sh
+    - kill $BUILD_PID  # Stop sphinx-autobuild after testing
   artifacts:
     when: always
     paths:
