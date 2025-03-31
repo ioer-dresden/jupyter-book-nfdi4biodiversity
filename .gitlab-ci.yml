@@ -1,9 +1,34 @@
 stages:
+  - test
   - build-staging
   - build
   - deploy
   - deploy-staging
-  
+
+test:
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  stage: test
+  before_script:
+     # initialize conda shell
+    - conda init bash
+    - source ~/.bashrc
+    # activate default ci_env from registry image
+    # contains anybadge
+    - conda activate ci_env
+    - conda install jupyter-book -c conda-forge
+    - pip install sphinx-autobuild -y
+  script:
+    - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
+    - /bin/sh tests/link-check.sh
+  artifacts:
+    when: always
+    paths:
+      - rspec.xml
+    reports:
+      junit: rspec.xml
+  only:
+    - staging
+
 build-staging:
   image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
   stage: build
