@@ -28,6 +28,10 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'https://www.preprints.org' \
          --ignore-fragments \
          --buffer-size $BUFFER_SIZE \
+         --crawl \
+         --color=always \
+         --header='User-Agent:curl/7.54.0' \
+         --skip-tls-verification \
          --max-response-body-size 100000000 \
          --junit > rspec.xml"
 
@@ -52,7 +56,7 @@ for i in $(seq 1 60); do
         echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
         
         # Run Muffet and capture output
-        eval muffet --verbose --debug "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
+        eval muffet "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
         
         # Check Muffet output
         cat muffet_output.log
