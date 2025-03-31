@@ -79,4 +79,4 @@ sphinx:
     html_show_copyright     : false
     html_extra_path         : ['resources/html',]
     suppress_warnings       : ['nbsphinx',]
-    
+    myst_heading_anchors    : 3
