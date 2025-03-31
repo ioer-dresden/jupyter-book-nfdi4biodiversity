@@ -31,11 +31,17 @@ OPTIONS="--exclude 'reddit.com' \
          --max-response-body-size 100000000 \
          --junit > rspec.xml"
 
-for i in $(seq 0 ${MAX_WAIT_TIME}); do # 5 min
+for i in $(seq 0 ${MAX_WAIT_TIME}); do
     sleep 0.5
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
-        eval muffet "${OPTIONS}" ${LOCAL_HOST} && exit 0 || exit 1
+        # Check if we can fetch the main page of the Jupyter Book
+        if curl -s ${LOCAL_HOST} | grep -q "Jupyter Book"; then
+            echo "Server is up and Jupyter Book is accessible."
+            eval muffet "${OPTIONS}" ${LOCAL_HOST} && exit 0 || exit 1
+        else
+            echo "Jupyter Book content is not yet available. Retrying..."
+        fi
     fi
 done
 
