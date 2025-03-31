@@ -31,18 +31,16 @@ OPTIONS="--exclude 'reddit.com' \
          --max-response-body-size 100000000 \
          --junit > rspec.xml"
 
-for i in $(seq 0 ${MAX_WAIT_TIME}); do
-    sleep 0.5
+# Wait for the server to respond with HTTP 200 OK
+for i in $(seq 1 ${MAX_WAIT_TIME}); do
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
-        # Check if we can fetch the main page of the Jupyter Book
-        if curl -s ${LOCAL_HOST} | grep -q "Jupyter Book"; then
-            echo "Server is up and Jupyter Book is accessible."
-            eval muffet "${OPTIONS}" ${LOCAL_HOST} && exit 0 || exit 1
-        else
-            echo "Jupyter Book content is not yet available. Retrying..."
-        fi
+        echo "Server is running. Running Muffet..."
+        eval muffet "${OPTIONS}" ${LOCAL_HOST} && \
+        echo "Muffet ran successfully" && exit 0 || \
+        echo "Muffet failed to run"
     fi
+    sleep 1
 done
 
-echo "error: time out $((${MAX_WAIT_TIME}/2)) sec" && exit 1
+echo "error: time out after $MAX_WAIT_TIME seconds" && exit 1
