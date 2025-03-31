@@ -6,7 +6,7 @@ stages:
   - deploy-staging
 
 test:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.1"
   stage: test
   before_script:
      # initialize conda shell
@@ -16,10 +16,10 @@ test:
     # contains anybadge
     - conda activate ci_env
     - conda install -yq jupyter-book -c conda-forge
-    - pip install --no-input sphinx-autobuild
   script:
     - jupyter-book config sphinx .
-    - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
+    - sphinx-build . _build/html -b html
+    - python3 -m http.server 8000 --directory _build/html > /dev/null 2>&1 &
     - BUILD_PID=$!
     - sleep 15 # wait until book is build
     - /bin/bash tests/link-check.sh
@@ -34,7 +34,7 @@ test:
     - staging
 
 build-staging:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.1"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags
@@ -87,7 +87,7 @@ build-staging:
     - staging
     
 build:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.1"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags
