@@ -16,7 +16,7 @@ test:
     # contains anybadge
     - conda activate ci_env
     - conda install jupyter-book -c conda-forge
-    - pip install sphinx-autobuild -y
+    - pip install -y sphinx-autobuild
   script:
     - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
     - /bin/sh tests/link-check.sh
