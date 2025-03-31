@@ -31,16 +31,17 @@ OPTIONS="--exclude 'reddit.com' \
          --max-response-body-size 100000000 \
          --junit > rspec.xml"
 
-# Wait for the server to respond with HTTP 200 OK
-for i in $(seq 1 ${MAX_WAIT_TIME}); do
+# Wait for server to respond
+for i in $(seq 1 60); do
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
-        echo "Server is running. Running Muffet..."
+        echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
         eval muffet "${OPTIONS}" ${LOCAL_HOST} && \
         echo "Muffet ran successfully" && exit 0 || \
-        echo "Muffet failed to run"
+        echo "Muffet failed"
     fi
     sleep 1
 done
 
-echo "error: time out after $MAX_WAIT_TIME seconds" && exit 1
+echo "error: Server is not up after 60 seconds"
+exit 1

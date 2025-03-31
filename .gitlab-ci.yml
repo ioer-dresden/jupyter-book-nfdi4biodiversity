@@ -19,7 +19,7 @@ test:
   script:
     - jupyter-book config sphinx .
     - sphinx-build . _build/html -b html
-    - python3 -m http.server 8000 --directory _build/html > /dev/null 2>&1 &
+    - python3 -m http.server 8000 --directory _build/html > server.log 2>&1 &
     - BUILD_PID=$!
     - sleep 15  # wait until book is built
     - tail -n 20 server.log  # Tail the last 20 lines of the log to check for issues
