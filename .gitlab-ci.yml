@@ -19,7 +19,7 @@ test:
     - pip install --no-input sphinx-autobuild
   script:
     - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
-    - /bin/sh tests/link-check.sh
+    - /bin/bash tests/link-check.sh
   artifacts:
     when: always
     paths:
