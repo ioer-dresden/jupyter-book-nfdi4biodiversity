@@ -26,14 +26,14 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'https://doi.org' \
          --exclude 'https://www.preprints.org' \
          --color=always \
+         --ignore-fragments \
          --buffer-size=16384 \
          --max-connections=10 \
          --verbose \
          --header='User-Agent:curl/7.54.0' \
          --skip-tls-verification \
-         --max-response-body-size 100000000"
-         
-# --junit > rspec.xml"
+         --max-response-body-size 100000000 \
+         --junit > rspec.xml"
 
 # Wait for server to respond
 for i in $(seq 1 60); do
