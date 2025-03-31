@@ -35,7 +35,7 @@ OPTIONS="--exclude 'reddit.com' \
          --junit > rspec.xml"
 
 for i in $(seq 1 ${MAX_WAIT_TIME}); do
-    sleep 0.5
+    sleep 5
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [ "${IS_SERVER_RUNNING}" = "200" ]; then  # Change from [[ ... ]] to [ ... ]
         eval muffet ${OPTIONS} ${LOCAL_HOST}
