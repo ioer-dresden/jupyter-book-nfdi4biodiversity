@@ -159,13 +159,13 @@ Since this training material consists of a mixture of code, comments, documentat
 ## Documentation, descriptions or any code comments changed
 
 Use:
-```yml
+```yaml
 docs: improved description of chapter 1
 ```
 
 The same applies to minor changes such as fixing typos:
 Use:
-```yml
+```yaml
 docs: fixed typo
 ```
 
@@ -174,7 +174,7 @@ These changes will not result in any version bump, but they will be listed as im
 ## Minor code changes, bug fixes
 
 Use:
-```yml
+```yaml
 fix: issue with matplotlib and legend in figure 7
 ```
 
@@ -184,7 +184,7 @@ This will result in a new `patch` release.
 
 
 Use:
-```yml
+```yaml
 feat: added an interactive map (folium) to chapter 7
 ```
 
@@ -193,7 +193,7 @@ This will result in a new `minor` release.
 ## Changes to the Continuous Integration
 
 Use:
-```yml
+```yaml
 ci: fix registry image not accessible
 ```
 
