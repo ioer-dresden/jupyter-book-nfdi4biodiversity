@@ -87,7 +87,7 @@ Note that we are on the git branch called `staging`. We can also see that the no
 ## 4.3 Commit changes
 
 ```{figure} resources/03_stage_changes.gif
-:name: edit-files
+:name: stage-files
 
 "Staging" changes
 ```
