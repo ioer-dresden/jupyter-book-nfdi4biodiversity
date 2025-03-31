@@ -29,12 +29,13 @@ OPTIONS="--exclude 'reddit.com' \
          --ignore-fragments \
          --buffer-size=16384 \
          --max-connections=10 \
-         --verbose \
          --header='User-Agent:curl/7.54.0' \
          --skip-tls-verification \
          --max-response-body-size 100000000 \
          --junit > rspec.xml"
 
+         # --verbose \
+         
 # Wait for server to respond
 for i in $(seq 1 60); do
     IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
@@ -43,7 +44,6 @@ for i in $(seq 1 60); do
         eval muffet "${OPTIONS}" ${LOCAL_HOST} && \
         echo "Muffet ran successfully" && exit 0 || \
         echo "Muffet failed"
-        Run Muffet and output detailed logs
     fi
     sleep 1
 done
