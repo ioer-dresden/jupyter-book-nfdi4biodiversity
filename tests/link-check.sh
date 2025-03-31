@@ -32,7 +32,7 @@ OPTIONS="--exclude 'reddit.com' \
          --header='User-Agent:curl/7.54.0' \
          --skip-tls-verification \
          --max-response-body-size 100000000 \
-         --junit"
+         --junit > rspec.xml"
 
 for i in $(seq 1 ${MAX_WAIT_TIME}); do
     sleep 0.5
