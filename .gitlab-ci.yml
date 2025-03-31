@@ -22,8 +22,7 @@ test:
     - python3 -m http.server 8000 --directory _build/html > server.log 2>&1 &
     - BUILD_PID=$!
     - sleep 15  # wait until book is built
-    - tail -n 20 server.log  # Tail the last 20 lines of the log to check for issues
-    - /bin/bash tests/link-check.sh
+    - /bin/sh tests/link-check.sh
     - kill $BUILD_PID  # Stop sphinx-autobuild after testing
   artifacts:
     when: always
