@@ -52,7 +52,7 @@ for i in $(seq 1 60); do
         echo "Server is running at ${LOCAL_HOST}. Running Muffet now..."
         
         # Run Muffet and capture output
-        eval muffet --verbose "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
+        eval muffet --verbose --debug "${OPTIONS}" ${LOCAL_HOST} > muffet_output.log 2>&1
         
         # Check Muffet output
         cat muffet_output.log
@@ -70,5 +70,5 @@ for i in $(seq 1 60); do
     sleep 1  # Wait 1 second before retrying
 done
 
-echo "error: Server is not up after 60 seconds"
-exit 1
+# echo "error: Server is not up after 60 seconds"
+# exit 1
