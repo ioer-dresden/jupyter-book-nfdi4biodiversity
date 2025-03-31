@@ -15,8 +15,8 @@ test:
     # activate default ci_env from registry image
     # contains anybadge
     - conda activate ci_env
-    - conda install jupyter-book -c conda-forge
-    - pip install -y sphinx-autobuild
+    - conda install -yq jupyter-book -c conda-forge
+    - pip install --no-input sphinx-autobuild
   script:
     - sphinx-autobuild . _build/html -b html > /dev/null 2>&1 &
     - /bin/sh tests/link-check.sh
