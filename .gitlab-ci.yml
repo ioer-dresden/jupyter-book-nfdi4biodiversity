@@ -19,8 +19,8 @@ test:
   allow_failure: true
   script:
     - jupyter-book config sphinx .
-    - jupyter-book build --path-output _build/html .
-    - python3 -m http.server 8000 --directory _build/html --bind 0.0.0.0 > server.log 2>&1 &
+    - jupyter-book build .
+    - python3 -m http.server 8000 --directory _build --bind 0.0.0.0 > server.log 2>&1 &
     - BUILD_PID=$!
     - sleep 15  # wait until book is built
     - /bin/sh tests/link-check.sh
