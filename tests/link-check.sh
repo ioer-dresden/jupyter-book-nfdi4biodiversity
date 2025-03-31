@@ -25,6 +25,12 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'https://wwwpub.zih.tu-dresden.de' \
          --exclude 'https://doi.org' \
          --exclude 'https://www.preprints.org' \
+         --exclude 'https://kommisdd.dresden.de' \
+         --exclude 'http://localhost:8000/_static/videos/Video.webm' \
+         --exclude 'http://localhost:8000/_static/videos/Video3.webm' \
+         --exclude 'academic.oup.com' \
+         --exclude 'wiley.com' \
+         --exclude 'campus.fdz.ioer.info' \
          --color=always \
          --ignore-fragments \
          --buffer-size=16384 \
