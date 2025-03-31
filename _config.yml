@@ -69,7 +69,7 @@ repository:
 # Bibliography
 
 bibtex_reference_style: author_year
-bibtex_bibfiles: "references.bib"
+bibtex_bibfiles: ["references.bib"]
     
 #######################################################################################
 # Advanced and power-user settings
