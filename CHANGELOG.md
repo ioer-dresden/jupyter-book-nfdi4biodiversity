@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v1.0.0 (2025-04-02)
+
+### Documentation
+
+- Update README.md
+  ([`d36d86a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d36d86a1fb0a4f43b3f73b6c1d003748567565e5))
+
+### Features
+
+- Make first major release
+  ([`c1c2c0f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c1c2c0f6921a9c1a75496fb109291e67e463aae9))
+
+BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will be archived in our
+  [ioerDATA](https://data.fdz.ioer.de/) repository.
+
+### Breaking Changes
+
+- This is the first milestone release (Major, 1.0.0), which will be archived in our
+  [ioerDATA](https://data.fdz.ioer.de/) repository.
+
+
 ## v0.8.0 (2025-04-02)
 
 ### Bug Fixes
