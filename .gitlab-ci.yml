@@ -1,11 +1,41 @@
 stages:
+  - test
   - build-staging
   - build
   - deploy
   - deploy-staging
-  
+
+test:
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.3"
+  stage: test
+  before_script:
+     # initialize conda shell
+    - conda init bash
+    - source ~/.bashrc
+    # activate default ci_env from registry image
+    # contains anybadge
+    - conda activate ci_env
+    - conda install -yq jupyter-book -c conda-forge
+  allow_failure: true
+  script:
+    - jupyter-book config sphinx .
+    - jupyter-book build .
+    - python3 -m http.server 8000 --directory _build/html --bind "::" > server.log 2>&1 &
+    - BUILD_PID=$!
+    - sleep 15  # wait until book is built
+    - /bin/sh tests/link-check.sh
+    - kill $BUILD_PID  # Stop sphinx-autobuild after testing
+  artifacts:
+    when: always
+    paths:
+      - rspec.xml
+    reports:
+      junit: rspec.xml
+  only:
+    - staging
+
 build-staging:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.3"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags
@@ -58,7 +88,7 @@ build-staging:
     - staging
     
 build:
-  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.0"
+  image: "registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault:0.8.3"
   stage: build
   variables:
       GIT_FETCH_EXTRA_FLAGS: --tags

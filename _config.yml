@@ -61,7 +61,7 @@ launch_buttons:
   # colab_url                 : https://colab.research.google.com # The URL of Google Colab (e.g., https://colab.research.google.com)
 
 repository:
-  url                       : https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity.git  # The URL to your book's repository
+  url                       : https://github.com/ioer-dresden/jupyter-book-nfdi4biodiversity.git  # The URL to your book's repository
   path_to_book              : ""  # A path to your book's folder, relative to the repository root.
   branch                    : main  # Which branch of the repository should be used when creating links
 
@@ -69,7 +69,7 @@ repository:
 # Bibliography
 
 bibtex_reference_style: author_year
-bibtex_bibfiles: "references.bib"
+bibtex_bibfiles: ["references.bib"]
     
 #######################################################################################
 # Advanced and power-user settings
@@ -79,4 +79,4 @@ sphinx:
     html_show_copyright     : false
     html_extra_path         : ['resources/html',]
     suppress_warnings       : ['nbsphinx',]
-    
+    myst_heading_anchors    : 3
