@@ -1,6 +1,6 @@
 [![version](https://training.fdz.ioer.info/version.svg)][static-gl-url] [![pipeline](https://training.fdz.ioer.info/pipeline.svg)][static-gl-url]
 
-# Jupyter-Book NFDI4Biodiversity 
+# IOER Jupyter-Book NFDI4Biodiversity 
 
 This is the public repository for the Jupytwer book, available at https://training.fdz.ioer.info/. We use this repository for outreach. All internal collaboration and continuous integration and deployment (CI & CD) takes place in [this Gitlab repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity).
 
