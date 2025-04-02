@@ -1,6 +1,88 @@
 # CHANGELOG
 
 
+## v1.0.0 (2025-04-02)
+
+### Documentation
+
+- Update README.md
+  ([`d36d86a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d36d86a1fb0a4f43b3f73b6c1d003748567565e5))
+
+### Features
+
+- Make first major release
+  ([`c1c2c0f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c1c2c0f6921a9c1a75496fb109291e67e463aae9))
+
+BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will be archived in our
+  [ioerDATA](https://data.fdz.ioer.de/) repository.
+
+### Breaking Changes
+
+- This is the first milestone release (Major, 1.0.0), which will be archived in our
+  [ioerDATA](https://data.fdz.ioer.de/) repository.
+
+
+## v0.8.0 (2025-04-02)
+
+### Bug Fixes
+
+- 'references.bib' is not of type 'array'
+  ([`942bbaf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/942bbafae498e692a235ed418e6255b8887779cb))
+
+- Ci
+  ([`b18a731`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b18a731539df54c4b33613793030f9eb3cad8379))
+
+- Cross-reference target not found
+  ([`b28f5da`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b28f5da6fc58e79a0f408cd579773c32cefc2724))
+
+- Enable heading anchors for H1-H3
+  ([`610e7e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/610e7e394db1325cf62ddf9b1a8aba073636f1c1))
+
+- Jupyter book command
+  ([`e8e3f91`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e8e3f91aae6c79c0c44bf8198d6d55fdd7cdae92))
+
+- Jupyter book command
+  ([`def7fe6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/def7fe6387b3bca334b55c2db3703b1c793edf70))
+
+- Jupyter book command
+  ([`1d323fe`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1d323fee1d284749d0c3f20fdc57fcd78dbef440))
+
+- Non-consecutive header level increase; H1 to H3
+  ([`f83ccaf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f83ccafa44b1c946f60a5256c07506afcdd2395c))
+
+- Removing the image
+  ([`937faa9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/937faa9581475c88a2e32cb059aea27feb1410eb))
+
+- Wrong shell, use bash
+  ([`4552d75`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4552d75dfce7da55f27d5e5394ff1a8ec0e8f318))
+
+### Code Style
+
+- Fix pygments yml->yaml
+  ([`8277381`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8277381102dbcd2c9ae15dd4be1c382fb06bb27d))
+
+### Continuous Integration
+
+- Add wait command
+  ([`6802ef3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/6802ef306929518b1d4f61ada8e6d6c5f330acae))
+
+- Fix muffet not available in image
+  ([`7da7692`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7da769240e3d698a4fb9304dd9164a07369d692e))
+
+- Update image version with fixed muffet binary
+  ([`77a821e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/77a821e28bc7816317b27f465ed990bd68579612))
+
+### Features
+
+- Add link-check in CI
+  ([`36b2fe1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/36b2fe14680803dd303f4813af4a98c29bffd772))
+
+### Refactoring
+
+- Change public repo URL from Gitlab to Github
+  ([`11ebbf2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/11ebbf28b00c31698bf9a3f1d739e193fff657c5))
+
+
 ## v0.7.1 (2025-03-28)
 
 ### Bug Fixes
