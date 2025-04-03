@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v1.2.0 (2025-04-03)
+
+### Documentation
+
+- Fix links in Readme.md, cleanup
+  ([`9121f5e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9121f5e9dbdcf4b65db9df0070a09b4ec20504e7))
+
+### Features
+
+- Add DOI
+  ([`574a994`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/574a994374a1874357b89d94824dc5948bb605cc))
+
+
 ## v1.1.0 (2025-04-03)
 
 ### Bug Fixes
