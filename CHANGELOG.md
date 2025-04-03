@@ -1,25 +1,51 @@
 # CHANGELOG
 
 
-## v1.0.0 (2025-04-02)
+## v1.1.0 (2025-04-03)
 
-### Documentation
+### Bug Fixes
 
-- Update README.md
-  ([`d36d86a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d36d86a1fb0a4f43b3f73b6c1d003748567565e5))
+- Closing <kbd> tag missing
+  ([`62cb488`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/62cb488f9685646f852e5764c2d4a62400f823d3))
+
+- Kbd escape asterix
+  ([`f2207e8`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f2207e8a338786e69cc4816ee6f0e92e825ac639))
+
+- Match LICENSE.md to CC By 4.0
+  ([`6bfd33c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/6bfd33cab738ba4edaf0639a052a3165ca29d826))
+
+- Order of contributions
+  ([`371c5b4`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/371c5b4f5f5c70030b4940a26617c0ad69af6703))
+
+- Remove auto-url
+  ([`7fb5a93`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7fb5a93ab59bf16fd6b044356bfab235e98ddf43))
+
+- Toml not found
+  ([`b8509f1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b8509f1d1860caf81ada7579968f42ed6dc59cb6))
+
+### Code Style
+
+- Add <kbd> to date format
+  ([`49f6eb0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/49f6eb011ec8a427607fd55f5491571442765ceb))
+
+- Add bg to version number
+  ([`587f730`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/587f730172f7e0dc386fee77b8278be7e93b5d95))
 
 ### Features
 
-- Make first major release
-  ([`c1c2c0f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c1c2c0f6921a9c1a75496fb109291e67e463aae9))
+- Add directory tree output
+  ([`7333e04`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7333e0496b151fa803e05f5a130a3d89a0485d28))
 
-BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will be archived in our
-  [ioerDATA](https://data.fdz.ioer.de/) repository.
+### Refactoring
 
-### Breaking Changes
+- Revise release generation script
+  ([`afc19d1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/afc19d1f64b235939de18af70c9a40bf10a3cb4f))
 
-- This is the first milestone release (Major, 1.0.0), which will be archived in our
-  [ioerDATA](https://data.fdz.ioer.de/) repository.
+- Use short intext-references, link to reference section
+  ([`47358ac`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/47358ac4a493af0edfcab262cde73e8ffcf97ed8))
+
+
+## v1.0.0 (2025-04-02)
 
 
 ## v0.8.0 (2025-04-02)
@@ -29,8 +55,14 @@ BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will 
 - 'references.bib' is not of type 'array'
   ([`942bbaf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/942bbafae498e692a235ed418e6255b8887779cb))
 
+- Add summary to notebook 305
+  ([`cd8c94f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cd8c94f912ce09d9bb1f75c5515026c5f761cf06))
+
 - Ci
   ([`b18a731`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b18a731539df54c4b33613793030f9eb3cad8379))
+
+- Content block expected for the admonition directive
+  ([`4ad3e1f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4ad3e1f1929158c994674528606f8858fc8cece7))
 
 - Cross-reference target not found
   ([`b28f5da`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b28f5da6fc58e79a0f408cd579773c32cefc2724))
@@ -53,6 +85,9 @@ BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will 
 - Removing the image
   ([`937faa9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/937faa9581475c88a2e32cb059aea27feb1410eb))
 
+- Several issues in consistency of code; reduce warnings
+  ([`66d1827`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/66d1827b8aaf13cdc8ea08dffefadb6598624a73))
+
 - Wrong shell, use bash
   ([`4552d75`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4552d75dfce7da55f27d5e5394ff1a8ec0e8f318))
 
@@ -72,10 +107,27 @@ BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will 
 - Update image version with fixed muffet binary
   ([`77a821e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/77a821e28bc7816317b27f465ed990bd68579612))
 
+### Documentation
+
+- Basic revision of typos and grammar
+  ([`8e643ae`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8e643aeb5d24c3bcf731b1d7f25b60ef88674a97))
+
+- Update README.md
+  ([`d36d86a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d36d86a1fb0a4f43b3f73b6c1d003748567565e5))
+
 ### Features
+
+- Add crosslink for urlencode
+  ([`cf9c969`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cf9c9697bd0293b9c32d8284f4aaff7b331e3f91))
 
 - Add link-check in CI
   ([`36b2fe1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/36b2fe14680803dd303f4813af4a98c29bffd772))
+
+- Make first major release
+  ([`c1c2c0f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c1c2c0f6921a9c1a75496fb109291e67e463aae9))
+
+BREAKING CHANGE: This is the first milestone release (Major, 1.0.0), which will be archived in our
+  [ioerDATA](https://data.fdz.ioer.de/) repository.
 
 ### Refactoring
 
