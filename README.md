@@ -24,23 +24,10 @@ See the [Contribution Documentation](https://training.fdz.ioer.info/CONTRIBUTING
 
 - This repository is versioned with 
   [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/),
-- Jupyter notebooks are tracked as Markdown files using [Jupytext](https://github.com/mwouts/jupytext).
 - If you want to run these notebooks, have a look at the instructions to use the 
   [Carto-Lab Docker](https://gitlab.vgiscience.de/lbsn/tools/jupyterlab), 
-  provided at the beginning of the [notebook][1].
+  provided at the beginning of the [Part I - Introduction][1].
+- See [the Contributing](https://stag.training.fdz.ioer.info/CONTRIBUTING.html) section for a step by step description
 
-To manually bump a version:
-```python
-semantic-release publish
-```
-
-To create `ipynb` files from Markdown:
-```
-conda activate jupyter_env
-jupytext --sync /home/jovyan/work/md/notebook.md
-```
-
-This will create notebooks that can be opened in JupyterLab in the subfolder [notebooks/](notebooks/).
-
-[1]: https://training.fdz.ioer.info/
+[1]: https://training.fdz.ioer.info/notebooks/102_jupyter_notebooks.html#carto-lab-docker
 [static-gl-url]: https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity
