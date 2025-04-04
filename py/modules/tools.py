@@ -1,43 +1,51 @@
-""" A number of helper tools to reduce code in the training materials
-
-    Source: https://gitlab.hrz.tu-chemnitz.de/s7398234--tu-dresden.de/base_modules/
 """
-import os
-import io
-import csv
-import numpy as np
-import warnings
-import requests
-import pandas as pd
-import geopandas as gp
-import zipfile
-import shutil
-import pkg_resources
-import platform
-import fnmatch
-import matplotlib.pyplot as plt
+tools.py – A number of helper tools to reduce and share code in spatial data processing with JupyterLab notebooks.
+
+Author: Dr.-Ing. Alexander Dunkel
+License: MIT License
+Source: https://gitlab.hrz.tu-chemnitz.de/s7398234--tu-dresden.de/base_modules/
+"""
+
+# --- Standard Library ---
 import base64
-import geoviews as gv
+import csv
+import fnmatch
+import io
+import os
+import platform
+import shutil
 import textwrap
-import mapclassify as mc
-from PIL import Image
-from cartopy import crs
+import warnings
+import zipfile
+from collections import namedtuple
+from datetime import date
 from itertools import islice
 from pathlib import Path
-from collections import namedtuple
-from IPython.display import clear_output
-from typing import List, Optional, Dict, Tuple
-from IPython.display import HTML, display
-from IPython.display import Markdown as md
-from datetime import date
-from adjustText import adjust_text
-from matplotlib.font_manager import FontProperties
-from matplotlib import font_manager
-from pyproj import Transformer
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
-OUTPUT = Path.cwd().parents[0] / "out"
+# --- Third-Party Libraries ---
+import geopandas as gp
+import matplotlib.pyplot as plt
+import mapclassify as mc
+import numpy as np
+import pandas as pd
+import pkg_resources
+import requests
+from PIL import Image
+from adjustText import adjust_text
+from cartopy import crs
+from matplotlib import font_manager
+from matplotlib.font_manager import FontProperties
+from pyproj import Transformer
+import geoviews as gv
 
+# --- Jupyter-Specific ---
+from IPython.display import HTML, Markdown as md, clear_output, display
+from html import escape
+
+# --- Globals ---
+OUTPUT = Path.cwd().parents[0] / "out"
 class DbConn(object):
 
     def __init__(self, db_conn):
