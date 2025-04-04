@@ -1,6 +1,49 @@
 # CHANGELOG
 
 
+## v1.3.0 (2025-04-04)
+
+### Bug Fixes
+
+- Add missing link
+  ([`7b3d2fe`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7b3d2fedf36f9a08bf3001f82aebf1d274d15b99))
+
+- Return tree in alphabetically sorted order
+  ([`378a5fd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/378a5fde45c33f247b66a555b67f2b017618af48))
+
+- Typo
+  ([`dc5a014`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/dc5a014d27198a08a3bba53be3a482a683e33089))
+
+- Wrong heading levels
+  ([`f073c0c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f073c0c25029fd8025dffeeb3254bb6fb02fd3a9))
+
+### Code Style
+
+- Hide prompt and answer behind dropdown
+  ([`c358fb7`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c358fb71c2ce418b78165662e3b58f80bc7f0141))
+
+- Remove output
+  ([`fd6c9ef`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/fd6c9efb6897cae69892b6000bb56141fa644915))
+
+### Documentation
+
+- Update docstring
+  ([`36ee41e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/36ee41e1f72240245a191cbc54b18517a5c09365))
+
+### Features
+
+- Add AI step
+  ([`331d9c9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/331d9c9813d28a8a15ec2fc478f9e0ee032e7cad))
+
+### Refactoring
+
+- Add proper header and attribution, license
+  ([`1bba731`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1bba7313103fec1c56aecbfde395fc50ed417529))
+
+- Reorder cells
+  ([`b5b2c8c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b5b2c8c2c305b2be33b7b88923deff3aa8fb59a9))
+
+
 ## v1.2.0 (2025-04-03)
 
 ### Documentation
