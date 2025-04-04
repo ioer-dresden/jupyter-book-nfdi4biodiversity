@@ -1,5 +1,5 @@
 """
-tools.py – A number of helper tools to reduce and share code in spatial data processing with JupyterLab notebooks.
+tools.py – A set of tools to help reduce and share code in geospatial analysis with JupyterLab notebooks.
 
 Author: Dr.-Ing. Alexander Dunkel
 License: MIT License
