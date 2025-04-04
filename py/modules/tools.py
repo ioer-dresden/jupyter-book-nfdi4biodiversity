@@ -416,65 +416,84 @@ def package_report(root_packages: List[str], python_version = True):
         '''
         ))
 
-def tree(dir_path: Path, level: int=-1, limit_to_directories: bool=False,
-         length_limit: int=1000, ignore_files_folders=None, ignore_match=None):
-    """Given a directory Path object print a visual tree structure
-    Source: https://stackoverflow.com/a/59109706/4556479
+def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
+         length_limit: int = 1000, ignore_files_folders=None, ignore_match=None,
+         sort_key=lambda x: x.name.lower()):
     """
-    dir_path = Path(dir_path) # accept string coerceable to Path
+    Pretty-print a visual tree structure of the directory in a Jupyter notebook,
+    with root-level folders listed before files.
+    """
+    dir_path = Path(dir_path)
     files = 0
     directories = 0
-    space =  '    '
+
+    space = '    '
     branch = '│   '
-    # pointers:
-    tee =    '├── '
-    last =   '└── '
+    tee = '├── '
+    last = '└── '
+
     print_list = []
-    always_ignore_files_folders = [".git", ".ipynb_checkpoints", "__pycache__", "__init__.py", "*.bak"]
+
+    always_ignore = {".git", ".ipynb_checkpoints", "__pycache__", "__init__.py"}
     if ignore_files_folders is None:
-        ignore_files_folders = always_ignore_files_folders
+        ignore_files_folders = always_ignore
     else:
-        ignore_files_folders += always_ignore_files_folders
+        ignore_files_folders = set(ignore_files_folders) | always_ignore
+
     if ignore_match is None:
-        ignore_match = ["_*", "*.pyc", "*.bak"] 
-    def inner(dir_path: Path, prefix: str='', level=-1):
+        ignore_match = ["_*", "*.pyc", "*.bak"]
+
+    def inner(current_path: Path, prefix: str = '', level: int = -1, is_root=False):
         nonlocal files, directories
-        if not level: 
-            return # 0, stop iterating
-        if limit_to_directories:
-            contents = [d for d in dir_path.iterdir() if
-                        d.name not in ignore_files_folders]
-        else: 
-            contents = [d for d in dir_path.iterdir()
-                        if d.name not in ignore_files_folders and
-                        not any(fnmatch.fnmatch(d, pat) for pat in ignore_match)]
-        # print(f'{contents[1].name})
+        if level == 0:
+            return
+
+        try:
+            contents = [p for p in current_path.iterdir()
+                        if p.name not in ignore_files_folders and
+                        not any(fnmatch.fnmatch(p.name, pat) for pat in ignore_match)]
+        except PermissionError:
+            return
+
+        # At root: folders first, then files (both sorted)
+        if is_root:
+            dirs = sorted([p for p in contents if p.is_dir()], key=sort_key)
+            non_dirs = sorted([p for p in contents if not p.is_dir()], key=sort_key)
+            contents = dirs + non_dirs
+        else:
+            contents = sorted(contents, key=sort_key)
+
         pointers = [tee] * (len(contents) - 1) + [last]
         for pointer, path in zip(pointers, contents):
+            line = prefix + pointer + path.name
+            yield line
+
             if path.is_dir():
-                yield prefix + pointer + path.name
                 directories += 1
-                extension = branch if pointer == tee else space 
-                yield from inner(path, prefix=prefix+extension, level=level-1)
+                extension = branch if pointer == tee else space
+                yield from inner(path, prefix=prefix + extension, level=level - 1)
             elif not limit_to_directories:
-                yield prefix + pointer + path.name
                 files += 1
-    print_list.append(".")
-    iterator = inner(dir_path, level=level)
+
+    # Generate tree body
+    iterator = inner(dir_path, level=level, is_root=True)
     for line in islice(iterator, length_limit):
-        print_list.append(line)
+        print_list.append(escape(line))
+
     if next(iterator, None):
-        print_list.append(f'... length_limit, {length_limit}, reached, counted:')
-    print_list.append(f'\n{directories} directories' + (f', {files} files' if files else ''))
-    br = "<br>"
+        print_list.append(f"... length_limit, {length_limit}, reached, counted:")
+
+    print_list.append(f"\n{directories} directories" + (f", {files} files" if files else ""))
+    print_list.append(".")  # Root at the end
+
     return HTML(f"""
-        <div>
-            <details><summary style='cursor: pointer;'>Directory file tree</summary>
-            <pre><code>{"<br>".join(print_list)}
-            </pre></code>
-            </details>
-        </div>      
-        """)
+    <div>
+        <details><summary style='cursor: pointer;'><kbd>Directory file tree</kbd></summary>
+        <pre><code>{"<br>".join(print_list)}</code></pre>
+        </details>
+    </div>      
+    """)
+
 
 def record_preview_hll(file: Path, num: int = 0):
     """Get record preview for hll data"""
