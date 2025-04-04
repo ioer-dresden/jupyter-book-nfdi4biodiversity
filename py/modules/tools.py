@@ -1,43 +1,51 @@
-""" A number of helper tools to reduce code in the training materials
-
-    Source: https://gitlab.hrz.tu-chemnitz.de/s7398234--tu-dresden.de/base_modules/
 """
-import os
-import io
-import csv
-import numpy as np
-import warnings
-import requests
-import pandas as pd
-import geopandas as gp
-import zipfile
-import shutil
-import pkg_resources
-import platform
-import fnmatch
-import matplotlib.pyplot as plt
+tools.py – A set of tools to help reduce and share code in geospatial analysis with JupyterLab notebooks.
+
+Author: Dr.-Ing. Alexander Dunkel
+License: MIT License
+Source: https://gitlab.hrz.tu-chemnitz.de/s7398234--tu-dresden.de/base_modules/
+"""
+
+# --- Standard Library ---
 import base64
-import geoviews as gv
+import csv
+import fnmatch
+import io
+import os
+import platform
+import shutil
 import textwrap
-import mapclassify as mc
-from PIL import Image
-from cartopy import crs
+import warnings
+import zipfile
+from collections import namedtuple
+from datetime import date
 from itertools import islice
 from pathlib import Path
-from collections import namedtuple
-from IPython.display import clear_output
-from typing import List, Optional, Dict, Tuple
-from IPython.display import HTML, display
-from IPython.display import Markdown as md
-from datetime import date
-from adjustText import adjust_text
-from matplotlib.font_manager import FontProperties
-from matplotlib import font_manager
-from pyproj import Transformer
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
-OUTPUT = Path.cwd().parents[0] / "out"
+# --- Third-Party Libraries ---
+import geopandas as gp
+import matplotlib.pyplot as plt
+import mapclassify as mc
+import numpy as np
+import pandas as pd
+import pkg_resources
+import requests
+from PIL import Image
+from adjustText import adjust_text
+from cartopy import crs
+from matplotlib import font_manager
+from matplotlib.font_manager import FontProperties
+from pyproj import Transformer
+import geoviews as gv
 
+# --- Jupyter-Specific ---
+from IPython.display import HTML, Markdown as md, clear_output, display
+from html import escape
+
+# --- Globals ---
+OUTPUT = Path.cwd().parents[0] / "out"
 class DbConn(object):
 
     def __init__(self, db_conn):
@@ -408,65 +416,84 @@ def package_report(root_packages: List[str], python_version = True):
         '''
         ))
 
-def tree(dir_path: Path, level: int=-1, limit_to_directories: bool=False,
-         length_limit: int=1000, ignore_files_folders=None, ignore_match=None):
-    """Given a directory Path object print a visual tree structure
-    Source: https://stackoverflow.com/a/59109706/4556479
+def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
+         length_limit: int = 1000, ignore_files_folders=None, ignore_match=None,
+         sort_key=lambda x: x.name.lower()):
     """
-    dir_path = Path(dir_path) # accept string coerceable to Path
+    Pretty-print a visual tree structure of the directory in a Jupyter notebook,
+    with root-level folders listed before files.
+    """
+    dir_path = Path(dir_path)
     files = 0
     directories = 0
-    space =  '    '
+
+    space = '    '
     branch = '│   '
-    # pointers:
-    tee =    '├── '
-    last =   '└── '
+    tee = '├── '
+    last = '└── '
+
     print_list = []
-    always_ignore_files_folders = [".git", ".ipynb_checkpoints", "__pycache__", "__init__.py", "*.bak"]
+
+    always_ignore = {".git", ".ipynb_checkpoints", "__pycache__", "__init__.py"}
     if ignore_files_folders is None:
-        ignore_files_folders = always_ignore_files_folders
+        ignore_files_folders = always_ignore
     else:
-        ignore_files_folders += always_ignore_files_folders
+        ignore_files_folders = set(ignore_files_folders) | always_ignore
+
     if ignore_match is None:
-        ignore_match = ["_*", "*.pyc", "*.bak"] 
-    def inner(dir_path: Path, prefix: str='', level=-1):
+        ignore_match = ["_*", "*.pyc", "*.bak"]
+
+    def inner(current_path: Path, prefix: str = '', level: int = -1, is_root=False):
         nonlocal files, directories
-        if not level: 
-            return # 0, stop iterating
-        if limit_to_directories:
-            contents = [d for d in dir_path.iterdir() if
-                        d.name not in ignore_files_folders]
-        else: 
-            contents = [d for d in dir_path.iterdir()
-                        if d.name not in ignore_files_folders and
-                        not any(fnmatch.fnmatch(d, pat) for pat in ignore_match)]
-        # print(f'{contents[1].name})
+        if level == 0:
+            return
+
+        try:
+            contents = [p for p in current_path.iterdir()
+                        if p.name not in ignore_files_folders and
+                        not any(fnmatch.fnmatch(p.name, pat) for pat in ignore_match)]
+        except PermissionError:
+            return
+
+        # At root: folders first, then files (both sorted)
+        if is_root:
+            dirs = sorted([p for p in contents if p.is_dir()], key=sort_key)
+            non_dirs = sorted([p for p in contents if not p.is_dir()], key=sort_key)
+            contents = dirs + non_dirs
+        else:
+            contents = sorted(contents, key=sort_key)
+
         pointers = [tee] * (len(contents) - 1) + [last]
         for pointer, path in zip(pointers, contents):
+            line = prefix + pointer + path.name
+            yield line
+
             if path.is_dir():
-                yield prefix + pointer + path.name
                 directories += 1
-                extension = branch if pointer == tee else space 
-                yield from inner(path, prefix=prefix+extension, level=level-1)
+                extension = branch if pointer == tee else space
+                yield from inner(path, prefix=prefix + extension, level=level - 1)
             elif not limit_to_directories:
-                yield prefix + pointer + path.name
                 files += 1
-    print_list.append(".")
-    iterator = inner(dir_path, level=level)
+
+    # Generate tree body
+    iterator = inner(dir_path, level=level, is_root=True)
     for line in islice(iterator, length_limit):
-        print_list.append(line)
+        print_list.append(escape(line))
+
     if next(iterator, None):
-        print_list.append(f'... length_limit, {length_limit}, reached, counted:')
-    print_list.append(f'\n{directories} directories' + (f', {files} files' if files else ''))
-    br = "<br>"
+        print_list.append(f"... length_limit, {length_limit}, reached, counted:")
+
+    print_list.append(f"\n{directories} directories" + (f", {files} files" if files else ""))
+    print_list.append(".")  # Root at the end
+
     return HTML(f"""
-        <div>
-            <details><summary style='cursor: pointer;'>Directory file tree</summary>
-            <pre><code>{"<br>".join(print_list)}
-            </pre></code>
-            </details>
-        </div>      
-        """)
+    <div>
+        <details><summary style='cursor: pointer;'><kbd>Directory file tree</kbd></summary>
+        <pre><code>{"<br>".join(print_list)}</code></pre>
+        </details>
+    </div>      
+    """)
+
 
 def record_preview_hll(file: Path, num: int = 0):
     """Get record preview for hll data"""
