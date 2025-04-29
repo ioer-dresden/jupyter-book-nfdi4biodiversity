@@ -1,6 +1,60 @@
 # CHANGELOG
 
 
+## v1.4.0 (2025-04-29)
+
+### Bug Fixes
+
+- Change to binder hub url
+  ([`c217781`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c21778122eaafbf16f016e3d5b53df929fdc877b))
+
+According to:
+  https://jupyterjsc.pages.jsc.fz-juelich.de/docs/jupyterjsc/users/jupyterlab/repo2docker/
+
+- Make dependency preparation script environment-agnostic
+  ([`57b11c5`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/57b11c554391f5255b78f46c17f66dc8c0e7c642))
+
+Preparation for Binder/JupyterHub notebook setup
+
+- Merge conflict, unfinished rebase
+  ([`93f25e1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/93f25e1d4f1fc10668392db8aadd750cda9b2abb))
+
+- Move data retrieval to first notebook of reference documentation
+  ([`1f12320`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1f12320cb1d867920315aebc05524ca61223a7b5))
+
+This partly solves #28. There is still need to update all other notebooks of the reference
+  documentation.
+
+- Place anchor above header
+  ([`07edc41`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/07edc4111e214590d8e104657132fa502ecc33ac))
+
+- Use color logo FDZ in dark mode, too (Nicolaas)
+  ([`1fdd65f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1fdd65f088c0cf2115f639bd3389dc1319e7b1dd))
+
+### Code Style
+
+- Fix admonition titles
+  ([`7c592c6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7c592c62446e0f15bbbc7ac88de5028faba9009f))
+
+### Documentation
+
+- Update notebook 202 content
+  ([`ba3b7ee`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ba3b7ee3a41fe4f992e3e64482ff719255104e8c))
+
+### Features
+
+- Add Jupyter4NFDI Hub integration documentation
+  ([`9ce36a1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9ce36a1737ffdc82221b764a549945f9c48279b0))
+
+- Enable Jupyter4NFDI hub link in interface
+  ([`04807e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/04807e3b988cb979eb7106302a7d90beecb8edae))
+
+### Refactoring
+
+- Update license year
+  ([`ed41c49`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ed41c49ece0e455fe292777f2a911401e1651cb5))
+
+
 ## v1.3.0 (2025-04-04)
 
 ### Bug Fixes
