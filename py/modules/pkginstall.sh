@@ -2,31 +2,33 @@
 
 ################################################################################
 #
-# Shell script to install python packages for Carto-Lab Docker base environment "worker_env"
-# - provide list of package names as string, separated by space character
-# - will check folder exists before installation, to reduce processing time
-# - will output version of installed packages afterwards
+# Environment-agnostic Python package installer.
+# - Use the Python binary passed as first argument
+# - Check if each package is available; install it if not
 #
 ################################################################################
 
-# Exit as soon as a command fails
 set -e
-
-# Accessing an empty variable will yield an error
 set -u
 
-WORKER_PATH="/opt/conda/envs/worker_env/bin/python"
-PACKAGE_PATH="/opt/conda/envs/worker_env/lib/python3.9/site-packages/"
+PYTHON_BIN="$1"
+shift  # Shift arguments so $@ now contains only packages
 
-pkgs=( $1 )
-for i in "${!pkgs[@]}"; do
-    if [ ! -d "${PACKAGE_PATH}${pkgs[i]}" ]
-    then
-        /opt/conda/envs/worker_env/bin/python -m pip install "${pkgs[i]}" >&- 2>&-
-        pkgversion=$(/opt/conda/envs/worker_env/bin/python -c "import ${pkgs[i]//-/_};print(${pkgs[i]//-/_}.__version__);")
-        echo "Installed ${pkgs[i]} ${pkgversion}."
-        continue
+pkgs=( "$@" )
+
+for pkg in "${pkgs[@]}"; do
+    import_name="${pkg//-/_}"
+    if "$PYTHON_BIN" -c "import ${import_name}" 2>/dev/null; then
+        version=$("$PYTHON_BIN" -c "import ${import_name}; print(getattr(${import_name}, '__version__', 'unknown'))")
+        echo "${pkg} already installed (version ${version})."
     else
-        echo "${pkgs[i]} already installed."
+        echo "Installing ${pkg}..."
+        "$PYTHON_BIN" -m pip install "$pkg" --quiet
+        if "$PYTHON_BIN" -c "import ${import_name}" 2>/dev/null; then
+            version=$("$PYTHON_BIN" -c "import ${import_name}; print(getattr(${import_name}, '__version__', 'unknown'))")
+            echo "Installed ${pkg} ${version}."
+        else
+            echo "Warning: ${pkg} installed but version could not be determined."
+        fi
     fi
 done
