@@ -1,6 +1,29 @@
 # CHANGELOG
 
 
+## v1.5.0 (2025-04-30)
+
+### Bug Fixes
+
+- Compatibility with Jupyter4NFDI Hub
+  ([`bd172ac`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bd172ac5b103cb35455eff0bdcbad77eb3be47ad))
+
+### Continuous Integration
+
+- Fix mermaid-cli (mmdc not found)
+  ([`56cbc37`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/56cbc3771d212dbc77d501b6412135d666e754cb))
+
+### Features
+
+- New header image from Nicolaas
+  ([`89b947e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/89b947e338f7a83fa64945ae04b2728a87c1735f))
+
+### Refactoring
+
+- Update year in copyright footer
+  ([`eaaeb76`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/eaaeb76f4d675420e2b76a9761cd9e7a7b072d9f))
+
+
 ## v1.4.0 (2025-04-29)
 
 ### Bug Fixes
