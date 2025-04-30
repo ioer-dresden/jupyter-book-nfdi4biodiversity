@@ -58,11 +58,16 @@ build-staging:
       - anybadge -l pipeline --value="passed (staging)" --file=pipeline.svg --color=#70A401
       # convert readme to index.html and contributing.md and copy to webroot
       # use intermediate step to include mermaid conversion
-      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
-      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
+      - mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
+      - mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
       - pandoc -v
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
+      # patch launch buttons to show Jupyter4NFDI instead of Binder
+      # - launch_file=$(python -c "import sphinx_book_theme, os; print(os.path.join(os.path.dirname(sphinx_book_theme.__file__), 'header_buttons', 'launch.py'))")
+      # - echo "Patching launch button labels in: $launch_file"
+      # - sed -i 's/"text": "Binder"/"text": "Jupyter4NFDI"/' "$launch_file"
+      # - sed -i 's/"Launch on" \+ " Binder"/"Launch on Jupyter4NFDI"/' "$launch_file"
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
@@ -121,8 +126,8 @@ build:
       - anybadge -l pipeline --value="passed" --file=pipeline.svg --color=#70A401
       # convert readme to index.html and contributing.md and copy to webroot
       # use intermediate step to include mermaid conversion
-      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
-      - npx -p @mermaid-js/mermaid-cli mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
+      - mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
+      - mmdc -p ./.pandoc/puppeteer-config.json -i CONTRIBUTING.md -o CONTRIBUTING.md
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html README.md -o readme.html
       - pandoc --standalone --embed-resource -c readme.css --template .pandoc/readme.html -f gfm -t html CONTRIBUTING.md -o contributing.html
       # create book
