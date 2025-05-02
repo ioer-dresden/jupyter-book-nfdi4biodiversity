@@ -68,6 +68,8 @@ build-staging:
       # - echo "Patching launch button labels in: $launch_file"
       # - sed -i 's/"text": "Binder"/"text": "Jupyter4NFDI"/' "$launch_file"
       # - sed -i 's/"Launch on" \+ " Binder"/"Launch on Jupyter4NFDI"/' "$launch_file"
+      - chmod +x scripts/patch_binder_links.sh
+      - ./scripts/patch_binder_links.sh
       # create book
       - jupyter-book config sphinx .
       - jupyter-book build .
@@ -75,6 +77,7 @@ build-staging:
       - sed -i -e 's|https://training.fdz.ioer.info/version.svg|https://stag.training.fdz.ioer.info/version.svg|g' _build/html/intro.html
       # replace link to staging
       - sed -i -e 's|https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity|https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/tree/staging?ref_type=heads|g' _build/html/intro.html
+      - grep -r 'flavor=xl1nfdi' _build/html || (echo "Binder Patch not applied successfully!" && exit 1)
       # collect artifacts
       - mkdir ._site
       - cp *.svg ._site
