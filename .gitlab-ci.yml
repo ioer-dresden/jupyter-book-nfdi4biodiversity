@@ -77,6 +77,7 @@ build-staging:
       - sed -i -e 's|https://training.fdz.ioer.info/version.svg|https://stag.training.fdz.ioer.info/version.svg|g' _build/html/intro.html
       # replace link to staging
       - sed -i -e 's|https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity|https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/tree/staging?ref_type=heads|g' _build/html/intro.html
+      - grep -r 'flavor=xl1nfdi' _build/html
       # collect artifacts
       - mkdir ._site
       - cp *.svg ._site
