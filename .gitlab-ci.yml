@@ -68,6 +68,7 @@ build-staging:
       # - echo "Patching launch button labels in: $launch_file"
       # - sed -i 's/"text": "Binder"/"text": "Jupyter4NFDI"/' "$launch_file"
       # - sed -i 's/"Launch on" \+ " Binder"/"Launch on Jupyter4NFDI"/' "$launch_file"
+      - chmod +x scripts/patch_binder_links.sh
       - ./scripts/patch_binder_links.sh
       # create book
       - jupyter-book config sphinx .
