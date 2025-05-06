@@ -1,6 +1,166 @@
 # CHANGELOG
 
 
+## v1.5.1 (2025-05-02)
+
+### Bug Fixes
+
+- Add dependencies to notebook 304 check
+  ([`16eafdb`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/16eafdb3dc31b0ef1034738c5f92c3c42fad5620))
+
+- Add missing dependency
+  ([`4bda384`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4bda384b7ad6bd50594cf629078aa91affd51f49))
+
+- Make sure dependencies are available for notebook 202
+  ([`286574b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/286574b9c02e0fbd011d1f431307e34c8ae1cde2))
+
+- Make sure dependencies are available for notebook 203
+  ([`e49e2bd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e49e2bd7615b3c79bfcd6ee7a0a438a83344252c))
+
+- Make sure dependencies are available for notebook 204
+  ([`3a358ce`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3a358ce912da616123e1bbebf7320c58d1c2b3c8))
+
+- Make sure dependencies are available for notebook 305
+  ([`17d3a34`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/17d3a3427f12e5992bad6f0d67975eb79fe2070b))
+
+- Make sure dependencies are available for notebook 306
+  ([`a0bb6c1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a0bb6c1308aca2ee7234f9e9cc0753f498882d2d))
+
+- Make sure dependencies are available for notebook 307
+  ([`1c47838`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1c4783859a5c8c49a6cb22652a5072f35fd2bc17))
+
+- Make sure dependencies are available for notebook 308
+  ([`81ec48b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/81ec48b8e19c759a8bff7b408b62029d9a2dda13))
+
+- Make sure dependencies are available for notebook 309
+  ([`1bdd375`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1bdd375b53de32b46ad5bdf94895efb46f482528))
+
+- Make sure dependencies are available for notebook 310
+  ([`6f303a6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/6f303a6f20540478fe24758a1b3b3e664cf74116))
+
+- Make sure OUTPUT path exists, if not create it
+  ([`1c6913e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1c6913ebe885969342cefdea245092b2f113cde5))
+
+- Make sure that dependencies are installed
+  ([`3832b99`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3832b9999618630d45393abd4350c7661593d966))
+
+- Shapefiles not extracted
+  ([`de53336`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/de53336218f1bbb8f55bd4a986fc062812e26c77))
+
+### Continuous Integration
+
+- Binder patch not working
+  ([`59e9a42`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/59e9a42e3f7d292cedbc1f923acc9d75c1e0f56c))
+
+- Fix indentation error§
+  ([`b958059`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b958059d80c079eb517ee0413bb9801c5e30728a))
+
+- Fix launch puttons with flavor parameter (cloud memory)
+  ([`81cee2e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/81cee2e20a5a6a76d55fe462e00b8f6356ed65dc))
+
+- Fix launch.py patch
+  ([`acf4a93`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/acf4a9398eae9c38bd83b9023d93af0336dc84f9))
+
+- Fix launch.py patch
+  ([`bed22f8`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bed22f85478d0dd9c337d373237528d705a583de))
+
+- Fix name
+  ([`d5d6d06`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d5d6d06970193b13d50d463c86a61d14e2feda24))
+
+- Fix permission issues
+  ([`cdc50ba`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cdc50bab5b83be3a238bdfd26ad66989533907eb))
+
+### Documentation
+
+- Add ioerDATA test warning note
+  ([`2052d66`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2052d66df8490ce6b6cbc5860b009f10a485c1ef))
+
+- Add working on a copy of data note
+  ([`63bf3ab`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/63bf3ab98de92726f75d5fc59196631fc38b8e70))
+
+### Refactoring
+
+- Correct upstream name in zip file
+  ([`3433c6a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3433c6a82be102f522f575fd64c196e39fd02927))
+
+
+## v1.5.0 (2025-04-30)
+
+### Bug Fixes
+
+- Compatibility with Jupyter4NFDI Hub
+  ([`bd172ac`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bd172ac5b103cb35455eff0bdcbad77eb3be47ad))
+
+### Continuous Integration
+
+- Fix mermaid-cli (mmdc not found)
+  ([`56cbc37`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/56cbc3771d212dbc77d501b6412135d666e754cb))
+
+### Features
+
+- New header image from Nicolaas
+  ([`89b947e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/89b947e338f7a83fa64945ae04b2728a87c1735f))
+
+### Refactoring
+
+- Update year in copyright footer
+  ([`eaaeb76`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/eaaeb76f4d675420e2b76a9761cd9e7a7b072d9f))
+
+
+## v1.4.0 (2025-04-29)
+
+### Bug Fixes
+
+- Change to binder hub url
+  ([`c217781`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c21778122eaafbf16f016e3d5b53df929fdc877b))
+
+According to:
+  https://jupyterjsc.pages.jsc.fz-juelich.de/docs/jupyterjsc/users/jupyterlab/repo2docker/
+
+- Make dependency preparation script environment-agnostic
+  ([`57b11c5`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/57b11c554391f5255b78f46c17f66dc8c0e7c642))
+
+Preparation for Binder/JupyterHub notebook setup
+
+- Merge conflict, unfinished rebase
+  ([`93f25e1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/93f25e1d4f1fc10668392db8aadd750cda9b2abb))
+
+- Move data retrieval to first notebook of reference documentation
+  ([`1f12320`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1f12320cb1d867920315aebc05524ca61223a7b5))
+
+This partly solves #28. There is still need to update all other notebooks of the reference
+  documentation.
+
+- Place anchor above header
+  ([`07edc41`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/07edc4111e214590d8e104657132fa502ecc33ac))
+
+- Use color logo FDZ in dark mode, too (Nicolaas)
+  ([`1fdd65f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1fdd65f088c0cf2115f639bd3389dc1319e7b1dd))
+
+### Code Style
+
+- Fix admonition titles
+  ([`7c592c6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7c592c62446e0f15bbbc7ac88de5028faba9009f))
+
+### Documentation
+
+- Update notebook 202 content
+  ([`ba3b7ee`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ba3b7ee3a41fe4f992e3e64482ff719255104e8c))
+
+### Features
+
+- Add Jupyter4NFDI Hub integration documentation
+  ([`9ce36a1`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9ce36a1737ffdc82221b764a549945f9c48279b0))
+
+- Enable Jupyter4NFDI hub link in interface
+  ([`04807e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/04807e3b988cb979eb7106302a7d90beecb8edae))
+
+### Refactoring
+
+- Update license year
+  ([`ed41c49`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ed41c49ece0e455fe292777f2a911401e1651cb5))
+
+
 ## v1.3.0 (2025-04-04)
 
 ### Bug Fixes
