@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v1.6.0 (2025-05-07)
+
+### Bug Fixes
+
+- Max width of video
+  ([`5d7c647`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5d7c647e7e0960dd7e2fa25f8cede7639542dbde))
+
+- Update Binder Link graphic to match Jupyter4NFDI
+  ([`305ef0f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/305ef0f10f2b7f117e35fe115a679608365d9f1e))
+
+### Continuous Integration
+
+- Apply patch to main, too
+  ([`b896fa0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b896fa008311e7582c49fc3736ffb3d5aa1953c9))
+
+### Features
+
+- Add video showing how to run notebooks in Jupyter4NFDI Hub
+  ([`792abbb`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/792abbb4fa1a0c3856b880c8904ad482ca9878fa))
+
+
 ## v1.5.1 (2025-05-02)
 
 ### Bug Fixes
