@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.6.2 (2025-05-12)
+
+### Bug Fixes
+
+- Load missing tools module
+  ([`922e3af`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/922e3af62b2c8f292fabd74ef0d4081fb3bd82f9))
+
+
 ## v1.6.1 (2025-05-12)
 
 ### Bug Fixes
