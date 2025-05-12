@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v1.6.2 (2025-05-12)
+
+### Bug Fixes
+
+- Load missing tools module
+  ([`922e3af`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/922e3af62b2c8f292fabd74ef0d4081fb3bd82f9))
+
+
+## v1.6.1 (2025-05-12)
+
+### Bug Fixes
+
+- Add cache for Monitor API queries
+  ([`32578c2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/32578c23938ba61b5d3604b1f7b0eacbd9c2a553))
+
+- Load API cache if species did not change (make notebook reproducible on NFDI hub)
+  ([`54078e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/54078e3877f0f64d6f6ee9a41f20a9bf633dfbea))
+
+### Documentation
+
+- Add cross-ref for monitor API key registration
+  ([`bc9e738`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bc9e738bc98ed2f2cc0c5dcccc33a1d531e15418))
+
+
 ## v1.6.0 (2025-05-07)
 
 ### Bug Fixes
