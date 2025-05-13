@@ -1,22 +1,21 @@
-# CHANGELOG
-
 {% if context.history.unreleased | length > 0 %}
 ## Unreleased
-{% for type_, commits in context.history.unreleased | dictsort if type_ != "unknown" -%}
+{% for type_, commits in context.history.unreleased | dictsort if type_ != "unknown" %} {# Removed leading hyphen #}
 ### {{ type_ | capitalize }}
-{%- for commit in commits if type_ != "unknown" %}
+{% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
    Original template used commit.descriptions[0] here.
    We replace it with commit.subject.
-   Keeping the capitalize filter as it was in the original template for this line.
+   Keeping the capitalize filter for consistency with the original line formatting,
+   but it won't do anything if commit.subject is already capitalized or empty.
 #}
-{% if commit.scope -%}
+{% if commit.scope %} {# Removed trailing hyphen #}
 - **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
-{% else -%}
+{% else %} {# Removed trailing hyphen #}
 - {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
-   Removed the block that iterated through commit.descriptions[1:]
+   Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
    {%- if commit.descriptions | length > 1 %}
      {%- for description in commit.descriptions[1:] %}
        - {{ description }}
@@ -24,32 +23,33 @@
    {%- endif %}
 #}
 {#
-   Removed the block that rendered breaking changes from the body
+   Removed the block that rendered breaking changes from the body footer
    {%- if commit.breaking_descriptions | length > 0 %}
        **BREAKING CHANGES:** {{ commit.breaking_descriptions | join(" ") }}
    {%- endif %}
 #}
-{%- endfor %}
-{% endfor %}
+{% endfor %} {# Removed leading hyphen #}
+{% endfor %} {# Removed leading hyphen #}
 {% endif %}
 
-{% for version, release in context.history.released.items() -%}
+{% for version, release in context.history.released.items() %} {# Removed trailing hyphen #}
 ## {{ version.as_semver_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
-{%- for type_, commits in release["elements"] | dictsort if type_ != "unknown" %}
+{% for type_, commits in release["elements"] | dictsort if type_ != "unknown" %} {# Removed leading hyphen #}
 ### {{ type_ | capitalize }}
-{%- for commit in commits if type_ != "unknown" %}
+{% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
    Original template used commit.descriptions[0] here.
    We replace it with commit.subject.
-   Keeping the capitalize filter as it was in the original template for this line.
+   Keeping the capitalize filter for consistency with the original line formatting,
+   but it won't do anything if commit.subject is already capitalized or empty.
 #}
-{% if commit.scope -%}
+{% if commit.scope %} {# Removed trailing hyphen #}
 - **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
-{% else -%}
+{% else %} {# Removed trailing hyphen #}
 - {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
-   Removed the block that iterated through commit.descriptions[1:]
+   Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
    {%- if commit.descriptions | length > 1 %}
      {%- for description in commit.descriptions[1:] %}
        - {{ description }}
@@ -57,28 +57,28 @@
    {%- endif %}
 #}
 {#
-   Removed the block that rendered breaking changes from the body
+   Removed the block that rendered breaking changes from the body footer
    {%- if commit.breaking_descriptions | length > 0 %}
        **BREAKING CHANGES:** {{ commit.breaking_descriptions | join(" ") }}
    {%- endif %}
 #}
-{%- endfor %}
-{% endfor %}
-{%- if "breaking" in release["elements"] %}
+{% endfor %} {# Removed leading hyphen #}
+{% endfor %} {# Removed leading hyphen #}
+{%- if "breaking" in release["elements"] %} {# Keeping leading hyphen on this block for layout control #}
 ### BREAKING CHANGES
 {%- for type_, commits in release["elements"] | dictsort if type_ == "breaking" %}
-{%- for commit in commits %}
+{% for commit in commits %} {# Removed leading hyphen #}
 {#
    Original template used commit.breaking_descriptions.
    We replace it with commit.subject.
    Prepending "BREAKING CHANGE:" for clarity for this type.
 #}
-{% if commit.scope -%}
-- **{{ commit.scope }}**: BREAKING CHANGE: {{ commit.subject }}
-{% else -%}
-- BREAKING CHANGE: {{ commit.subject }}
+{% if commit.scope %} {# Removed trailing hyphen #}
+- **{{ commit.scope }}**: BREAKING CHANGE: {{ commit.subject }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
+{% else %} {# Removed trailing hyphen #}
+- BREAKING CHANGE: {{ commit.subject }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
 {% endif %}
-{%- endfor %}
-{%- endfor %}
+{% endfor %} {# Removed leading hyphen #}
+{% endfor %} {# Removed leading hyphen #}
 {% endif %}
 {% endfor %}
