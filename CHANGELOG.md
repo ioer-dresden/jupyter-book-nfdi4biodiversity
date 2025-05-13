@@ -1,12 +1,95 @@
 # CHANGELOG
 
 
-## v1.6.2 (2025-05-12)
+## v1.6.3 (2025-05-13)
 
 ### Bug Fixes
 
-- Load missing tools module
-  ([`922e3af`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/922e3af62b2c8f292fabd74ef0d4081fb3bd82f9))
+- Add introduction and motivation to notebooks 501 and 502
+  ([`c72b63f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c72b63f601373c6d82f24a7fd777eef84a3b3367))
+
+fixes #34, fixes #33
+
+- Add missing reference bib
+  ([`0f41cc6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/0f41cc6ff711f6eb24ba259531275802e6ddfa2c))
+
+- Add missing references section
+  ([`1c8ea4b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1c8ea4bace07226349e1fbe6f4c356364be1e2ea))
+
+- Make notebook 205 compatible with Jupyter4NFDI hub
+  ([`903d375`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/903d375dd827657a8014d05d02369c6a13c7905d))
+
+This was challenging to fix because the JupyterHub differs quite a bit from the CartoLab Docker
+  environment. I managed to move the code forward so that the notebook now should run in both
+  environments. But I also stumbled across an error in the cell magic with the <code>7z</code>
+  command (TokenError, likely a regression introduced by a new JupyterLab version.
+
+I fixed this by using the %%bash cell magic - this does not show the time, unfortunately. In
+  JupyterHub, this may still produce errors because of missing files or folders - depending on
+  whether the user ran the complete training materials or not. But this is expected. I am fine now
+  with this notebook, if it works with CartoLab and JupyterHub.
+
+For the future, any changes and updates will need to be carefully considered here because this
+  notebook makes use of a lot of bash commands, which will more easily break because notebooks are
+  primarily Python oriented.
+
+I wanted to keep the bash commands because they are significantly shorter and less verbose than the
+  Python alternatives, which is preferable for beginners (and also reduces the length of notebooks
+  and the need to explain all the peculiar Python code around zipping and accessing git version
+  strings etc.).
+
+fixes #29
+
+- Markdown formatting
+  ([`f7d49f5`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f7d49f5df3d9aace303e5fdac244af4c9aa58524))
+
+- Video shown in HTML, but not in notebook itself
+  ([`e98c169`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e98c1698721a45803ab8e2849052a5c4b870c734))
+
+cause: Jupyter sanitizing HTML <video> tag in *.ipynb
+
+fixes #32
+
+### Code Style
+
+- Hide input cell
+  ([`f72994f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f72994f954df4491ecc1e4c9107b6488354e1f1a))
+
+### Documentation
+
+- Add note for Gitlab and Github
+  ([`515ec06`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/515ec06b327cb1e48ed0ce7905ab91e99e6080dd))
+
+- Minor rephrase (be more specific)
+  ([`b0eb969`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b0eb96907f1877f1ca0c656c5c5e1ee4d054c3d9))
+
+- Rephrase admonition
+  ([`74aa495`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/74aa4953d2895608c4d063e44beba10037fb15d7))
+
+- Rephrase and add explanation for how to use install script
+  ([`53b7eeb`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/53b7eebd74787333b8f3bf7809f637680c1f9905))
+
+### Refactoring
+
+- Add explicit print to show output
+  ([`a49f443`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a49f443636c0d3180d445e1267c87e595b0dfffe))
+
+- Do not use "API" when referring to a URL
+  ([`f9cf8bf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f9cf8bf25186fa85a97eaba651cea161fc272007))
+
+HTTP protocol can be seen an API, but it is rather unusual to treat URLs as "APIs". We should be
+  more specific and call it a URL.
+
+fixes #31
+
+- Hide input
+  ([`311d200`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/311d200b674ea9ba3f7e1f1dbe12c97e32a86c42))
+
+- Remove deprecated mp4 videos (converted to webp)
+  ([`c30e178`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c30e178589ef98ab5958429a7410cc90742d8fbb))
+
+
+## v1.6.2 (2025-05-12)
 
 
 ## v1.6.1 (2025-05-12)
@@ -18,6 +101,14 @@
 
 - Load API cache if species did not change (make notebook reproducible on NFDI hub)
   ([`54078e3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/54078e3877f0f64d6f6ee9a41f20a9bf633dfbea))
+
+- Load missing tools module
+  ([`922e3af`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/922e3af62b2c8f292fabd74ef0d4081fb3bd82f9))
+
+### Code Style
+
+- Hide cell; update notebook with API key available
+  ([`2ae56ba`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2ae56ba1c1239c36baf47e9f6333eec1e637878a))
 
 ### Documentation
 
