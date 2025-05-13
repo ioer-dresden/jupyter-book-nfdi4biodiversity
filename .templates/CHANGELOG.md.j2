@@ -1,18 +1,18 @@
+# CHANGELOG
+
 {% if context.history.unreleased | length > 0 %}
 ## Unreleased
 {% for type_, commits in context.history.unreleased | dictsort if type_ != "unknown" %} {# Removed leading hyphen #}
 ### {{ type_ | capitalize }}
 {% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
-   Original template used commit.descriptions[0] here.
-   We replace it with commit.subject.
-   Keeping the capitalize filter for consistency with the original line formatting,
-   but it won't do anything if commit.subject is already capitalized or empty.
+   Replacing commit.subject with the first line of the raw message.
+   Keeping the capitalize filter as it was on the commit.subject line.
 #}
 {% if commit.scope %} {# Removed trailing hyphen #}
-- **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+- **{{ commit.scope }}**: {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% else %} {# Removed trailing hyphen #}
-- {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+- {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
    Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
@@ -38,15 +38,13 @@
 ### {{ type_ | capitalize }}
 {% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
-   Original template used commit.descriptions[0] here.
-   We replace it with commit.subject.
-   Keeping the capitalize filter for consistency with the original line formatting,
-   but it won't do anything if commit.subject is already capitalized or empty.
+   Replacing commit.subject with the first line of the raw message.
+   Keeping the capitalize filter as it was on the commit.subject line.
 #}
 {% if commit.scope %} {# Removed trailing hyphen #}
-- **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+- **{{ commit.scope }}**: {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% else %} {# Removed trailing hyphen #}
-- {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+- {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
    Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
@@ -70,13 +68,14 @@
 {% for commit in commits %} {# Removed leading hyphen #}
 {#
    Original template used commit.breaking_descriptions.
-   We replace it with commit.subject.
+   We replace it with the first line of the raw message.
    Prepending "BREAKING CHANGE:" for clarity for this type.
+   Not capitalizing the first line here, consistent with the original template's handling of breaking changes.
 #}
 {% if commit.scope %} {# Removed trailing hyphen #}
-- **{{ commit.scope }}**: BREAKING CHANGE: {{ commit.subject }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
+- **{{ commit.scope }}**: BREAKING CHANGE: {{ commit.message.split('\n')[0] }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
 {% else %} {# Removed trailing hyphen #}
-- BREAKING CHANGE: {{ commit.subject }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
+- BREAKING CHANGE: {{ commit.message.split('\n')[0] }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }})) {# Added hash/link back here for breaking changes #}
 {% endif %}
 {% endfor %} {# Removed leading hyphen #}
 {% endfor %} {# Removed leading hyphen #}
