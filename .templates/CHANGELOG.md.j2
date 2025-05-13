@@ -1,0 +1,84 @@
+# CHANGELOG
+
+{% if context.history.unreleased | length > 0 %}
+## Unreleased
+{% for type_, commits in context.history.unreleased | dictsort if type_ != "unknown" -%}
+### {{ type_ | capitalize }}
+{%- for commit in commits if type_ != "unknown" %}
+{#
+   Original template used commit.descriptions[0] here.
+   We replace it with commit.subject.
+   Keeping the capitalize filter as it was in the original template for this line.
+#}
+{% if commit.scope -%}
+- **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% else -%}
+- {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endif %}
+{#
+   Removed the block that iterated through commit.descriptions[1:]
+   {%- if commit.descriptions | length > 1 %}
+     {%- for description in commit.descriptions[1:] %}
+       - {{ description }}
+     {%- endfor %}
+   {%- endif %}
+#}
+{#
+   Removed the block that rendered breaking changes from the body
+   {%- if commit.breaking_descriptions | length > 0 %}
+       **BREAKING CHANGES:** {{ commit.breaking_descriptions | join(" ") }}
+   {%- endif %}
+#}
+{%- endfor %}
+{% endfor %}
+{% endif %}
+
+{% for version, release in context.history.released.items() -%}
+## {{ version.as_semver_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{%- for type_, commits in release["elements"] | dictsort if type_ != "unknown" %}
+### {{ type_ | capitalize }}
+{%- for commit in commits if type_ != "unknown" %}
+{#
+   Original template used commit.descriptions[0] here.
+   We replace it with commit.subject.
+   Keeping the capitalize filter as it was in the original template for this line.
+#}
+{% if commit.scope -%}
+- **{{ commit.scope }}**: {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% else -%}
+- {{ commit.subject | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endif %}
+{#
+   Removed the block that iterated through commit.descriptions[1:]
+   {%- if commit.descriptions | length > 1 %}
+     {%- for description in commit.descriptions[1:] %}
+       - {{ description }}
+     {%- endfor %}
+   {%- endif %}
+#}
+{#
+   Removed the block that rendered breaking changes from the body
+   {%- if commit.breaking_descriptions | length > 0 %}
+       **BREAKING CHANGES:** {{ commit.breaking_descriptions | join(" ") }}
+   {%- endif %}
+#}
+{%- endfor %}
+{% endfor %}
+{%- if "breaking" in release["elements"] %}
+### BREAKING CHANGES
+{%- for type_, commits in release["elements"] | dictsort if type_ == "breaking" %}
+{%- for commit in commits %}
+{#
+   Original template used commit.breaking_descriptions.
+   We replace it with commit.subject.
+   Prepending "BREAKING CHANGE:" for clarity for this type.
+#}
+{% if commit.scope -%}
+- **{{ commit.scope }}**: BREAKING CHANGE: {{ commit.subject }}
+{% else -%}
+- BREAKING CHANGE: {{ commit.subject }}
+{% endif %}
+{%- endfor %}
+{%- endfor %}
+{% endif %}
+{% endfor %}

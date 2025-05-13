@@ -9,6 +9,9 @@ branch = "main"
 [tool.semantic_release.branches.main]
 match = "(main)"
 
+[tool.semantic_release.changelog]
+template_dir = ".templates"
+
 [tool.semantic_release.remote]
 name = "origin"
 type = "gitlab"
