@@ -18,6 +18,9 @@ This project is a collaborative team effort, and we want to make contributing as
    * [4.6 Wait for the website to update](#wait-for-the-website-to-update)
 - [5. Git best practices](#git-best-practices)
 - [6. Semantic Versioning](#semantic-versioning)
+- [6. Semantic Versioning](#semantic-versioning)
+- [7. Formatting conventions](#formatting-conventions)
+
 
 (heading-target)=
 # 1. Overview of files
