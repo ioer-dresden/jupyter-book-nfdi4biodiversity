@@ -3,6 +3,95 @@
 
 
  
+## v1.6.7 (2025-05-22)
+ 
+### Bug fixes
+ 
+
+ 
+- Fix: another typo ([`25acaca`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/25acaca12d92cc69b3f06071f091adb5f41fbf9c))
+
+
+
+ 
+
+ 
+- Fix: typo ([`545048b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/545048b6b7abf5fe214dfcee322fbe2e7f488f9d))
+
+
+
+ 
+ 
+### Documentation
+ 
+
+ 
+- Docs: add missing toc entry ([`d5b3af0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d5b3af0c257348f772e7fc8c40e6d50c9d4c21d5))
+
+
+
+ 
+
+ 
+- Docs: add link to contribution section ([`5a09171`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5a09171f6fc0a4788123f86f3adecbb606c92368))
+
+
+
+ 
+
+ 
+- Docs: fix cross-link ([`f507290`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f507290551c299143ac0bd9319559d0f148d8390))
+
+
+
+ 
+
+ 
+- Docs: add link to conventional commits 1.0.0 specification ([`dd14a6a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/dd14a6ae06fc819f24429c7d5efd624aabeb54c2))
+
+
+
+ 
+
+ 
+- Docs: fix typo ([`c40dce5`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c40dce5ebf097cd9cb0c99f4009f29373e9aca28))
+
+
+
+ 
+
+ 
+- Docs: add explanation for params from requests.get() ([`8b2beaf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8b2beaf1fd09fa0c8e008610dbf2bb853e376a6f))
+
+
+
+ 
+
+ 
+- Docs: explain where the gbif dataset key comes from ([`376f9d4`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/376f9d4322eb20ee363a7cfc5c41bb6f5b3584ae))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+ 
+- Refactor: code style ([`cb10e22`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cb10e2238eda54f61cdbd385d662bc714bb12e67))
+
+
+
+ 
+
+ 
+- Refactor: remove duplicate module load ([`7d703f2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7d703f28e8296cddfedfc93ec2b1f2bb2fe397ab))
+
+
+
+ 
+ 
+ 
 ## v1.6.6 (2025-05-13)
  
 ### Bug fixes
