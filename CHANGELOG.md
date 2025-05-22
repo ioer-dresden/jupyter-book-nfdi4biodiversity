@@ -2,6 +2,21 @@
 
 
 
+
+
+ 
+## v1.6.8 (2025-05-22)
+ 
+### Bug fixes
+ 
+
+ 
+- Fix: rename section "code style" to "style" in changelog ([`36cf119`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/36cf11912de3bb9b79f9869331691df2aed2aa39))
+
+
+
+ 
+ 
  
 ## v1.6.7 (2025-05-22)
  
