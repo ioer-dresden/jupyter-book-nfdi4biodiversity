@@ -243,7 +243,7 @@ Linguee DeepL Grammar Check.
 (heading-target)=
 ## Figure and Table formatting
 
-See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) for how to create Figures and Tables with caption.
+See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) on how to create Figures and Tables with caption.
 
 There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
 
