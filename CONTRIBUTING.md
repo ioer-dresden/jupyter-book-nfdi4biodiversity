@@ -160,7 +160,7 @@ The rendered training materials with the changed text.
 (heading-target)=
 # 6. Semantic Versioning
 
-The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) for writing your commit messages (see also [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format)). Our continuous integration will pick up commit messages, bump versions accordingly, and update [the Changelog](/CHANGELOG.html).
+The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) for writing your commit messages (see also [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format)). Our continuous integration will pick up commit messages, bump versions accordingly, and update [the Changelog](CHANGELOG).
 
 Since these training materials consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
 
