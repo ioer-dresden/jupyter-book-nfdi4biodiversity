@@ -5,6 +5,26 @@
 
 
  
+## v1.6.9 (2025-05-22)
+ 
+### Bug fixes
+ 
+
+ 
+- Fix: code style changelog mapping ([`97241b5`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/97241b5d42afdf1a66bfff44d4821f029bfe71b4))
+
+
+
+ 
+
+ 
+- Fix: code style changelog mapping ([`b522527`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b522527cb503ee75038b07c3e0e7cd225fdc7b2d))
+
+
+
+ 
+ 
+ 
 ## v1.6.8 (2025-05-22)
  
 ### Bug fixes
@@ -203,7 +223,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -305,7 +325,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -639,7 +659,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -720,7 +740,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -845,7 +865,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -989,7 +1009,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -1399,7 +1419,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -2721,7 +2741,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -3054,7 +3074,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -3184,7 +3204,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -3277,7 +3297,7 @@
 
  
  
-### Code style
+### Style
  
 
  
@@ -3466,7 +3486,7 @@
 
  
  
-### Code style
+### Style
  
 
  
