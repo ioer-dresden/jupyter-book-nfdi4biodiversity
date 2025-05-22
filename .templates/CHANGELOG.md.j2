@@ -1,9 +1,22 @@
 # CHANGELOG
 
+{% set type_labels = {
+    "feat": "Features",
+    "fix": "Bug fixes",
+    "refactor": "Refactoring",
+    "style": "Style",
+    "test": "Tests",
+    "chore": "Chores",
+    "docs": "Documentation",
+    "perf": "Performance",
+    "build": "Build",
+    "ci": "Continuous integration"
+} %}
+
 {% if context.history.unreleased | length > 0 %}
 ## Unreleased
 {% for type_, commits in context.history.unreleased | dictsort if type_ != "unknown" %} {# Removed leading hyphen #}
-### {{ type_ | capitalize }}
+### {{ type_labels.get(type_, type_ | capitalize) }}
 {% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
    Replacing commit.subject with the first line of the raw message.
@@ -35,7 +48,7 @@
 {% for version, release in context.history.released.items() %} {# Removed trailing hyphen #}
 ## {{ version.as_semver_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
 {% for type_, commits in release["elements"] | dictsort if type_ != "unknown" %} {# Removed leading hyphen #}
-### {{ type_ | capitalize }}
+### {{ type_labels.get(type_, type_ | capitalize) }}
 {% for commit in commits if type_ != "unknown" %} {# Removed leading hyphen #}
 {#
    Replacing commit.subject with the first line of the raw message.
