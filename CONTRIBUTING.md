@@ -1,6 +1,6 @@
 # Contributing
 
-This project is a collaborative team effort, and we want to make contributing as easy as possible. This page provides a small workthrough for contributing to the [IOER RDC Geospatial Training Materials](https://training.fdz.ioer.info). Please note that you currently need to request access in order to participate. Please contact the IOER team.
+This project is a collaborative team effort, and we want to make contributing as easy as possible. This page provides a small workthrough for contributing to the [IOER FDZ Geospatial Training Materials](https://training.fdz.ioer.info). Please note that you currently need to request access in order to participate. Please contact the IOER team.
 
 ![Mountain picture](resources/cover_image.jpg)
 *Made with❤️, Collaboration, and Open Source Software. Picture: 2021 Alexander Dunkel*
@@ -18,6 +18,8 @@ This project is a collaborative team effort, and we want to make contributing as
    * [4.6 Wait for the website to update](#wait-for-the-website-to-update)
 - [5. Git best practices](#git-best-practices)
 - [6. Semantic Versioning](#semantic-versioning)
+- [7. Formatting conventions](#formatting-conventions)
+
 
 (heading-target)=
 # 1. Overview of files
@@ -160,9 +162,9 @@ The rendered training materials with the changed text.
 (heading-target)=
 # 6. Semantic Versioning
 
-The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format). Our continuous integration will pick up commit messages and bump versions accordingly.
+The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) for writing your commit messages (see also [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format)). Our continuous integration will pick up commit messages, bump versions accordingly, and update [the Changelog](CHANGELOG).
 
-Since this training material consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
+Since these training materials consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
 
 (heading-target)=
 ## Documentation, descriptions or any code comments changed
@@ -240,7 +242,7 @@ Linguee DeepL Grammar Check.
 (heading-target)=
 ## Figure and Table formatting
 
-See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) for how to create Figures and Tables with caption.
+See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) on how to create Figures and Tables with caption.
 
 There is a `box-shadow` effect shown around figures by default. If you want to disable this on selected graphics, add `:figclass: fig-no-shadow` to the `{figure}`-tag.
 
@@ -347,7 +349,7 @@ In other cases, you may want to show images or other output rendered in a cell i
 (heading-target)=
 ## Overview first, details on demand
 
-Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
+Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/)): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
 
 Another way to hide information in input and output cells are [cell tags](https://jupyterbook.org/en/stable/content/metadata.html).
 
