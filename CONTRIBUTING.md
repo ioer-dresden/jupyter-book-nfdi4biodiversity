@@ -1,6 +1,6 @@
 # Contributing
 
-This project is a collaborative team effort, and we want to make contributing as easy as possible. This page provides a small workthrough for contributing to the [IOER RDC Geospatial Training Materials](https://training.fdz.ioer.info). Please note that you currently need to request access in order to participate. Please contact the IOER team.
+This project is a collaborative team effort, and we want to make contributing as easy as possible. This page provides a small workthrough for contributing to the [IOER FDZ Geospatial Training Materials](https://training.fdz.ioer.info). Please note that you currently need to request access in order to participate. Please contact the IOER team.
 
 ![Mountain picture](resources/cover_image.jpg)
 *Made with❤️, Collaboration, and Open Source Software. Picture: 2021 Alexander Dunkel*
@@ -160,9 +160,9 @@ The rendered training materials with the changed text.
 (heading-target)=
 # 6. Semantic Versioning
 
-The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format). Our continuous integration will pick up commit messages and bump versions accordingly.
+The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) for writing your commit messages (see also [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format)). Our continuous integration will pick up commit messages, bump versions accordingly, and update [the Changelog](/CHANGELOG.html).
 
-Since this training material consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
+Since these training materials consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
 
 (heading-target)=
 ## Documentation, descriptions or any code comments changed
