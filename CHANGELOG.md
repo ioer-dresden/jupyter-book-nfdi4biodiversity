@@ -4,6 +4,31 @@
 
 
 
+
+
+ 
+## v1.6.10 (2025-05-23)
+ 
+### Bug fixes
+ 
+
+ 
+- Fix: remove prefixes from invididual commit messages in changelog ([`c4d9dcc`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c4d9dccdfa515cb8a299e80c89f78e3d25de701b))
+
+
+
+ 
+ 
+### Style
+ 
+
+ 
+- Style: improve plot by placing legend horizontally below map ([`502e48b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/502e48b7fcc78ef7651d0cea860f1e04edf510d4))
+
+
+
+ 
+ 
  
 ## v1.6.9 (2025-05-22)
  
