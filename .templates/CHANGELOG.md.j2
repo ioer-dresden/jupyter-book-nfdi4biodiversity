@@ -64,10 +64,10 @@
    Replacing commit.subject with the first line of the raw message.
    Keeping the capitalize filter as it was on the commit.subject line.
 #}
-{% if commit.scope %} {# Removed trailing hyphen #}
-- **{{ commit.scope }}**: {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
-{% else %} {# Removed trailing hyphen #}
-- {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% if commit.scope %}
+- **{{ commit.scope }}**: {{ commit.message.split('\n')[0].split(':', 1) | last | trim | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% else %}
+- {{ commit.message.split('\n')[0].split(':', 1) | last | trim | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
    Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
