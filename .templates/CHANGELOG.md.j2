@@ -1,5 +1,14 @@
 # CHANGELOG
 
+{# 
+  Mapping of conventional commit types to human-friendly section headers.
+  If a type is not in this dictionary, it will fall back to the default type (Angular).
+  Example: 
+    - "code style" → "Style" (allows using the "style:"-prefix more broadly)
+    - "feat" → "Features"
+    - Unknown types like "improve" → "Improve"
+#}
+
 {% set type_labels = {
     "feat": "Features",
     "fix": "Bug fixes",
@@ -23,10 +32,10 @@
    Replacing commit.subject with the first line of the raw message.
    Keeping the capitalize filter as it was on the commit.subject line.
 #}
-{% if commit.scope %} {# Removed trailing hyphen #}
-- **{{ commit.scope }}**: {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
-{% else %} {# Removed trailing hyphen #}
-- {{ commit.message.split('\n')[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% if commit.scope %}
+- **{{ commit.scope }}**: {{ commit.message.split('\n')[0].split(':', 1) | last | trim | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% else %}
+- {{ commit.message.split('\n')[0].split(':', 1) | last | trim | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
 {% endif %}
 {#
    Removed the block that iterated through commit.descriptions[1:] (the rest of the body)
