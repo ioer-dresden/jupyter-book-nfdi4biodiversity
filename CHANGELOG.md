@@ -7,6 +7,46 @@
 
 
  
+## v1.7.0 (2025-05-26)
+ 
+### Bug fixes
+ 
+
+
+- Base_path not found ([`e098636`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e0986364ed2b07567abea0da991a383012e2c2dd))
+
+
+
+ 
+
+
+- Remove .git suffix from github url ([`36bfc3f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/36bfc3fc4b00b3f2ffd32ede137e007583cf61f5))
+
+
+
+ 
+ 
+### Features
+ 
+
+
+- Add launch button for colab ([`1aa97a4`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1aa97a410e08d3b5c4d082ad349fadeab01e35b7))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+
+- Disable colab for the meantime ([`47cdb31`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/47cdb3175c9b05407fae0c8aa17f94d95a12c075))
+
+
+
+ 
+ 
+ 
 ## v1.6.11 (2025-05-23)
  
 ### Bug fixes
