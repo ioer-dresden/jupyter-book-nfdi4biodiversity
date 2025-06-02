@@ -7,6 +7,43 @@
 
 
  
+## v1.7.1 (2025-06-02)
+ 
+### Bug fixes
+ 
+
+
+- Revise theroy chapters, cite fischer et al 2023 ([`bbd1c0c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bbd1c0c94acd5af94de5ed97ab55ec66e614142e))
+
+
+
+ 
+
+
+- Add warning for ambiguity of common names mapping ([`f7ec0f6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f7ec0f66bfaf87658b84ae7a8cb0753c09950660))
+
+
+
+ 
+
+
+- Replace ioerdata example with json retrieved via url ([`c7bd9f0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c7bd9f095ebe8bc426d0a1b8e5c2442728a784bd))
+
+
+
+ 
+ 
+### Documentation
+ 
+
+
+- Minor changes and rephrasing ([`eb15cc3`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/eb15cc3e2ddbc82aee52b731f90724cd62a9d215))
+
+
+
+ 
+ 
+ 
 ## v1.7.0 (2025-05-26)
  
 ### Bug fixes
