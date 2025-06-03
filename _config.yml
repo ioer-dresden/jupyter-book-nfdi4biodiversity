@@ -70,7 +70,6 @@ repository:
 #######################################################################################
 # Bibliography
 
-bibtex_reference_style: author_year
 bibtex_bibfiles: ["references.bib"]
     
 #######################################################################################
@@ -82,4 +81,4 @@ sphinx:
     html_extra_path         : ['resources/html',]
     suppress_warnings       : ['nbsphinx',]
     myst_heading_anchors    : 3
-    bibtex_reference_style  : author_year
+    bibtex_reference_style  : author_year_round_custom
