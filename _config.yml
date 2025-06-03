@@ -82,3 +82,4 @@ sphinx:
     html_extra_path         : ['resources/html',]
     suppress_warnings       : ['nbsphinx',]
     myst_heading_anchors    : 3
+    bibtex_reference_style  : super
