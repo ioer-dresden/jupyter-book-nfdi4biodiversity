@@ -35,6 +35,8 @@ parts:
   
 - caption: Further Reading
   chapters:
+  - file: BIBLIOGRAPHY
+    title: Bibliography
   - file: notebooks/401_endmatter-thanks
 
 
