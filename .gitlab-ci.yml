@@ -56,6 +56,7 @@ build-staging:
       - echo "Version for badges $version_var"
       - anybadge -l version --value="${version_var}" --file=version.svg --color=#70A401
       - anybadge -l pipeline --value="passed (staging)" --file=pipeline.svg --color=#70A401
+      - anybadge -l DOI --value="10.71830/6ILS40" --file=doi.svg --color=#1081C1
       # convert readme to index.html and contributing.md and copy to webroot
       # use intermediate step to include mermaid conversion
       - mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
@@ -123,6 +124,7 @@ build:
       - echo "Version for badges $version_var"
       - anybadge -l version --value="${version_var}" --file=version.svg --color=#70A401
       - anybadge -l pipeline --value="passed" --file=pipeline.svg --color=#70A401
+      - anybadge -l DOI --value="10.71830/6ILS40" --file=doi.svg --color=#1081C1
       # convert readme to index.html and contributing.md and copy to webroot
       # use intermediate step to include mermaid conversion
       - mmdc -p ./.pandoc/puppeteer-config.json -i README.md -o README.md
