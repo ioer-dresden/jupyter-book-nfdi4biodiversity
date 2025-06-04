@@ -360,3 +360,50 @@ For example, to hide a long cell output, add `hide-output` to cell metadata. You
 
 Add `hide-output` to a cell's metadata to hide its output with a drop-down link.
 ```
+
+## Citations, references
+
+Citations are managed with [sphinxcontrib-bibtex](https://github.com/mcmtroffaes/sphinxcontrib-bibtex). See the Jupyter Book docs [here](https://jupyterbook.org/en/stable/content/citations.html).
+
+1. Add bib-metadata
+
+In order to add literature, first add the reference (`*.bib` format) to `references.bib` file in the root or the repository.
+```{admonition} How to get the bib format?
+:class: hint
+You can sometimes download `*.bib`-metadata as "citations" from publication pages. Otherwise, use e.g. Zotero to export the publication to a `*.bib` file, open it, and copy the contents to `references.bib`.
+```
+
+2. Get reference
+
+Your newly added bib-entry has a unique identifier, e.g. `dworczyk_replication_2025`. Memorize this reference.
+
+3. Use reference
+
+Depending on how you want to use the reference, these are some examples:
+
+```
+{cite:ts}`salek_house_2015`
+```
+
+will be rendered as (full author list, without *et al.*):
+
+> [Šálek, Riegert, and Grill (2015)](/notebooks/201_example_introduction.html#id9)
+
+```
+{cite:t}`fischer_2023_10377868`
+```
+
+will be rendered as (in-text):
+
+> [Fischer *et al.* (2023)](/notebooks/101_theory_chapters.html#id22).
+
+```
+The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *({cite:alp}`wilkinson_fair_2016`)*
+```
+
+will be rendered as (no parenthesis)
+
+> The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *([Wilkinson \*et al.\* 2016](/notebooks/101_theory_chapters.html#id23))* 
+
+
+
