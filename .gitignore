@@ -5,6 +5,7 @@
 data/
 !py/modules/
 .empty
+conf.py
 tmp/
 _build/
 temp/
