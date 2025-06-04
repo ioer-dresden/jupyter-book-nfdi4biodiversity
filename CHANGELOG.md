@@ -7,6 +7,98 @@
 
 
  
+## v1.8.0 (2025-06-04)
+ 
+### Bug fixes
+ 
+
+
+- Remove hardcoded citations in notebook ([`a6caacf`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a6caacfad73741cf8a6495b369aab99644d701b8))
+
+
+
+ 
+
+
+- Update in-text references to textual citations ([`f6e446d`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f6e446d485026de8f6d53e29ac52e7ec198c3b02))
+
+
+
+ 
+ 
+### Style
+ 
+
+
+- Use round parenthesis instead of brackets for in-text references ([`3b3500e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3b3500ec765055b4e66120a8fed0836c456bd3b8))
+
+
+
+ 
+
+
+- Change bibliography style to plain ([`bb9a8cd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bb9a8cd80f7fe84dabc7fb7fcac9c22dc02ee153))
+
+
+
+ 
+
+
+- Switch to author_year citation format ([`79919ca`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/79919ca0ca63225467b87e5d8a7dd751f0668fe4))
+
+
+
+ 
+
+
+- Use superscript for reference citation labels ([`936d5a2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/936d5a2010021ad0c0366acae355639e7902045c))
+
+
+
+ 
+ 
+### Documentation
+ 
+
+
+- Add steps to list bibliography ([`c7849ed`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c7849ed28e872a93d85101c0e800f10314b5eb2b))
+
+
+
+ 
+
+
+- Explain how to use the bibfile and in-text reference notation ([`f7df4ba`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f7df4baef68d433eb4112a6f12b2b87654659652))
+
+
+
+ 
+ 
+### Features
+ 
+
+
+- Add badge for doi link ([`2b2e54b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2b2e54ba1a35548ed5aeecba5425467bb40b90a9))
+
+
+
+ 
+
+
+- Add citation style override to allow for apa-style references ([`c65354c`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c65354c02487729e1c2ed9414cae554755d2a3f4))
+
+
+
+ 
+
+
+- Add bibliography ([`bee6569`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bee65692c288a9624d4b9882c1ceccc1e0d67726))
+
+
+
+ 
+ 
+ 
 ## v1.7.1 (2025-06-02)
  
 ### Bug fixes
