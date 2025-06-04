@@ -406,4 +406,27 @@ will be rendered as (no parenthesis)
 > The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *([Wilkinson \*et al.\* 2016](/notebooks/101_theory_chapters.html#id23))* 
 
 
+4. Add a chapter bibliography
 
+If you want to show a list of references used at the end of each notebook, add the follow to the last cell of your notebook:
+``````
+## References
+
+```{bibliography}
+:style: unsrt
+:filter: docname in docnames
+```
+``````
+
+5. Add a global bibliography
+
+Create a new file `BIBLIOGRAPHY.md` and add:
+``````
+# Bibliography
+
+```{bibliography} references.bib
+:style: plain
+```
+``````
+
+Link this file in the `_toc.yml`. This will list all references used throughout your book.
