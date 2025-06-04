@@ -366,7 +366,7 @@ Add `hide-output` to a cell's metadata to hide its output with a drop-down link.
 
 Citations are managed with [sphinxcontrib-bibtex](https://github.com/mcmtroffaes/sphinxcontrib-bibtex). See the Jupyter Book docs [here](https://jupyterbook.org/en/stable/content/citations.html).
 
-1. Add bib-metadata
+**1. Add bib-metadata**
 
 In order to add literature, first add the reference (`*.bib` format) to `references.bib` file in the root or the repository.
 ```{admonition} How to get the bib format?
@@ -374,11 +374,11 @@ In order to add literature, first add the reference (`*.bib` format) to `referen
 You can sometimes download `*.bib`-metadata as "citations" from publication pages. Otherwise, use e.g. Zotero to export the publication to a `*.bib` file, open it, and copy the contents to `references.bib`.
 ```
 
-2. Get reference
+**2. Get reference**
 
 Your newly added bib-entry has a unique identifier, e.g. `dworczyk_replication_2025`. Memorize this reference.
 
-3. Use reference
+**3. Use reference**
 
 Depending on how you want to use the reference, these are some examples:
 
@@ -407,7 +407,7 @@ will be rendered as (no parenthesis)
 > The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *([Wilkinson \*et al.\* 2016](/notebooks/101_theory_chapters.html#id23))* 
 
 
-4. Add a chapter bibliography
+**4. Add a chapter bibliography**
 
 If you want to show a list of references used at the end of each notebook, add the follow to the last cell of your notebook:
 ``````
@@ -419,7 +419,7 @@ If you want to show a list of references used at the end of each notebook, add t
 ```
 ``````
 
-5. Add a global bibliography
+**5. Add a global bibliography**
 
 Create a new file `BIBLIOGRAPHY.md` and add:
 ``````
