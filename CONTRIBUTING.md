@@ -19,6 +19,7 @@ This project is a collaborative team effort, and we want to make contributing as
 - [5. Git best practices](#git-best-practices)
 - [6. Semantic Versioning](#semantic-versioning)
 - [7. Formatting conventions](#formatting-conventions)
+- [8. Citations, references](#citations-references)
 
 
 (heading-target)=
@@ -361,7 +362,7 @@ For example, to hide a long cell output, add `hide-output` to cell metadata. You
 Add `hide-output` to a cell's metadata to hide its output with a drop-down link.
 ```
 
-## Citations, references
+# 8. Citations, references
 
 Citations are managed with [sphinxcontrib-bibtex](https://github.com/mcmtroffaes/sphinxcontrib-bibtex). See the Jupyter Book docs [here](https://jupyterbook.org/en/stable/content/citations.html).
 
