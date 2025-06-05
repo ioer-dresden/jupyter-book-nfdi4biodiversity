@@ -1,8 +1,8 @@
-[![version](https://training.fdz.ioer.info/version.svg)][static-gl-url] [![pipeline](https://training.fdz.ioer.info/pipeline.svg)][static-gl-url]
+[![version](https://training.fdz.ioer.info/version.svg)][static-gl-url] [![pipeline](https://training.fdz.ioer.info/pipeline.svg)][static-gl-url] [![doi](https://training.fdz.ioer.info/doi.svg)][doi-url]
 
-# IOER Jupyter-Book NFDI4Biodiversity 
+# IOER Jupyter-Book NFDI4Biodiversity Training Materials
 
-This is the public repository for the Jupytwer book, available at https://training.fdz.ioer.info/. We use this repository for outreach. All internal collaboration and continuous integration and deployment (CI & CD) takes place in [this Gitlab repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity).
+This is the public repository for the Jupyter book, available at https://training.fdz.ioer.info/. We use this repository for outreach. All internal collaboration and continuous integration and deployment (CI & CD) takes place in [this Gitlab repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity).
 
 ## TL;DR
 
@@ -27,7 +27,8 @@ See the [Contribution Documentation](https://training.fdz.ioer.info/CONTRIBUTING
 - If you want to run these notebooks, have a look at the instructions to use the 
   [Carto-Lab Docker](https://gitlab.vgiscience.de/lbsn/tools/jupyterlab), 
   provided at the beginning of the [Part I - Introduction][1].
-- See [the Contributing](https://stag.training.fdz.ioer.info/CONTRIBUTING.html) section for a step by step description
+- See [the Contributing](https://training.fdz.ioer.info/CONTRIBUTING.html) section for a step by step description
 
 [1]: https://training.fdz.ioer.info/notebooks/102_jupyter_notebooks.html#carto-lab-docker
 [static-gl-url]: https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity
+[doi-url]: https://doi.org/10.71830/6ILS40
