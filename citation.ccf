@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+authors:
+- family-names: "Dworczyk"
+  given-names: "Claudia"
+  orcid: "https://orcid.org/0000-0003-3160-4782"
+- family-names: "Dunkel"
+  given-names: "Alexander"
+  orcid: "https://orcid.org/0000-0003-1157-7967"
+- family-names: "Rafiei"
+  given-names: "Fatemeh"
+- family-names: "Syrbe"
+  given-names: "Ralf-Uwe"
+  orcid: "https://orcid.org/0000-0002-0061-2467"
+title: "Exploring Spatial and Biodiversity Data with Python and JupyterLab"
+version: v1.8.0
+doi: 10.71830/6ILS40,
+date-released: March 2025
+url: "https://github.com/ioer-dresden/jupyter-book-nfdi4biodiversity"
+
