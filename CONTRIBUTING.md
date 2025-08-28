@@ -487,6 +487,7 @@ as the training materials.
 
 ```{figure} resources/rdm-flow.svg
 :name: rdm-philosophy
+:figclass: fig-no-shadow
 
 The research data management philosophy behind the training materials - turning good RDM practices from a theoretical ideal into a practical reality. Read further [here](https://cartolab.fdz.ioer.info/concept/).
 ```
