@@ -48,14 +48,14 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
     -   `.pandoc/`: Configuration and assets for Pandoc-based README rendering.
     -   `.templates/`: Templates, e.g., for `CHANGELOG.md` generation.
     -   `tmp/`: Temporary files or source data for processing (e.g., `vg2500` administrative boundaries). Note: Data in `tmp/` is intermediate and not directly part of the final curated dataset examples in `00_data/`.
-    -   `_config.yml`, `_toc.yml`: Configuration files for the Jupyter Book build process.
-    -   `pyproject.toml`: Defines Python project dependencies for reproducibility.
+    -   `_config.yml`, `_toc.yml`: The central configuration file for the Jupyter Book build process. Add or Update the TOC/Chapters here.
+    -   `pyproject.toml`: Defines Python project dependencies for reproducibility (semantic release configuration).
     -   `.gitlab-ci.yml`: GitLab CI/CD pipeline configuration for automating build and deployment.
     -   `LICENSE.md`: License information for the repository content.
     -   `README.md`: This file.
     -   `CONTRIBUTING.md`: Guidelines for contributing.
-    -   `CHANGELOG.md`: Records changes across versions.
-    -   `references.bib`, `BIBLIOGRAPHY.md`: Bibliographic information.
+    -   `CHANGELOG.md`: Records changes across versions. Updated automatically.
+    -   `references.bib`, `BIBLIOGRAPHY.md`: Bibliographic information. Add any bibtext-references here.
     -   Other configuration files (`.gitignore`, `.version`, `conf.json`, `nbconvert.tpl`, etc.).
 
 -   **Versioning:**
