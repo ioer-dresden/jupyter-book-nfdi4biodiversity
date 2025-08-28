@@ -20,6 +20,7 @@ This project is a collaborative team effort, and we want to make contributing as
 - [6. Semantic Versioning](#semantic-versioning)
 - [7. Formatting conventions](#formatting-conventions)
 - [8. Citations, references](#citations-references)
+- [9. Reproducible Science in Action: Carto-Lab Docker](#reproducible-science-in-action-carto-lab-docker)
 
 
 (heading-target)=
@@ -31,6 +32,8 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
 - [101_theory_chapters.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/101_theory_chapters.ipynb)
 - [102_jupyter_notebooks.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/102_jupyter_notebooks.ipynb)
 - [201_example_introduction.ipynb](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/blob/main/notebooks/201_example_introduction.ipynb)
+
+<br>
 
 -   **File Inventory (Key Directories and Files):**
     -   `notebooks/`: Contains the core content as Jupyter Notebook (`.ipynb`) files. These include theoretical explanations and practical coding exercises.
@@ -473,3 +476,18 @@ Create a new file `BIBLIOGRAPHY.md` and add:
 ``````
 
 Link this file in the `_toc.yml`. This will list all references used throughout your book.
+
+# 9. Reproducible Science in Action: Carto-Lab Docker
+
+If you want to know more about the technical infrastructure and Reasearch Data Management (RDM) concept behind the training materials,
+have a look at our [IOER FDZ Carto-Lab Docker documentation](https://cartolab.fdz.ioer.info/). We also presented these Training Materials,
+together with the Carto-Lab Docker RDM infrastructure at the 2nd Conference on Research Data Infrastructure (CoRDI 2025) in Aachen, Germany. 
+The poster provides a comprehensive visual summary of the Carto-Lab Docker RDM philosophy, its three-pillar architecture, and use cases such 
+as the training materials.
+
+
+```{figure} resources/2025-08-21_poster_cordi.png
+:name: cordi-poster
+
+The poster about the training materials and the Carto-Lab Docker that we presented at the 2nd Conference on Research Data Infrastructure (CoRDI 2025) in Aachen, Germany. A PDF is available [here](https://cartolab.fdz.ioer.info/assets/2025-08-21_poster_cordi.pdf).
+```
