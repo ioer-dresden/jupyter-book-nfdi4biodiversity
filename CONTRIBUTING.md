@@ -481,9 +481,16 @@ Link this file in the `_toc.yml`. This will list all references used throughout 
 
 If you want to know more about the technical infrastructure and Reasearch Data Management (RDM) concept behind the training materials,
 have a look at our [IOER FDZ Carto-Lab Docker documentation](https://cartolab.fdz.ioer.info/). We also presented these Training Materials,
-together with the Carto-Lab Docker RDM infrastructure at the 2nd Conference on Research Data Infrastructure (CoRDI 2025) in Aachen, Germany. 
+together with the Carto-Lab Docker at the 2nd Conference on Research Data Infrastructure (CoRDI 2025) in Aachen, Germany. 
 The poster provides a comprehensive visual summary of the Carto-Lab Docker RDM philosophy, its three-pillar architecture, and use cases such 
 as the training materials.
+
+```{figure} resources/rdm-flow.svg
+:name: rdm-philosophy
+:figclass: fig-no-shadow
+
+The research data management philosophy behind the training materials - turning good RDM practices from a theoretical ideal into a practical reality. Read further [here](https://cartolab.fdz.ioer.info/concept/).
+```
 
 
 ```{figure} resources/2025-08-21_poster_cordi.png
