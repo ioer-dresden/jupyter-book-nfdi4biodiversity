@@ -398,9 +398,14 @@ def package_report(root_packages: List[str], python_version = True):
     if python_version:
         pyv = platform.python_version()
         root_packages_list.append(["python", pyv])
-    for m in pkg_resources.working_set:
-        if m.project_name.lower() in root_packages:
-            root_packages_list.append([m.project_name, m.version])
+
+    normalized_roots = {pkg.lower() for pkg in root_packages}
+
+    for dist in distributions():
+        name = dist.metadata['Name']
+        if name and name.lower() in normalized_roots:
+            root_packages_list.append([name, dist.version])
+
     html_tables = ''
     for chunk in chunks(root_packages_list, 10):
         # get table HTML
@@ -415,6 +420,7 @@ def package_report(root_packages: List[str], python_version = True):
         </details>
         '''
         ))
+
 
 def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
          length_limit: int = 1000, ignore_files_folders=None, ignore_match=None,
