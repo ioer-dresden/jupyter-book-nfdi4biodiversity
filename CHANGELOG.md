@@ -7,6 +7,115 @@
 
 
  
+## v1.9.0 (2025-09-17)
+ 
+### Bug fixes
+ 
+
+
+- Use cache only for english sparrow ([`a72420f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a72420fc5bf5a47c67ab88ac113604d6ec08cb54))
+
+
+
+ 
+ 
+### Chores
+ 
+
+
+- Release version notebook update ([`e2a64dd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e2a64ddd271d81a21f41879e863fd8a05c3c3bf4))
+
+
+
+ 
+ 
+### Documentation
+ 
+
+
+- Minor update to file list descriptors ([`e913c8d`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/e913c8d488efca36a6d803ac9d1c135f2201850e))
+
+
+
+ 
+
+
+- Add rdm philosophy graphic (svg) ([`7380dbe`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7380dbec8cdea5ea2ec4ae390359d9bfb9274ac5))
+
+
+
+ 
+
+
+- Add rdm philosophy figure from cld ([`b1d6c66`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b1d6c66965ecaaf60809ff42beea34b99791d1b3))
+
+
+
+ 
+
+
+- Add cordi reference ([`4c3a91e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4c3a91e0c17580b0cf5834d65ffebd23a7dcac81))
+
+
+
+ 
+
+
+- Update file list overview; add github link for external contributions ([`9d39dc2`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9d39dc2bfa40a869a1be4b55a109a90aa9794bd0))
+
+
+
+ 
+ 
+### Features
+ 
+
+
+- Add graceful gbif rate limiting catch ([`421ea5f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/421ea5fdb1fb913c1396ced933365739f4c377c7))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+
+- Update method to remove deprecation notice ([`4144ec7`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4144ec71a31669d742e98e8b86ed4f04d98d29e2))
+
+
+
+ 
+
+
+- Update plot after updated response ([`bd74346`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/bd74346df3a326984b4d43b57a19905a1898a1aa))
+
+
+
+ 
+
+
+- Use species_common_name as plot title ([`b142f60`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/b142f609556bfa33ac3d4c81e5f9fe852317edd5))
+
+
+
+ 
+
+
+- Select species only once ([`a5136be`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a5136be4ae4ee3561ceb1f17f29c1ac65564617d))
+
+
+
+ 
+
+
+- Add heading ([`9ea85f7`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9ea85f720f215bb3df7023c305cda5f801899e51))
+
+
+
+ 
+ 
+ 
 ## v1.8.0 (2025-06-04)
  
 ### Bug fixes
