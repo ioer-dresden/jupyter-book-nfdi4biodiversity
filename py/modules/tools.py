@@ -30,7 +30,6 @@ import matplotlib.pyplot as plt
 import mapclassify as mc
 import numpy as np
 import pandas as pd
-import pkg_resources
 import requests
 from PIL import Image
 from adjustText import adjust_text
@@ -43,6 +42,11 @@ import geoviews as gv
 # --- Jupyter-Specific ---
 from IPython.display import HTML, Markdown as md, clear_output, display
 from html import escape
+
+try:
+    from importlib.metadata import distributions  # Python 3.8+
+except ImportError:
+    from importlib_metadata import distributions  # Python < 3.8
 
 # --- Globals ---
 OUTPUT = Path.cwd().parents[0] / "out"
@@ -391,35 +395,42 @@ def chunks(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
 
-def package_report(root_packages: List[str], python_version = True):
-    """Report package versions for root_packages entries"""
+def package_report(root_packages: List[str], python_version: bool = True):
+    """Report package versions for root_packages entries (gracefully handling missing ones)."""
     root_packages.sort(reverse=True)
     root_packages_list = []
+
     if python_version:
         pyv = platform.python_version()
         root_packages_list.append(["python", pyv])
 
     normalized_roots = {pkg.lower() for pkg in root_packages}
 
-    for dist in distributions():
-        name = dist.metadata['Name']
-        if name and name.lower() in normalized_roots:
-            root_packages_list.append([name, dist.version])
+    installed = {dist.metadata['Name'].lower(): (dist.metadata['Name'], dist.version)
+                 for dist in distributions()
+                 if dist.metadata['Name']}
+
+    for pkg in normalized_roots:
+        if pkg in installed:
+            name, version = installed[pkg]
+            root_packages_list.append([name, version])
+        else:
+            root_packages_list.append([pkg, "Not installed"])
 
     html_tables = ''
     for chunk in chunks(root_packages_list, 10):
-        # get table HTML
         html_tables += pd.DataFrame(
-                    chunk,
-                    columns=["package", "version"]
-                ).set_index("package").transpose().to_html()
+            chunk,
+            columns=["package", "version"]
+        ).set_index("package").transpose().to_html()
+
     display(HTML(
         f'''
         <details><summary style="cursor: pointer;">List of package versions used in this notebook</summary>
         {html_tables}
         </details>
         '''
-        ))
+    ))
 
 
 def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
