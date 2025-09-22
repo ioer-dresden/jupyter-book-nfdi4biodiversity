@@ -226,19 +226,26 @@ def get_stream_bytes(url: str):
     """Stream file from url to bytes object (in-memory)"""
     chunk_size = 8192
     content = bytes()
-    with requests.get(url, stream=True) as r:
-        r.raise_for_status()
-        total_length = return_total(r.headers)
-        for ix, chunk in enumerate(r.iter_content(
-                chunk_size=chunk_size)): 
-            content += bytes(chunk)
-            loaded = (ix*chunk_size)/1000000
-            if (ix % 100 == 0):
-                stream_progress(
-                    total_length, loaded)
-    stream_progress(
-        total_length, loaded)
-    return content
+    try:
+        with requests.get(url, stream=True, timeout=30) as r:
+            r.raise_for_status()
+            total_length = return_total(r.headers)
+            for ix, chunk in enumerate(r.iter_content(chunk_size=chunk_size)):
+                content += bytes(chunk)
+                loaded = (ix * chunk_size) / 1_000_000
+                if ix % 100 == 0:
+                    stream_progress(total_length, loaded)
+        stream_progress(total_length, loaded)
+        return content
+
+    except requests.exceptions.RequestException as e:
+        # Gracefully handle *any* connection/download errors
+        print(
+            f"[ERROR] Could not download from {url}\n"
+            f"Reason: {e}\n"
+            "👉 Please check your internet connection or the server availability."
+        )
+        return None   # or raise ConnectionError(...) if you want to stop execution
                         
 def highlight_row(s, color):
     return f'background-color: {color}'
@@ -306,22 +313,37 @@ def get_zip_extract(
         if report:
             print("File already exists.. skipping download..")
         return
-    if write_intermediate:
-        out_file = output_path / filename
-        get_stream_file(f'{uri}{filename}', out_file)
-        z = zipfile.ZipFile(out_file)
-    else:
-        content = get_stream_bytes(
-            f'{uri}{filename}')
-        z = zipfile.ZipFile(io.BytesIO(content))
+
+    try:
+        if write_intermediate:
+            out_file = output_path / filename
+            get_stream_file(f"{uri}{filename}", out_file)
+            z = zipfile.ZipFile(out_file)
+        else:
+            content = get_stream_bytes(f"{uri}{filename}")
+            if content is None:
+                print(f"[ERROR] Download of {filename} failed, skipping extraction.")
+                return False
+            z = zipfile.ZipFile(io.BytesIO(content))
+    except zipfile.BadZipFile:
+        print(f"[ERROR] {filename} is not a valid ZIP file (download may have failed).")
+        return False
+    except Exception as e:
+        print(f"[ERROR] Failed to extract {filename}: {e}")
+        return False
+
     print("Extracting zip..")
-    if filter_files:
-        file_names = z.namelist()
-        for filename in file_names:
-            if filename in filter_files:
-                z.extract(filename, output_path)
-    else:
-        z.extractall(output_path)
+    try:
+        if filter_files:
+            file_names = z.namelist()
+            for filename in file_names:
+                if filename in filter_files:
+                    z.extract(filename, output_path)
+        else:
+            z.extractall(output_path)
+    finally:
+        z.close()
+
     if write_intermediate:
         if out_file.is_file():
             out_file.unlink()
@@ -744,12 +766,16 @@ def get_shapes(
         shapes_name = "ne_110m_admin_0_countries.shp"
         col_name = "SOVEREIGNT"
         target_name = "country"
+    else:
+        raise ValueError(f"Unsupported reference: {reference}")
     # create  temporary storage folder, if not exists already
     shape_dir.mkdir(exist_ok=True)
     # test if file already downloaded
     if not (shape_dir / shapes_name).exists():
-        get_zip_extract(
-            uri=source_zip, filename=filename, output_path=shape_dir)
+        success = get_zip_extract(uri=source_zip, filename=filename, output_path=shape_dir)
+        if not success:
+            print(f"[ERROR] Could not download/extract shapes for '{reference}'.")
+            return gp.GeoDataFrame()
     else:
         print("Already exists")
     shapes = gp.read_file(shape_dir / shapes_name)
