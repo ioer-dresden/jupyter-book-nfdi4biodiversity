@@ -7,6 +7,53 @@
 
 
  
+## v1.9.1 (2025-09-22)
+ 
+### Bug fixes
+ 
+
+
+- Daten.gdz.bkg.bund.de unavailable ([`843b56b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/843b56bbe4153ebf669d1181ffb830fde4f8b7e0))
+
+
+
+ 
+
+
+- Make package check backwards compatible to older python versions ([`d4cb329`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d4cb329b26f07e6e0e2b522bd22adf917770e3f6))
+
+
+
+ 
+
+
+- /.version not found outside carto-lab ([`a492464`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a492464aa1be094608152c122a07fc72ee3b8ba8))
+
+
+
+ 
+ 
+### Style
+ 
+
+
+- Hide cell ([`7d9f857`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/7d9f857adf28902b23d0f2b0f23c1ba927ae7945))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+
+- Properly parametrize variable 'sachsen' to 'region' ([`cca9a4a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cca9a4a85921700171fcf495ef04b3749c6ef2d8))
+
+
+
+ 
+ 
+ 
 ## v1.9.0 (2025-09-17)
  
 ### Bug fixes
