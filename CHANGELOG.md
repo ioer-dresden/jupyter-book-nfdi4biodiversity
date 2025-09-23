@@ -7,6 +7,26 @@
 
 
  
+## v1.9.2 (2025-09-23)
+ 
+### Bug fixes
+ 
+
+
+- Region selection not properly parametrized in notebook 203 and 204 ([`78cae66`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/78cae666128a617ec149b897e48cae27fa875b78))
+
+
+
+ 
+
+
+- 00_data folder does not exist in notebook 205 ([`9373a4e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9373a4ec22226125913b6848779b64c83c186ded))
+
+
+
+ 
+ 
+ 
 ## v1.9.1 (2025-09-22)
  
 ### Bug fixes
