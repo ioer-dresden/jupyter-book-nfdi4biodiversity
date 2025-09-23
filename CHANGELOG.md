@@ -7,6 +7,19 @@
 
 
  
+## v1.9.4 (2025-09-23)
+ 
+### Bug fixes
+ 
+
+
+- Regression bug in file naming conventions (saxony -> sachsen) ([`75364a6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/75364a6f586b6ee6312672acb2e84a13ab919fd5))
+
+
+
+ 
+ 
+ 
 ## v1.9.3 (2025-09-23)
  
  
