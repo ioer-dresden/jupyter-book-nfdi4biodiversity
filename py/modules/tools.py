@@ -352,6 +352,7 @@ def get_zip_extract(
         print(
             f"Retrieved {filename}, "
             f"extracted size: {raw_size_mb:.2f} MB")
+    return True
 
 def zip_dir(path: Path, zip_file_path: Path):
     """Zip all contents of path to zip_file. Will not recurse subfolders."""
