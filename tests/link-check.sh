@@ -31,6 +31,12 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'academic.oup.com' \
          --exclude 'wiley.com' \
          --exclude 'campus.fdz.ioer.info' \
+         --exclude 'creativecommons.org' \
+         --exclude 'launch.py' \
+         --exclude 'realpython.com' \
+         --exclude 'readthedocs.io' \
+         --exclude 'ioer-fdz.de' \
+         --exclude 'jupyter.org' \
          --color=always \
          --ignore-fragments \
          --buffer-size=16384 \
