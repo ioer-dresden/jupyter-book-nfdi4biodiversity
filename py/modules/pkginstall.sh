@@ -7,64 +7,66 @@ set -euo pipefail                     # fail fast, treat unset vars as errors
 # 1  Suppress the “Running pip as the 'root' user …” warning
 export PIP_ROOT_USER_ACTION=ignore
 
-# 1  Optional mapping for packages whose *distribution* name differs
-#     from the name you type on the command line.
+# 2  Mapping for packages whose PyPI distribution name differs from the CLI name
 declare -A DIST_NAME_MAP=(
-    [dotenv]="python-dotenv"   # `import dotenv` → PyPI name `python-dotenv`
-    # add more overrides here if you discover them
+    [dotenv]="python-dotenv"
+    [adjusttext]="adjustText"
 )
 
-# 3  Helper: ask the same interpreter ($PYTHON_BIN) for a version
-_get_version() {
-    # $1 = package name that you typed on the command line (e.g. "dotenv")
-    local pkg="$1"
-    local dist_name="${DIST_NAME_MAP[$pkg]:-$pkg}"   # use map if present
+# 3  Mapping for packages whose Python import name differs from the CLI name
+declare -A IMPORT_NAME_MAP=(
+    [adjusttext]="adjustText"
+    [python-dotenv]="dotenv"
+)
 
-    # Run a one‑liner with the interpreter you gave to the script.
+# 4  Helper: ask the same interpreter ($PYTHON_BIN) for a version
+_get_version() {
+    local pkg="$1"
+    local dist_name="${DIST_NAME_MAP[$pkg]:-$pkg}"
+
     "$PYTHON_BIN" - <<PY
 import importlib.metadata as meta
 import sys
 
 dist = "${dist_name}"
 try:
-    # First try the PEP‑621/PEP‑566 distribution metadata
     print(meta.version(dist))
 except meta.PackageNotFoundError:
-    # Fallback: try to import the module and read its __version__ attr
     try:
-        mod = __import("${pkg//-/_}")
+        mod = __import("${IMPORT_NAME_MAP[$pkg]:-${pkg//-/_}}")
         print(getattr(mod, "__version__", "unknown"))
     except Exception:
         print("unknown")
 except Exception as e:
-    # Any unexpected error – still print something so the script keeps going
     print("unknown")
 PY
 }
 
-# 4  Main loop
+# 5  Main loop
 PYTHON_BIN="$1"
 shift                     # now $@ holds the list of packages that follow
 
 for pkg in "$@"; do
-    # Convert hyphens to underscores – the name we can import.
-    import_name="${pkg//-/_}"
+    # Resolve the actual Python import name (with fallback)
+    import_name="${IMPORT_NAME_MAP[$pkg]:-${pkg//-/_}}"
+    # Resolve the actual PyPI install name
+    dist_name="${DIST_NAME_MAP[$pkg]:-$pkg}"
 
-    #   4.1  Is the package already importable?
+    # 5.1 Is the package already importable?
     if "$PYTHON_BIN" -c "import $import_name" 2>/dev/null; then
         version=$(_get_version "$pkg")
         echo "${pkg} already installed (version ${version})."
         continue
     fi
 
-    #   4.2 Not present → install quietly.
-    "$PYTHON_BIN" -m pip install -qq "$pkg"
+    # 5.2 Not present → install using the proper distribution name
+    "$PYTHON_BIN" -m pip install -qq "$dist_name"
 
-    # Verify that the import now succeeds.
+    # Verify that the import now succeeds
     if "$PYTHON_BIN" -c "import $import_name" 2>/dev/null; then
         version=$(_get_version "$pkg")
         echo "Installed ${pkg} ${version}."
     else
-        echo "⚠️  ${pkg} was installed but cannot be imported."
+        echo "⚠️  ${pkg} was installed but cannot be imported as '${import_name}'."
     fi
 done

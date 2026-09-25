@@ -32,7 +32,6 @@ import numpy as np
 import pandas as pd
 import requests
 from PIL import Image
-from adjustText import adjust_text
 from cartopy import crs
 from matplotlib import font_manager
 from matplotlib.font_manager import FontProperties
@@ -47,6 +46,10 @@ try:
     from importlib.metadata import distributions  # Python 3.8+
 except ImportError:
     from importlib_metadata import distributions  # Python < 3.8
+try:
+    from adjustText import adjust_text
+except ImportError:
+    from adjusttext import adjust_text
 
 # --- Globals ---
 OUTPUT = Path.cwd().parents[0] / "out"
