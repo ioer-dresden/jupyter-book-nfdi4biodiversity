@@ -329,7 +329,7 @@ def get_zip_extract(
         # remove .zip suffix from filename first
         if report:
             print("File already exists.. skipping download..")
-        return
+        return True
 
     try:
         if write_intermediate:
