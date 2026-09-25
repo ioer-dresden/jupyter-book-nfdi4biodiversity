@@ -7,6 +7,139 @@
 
 
  
+## v1.10.0 (2026-09-25)
+ 
+### Bug fixes
+ 
+
+
+- Admonition without content ([`655e96b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/655e96b73a6e117d7c086314a1d9cca45b8c38f3))
+
+
+
+ 
+
+
+- Add missing title to admonition ([`ebf5182`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ebf5182398af0ef4daae556e7da968565e8fd5e0))
+
+
+
+ 
+
+
+- Remove space from admonition parameters ([`ed1a3cd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/ed1a3cd90ac56bdf0796e0b4447523c167bf8b8e))
+
+
+
+ 
+
+
+- Missing admonition content ([`60a443a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/60a443a5f76ed411051777aedb8da7d3a0a4dc22))
+
+
+
+ 
+
+
+- Missing title in admonition ([`3e2511b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/3e2511b5d15b9cf30ecb2ea0a3c4b142be2cfc40))
+
+
+
+ 
+
+
+- Cross-references in contributing.md ([`8917ee0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8917ee0c8562e32e335b96e00ebcad0d2eb10e5b))
+
+
+
+ 
+
+
+- Substitute openstreetmap with wikimedia tile maps, due to osm api restrictions ([`d2e5c5e`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/d2e5c5e34b7a254b3b232b0c5497d742ac801d63))
+
+
+
+ 
+
+
+- Make sure references.bib is available for download ([`c0afb6f`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c0afb6ff285675036d75cc8081bdeb399f014544))
+
+
+
+ 
+
+
+- Vg2500 download from bkg fails due to restructured zip file ([`13239b7`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/13239b721e462e322687d1252e2abba0b0aac214))
+
+
+
+ 
+ 
+### Chores
+ 
+
+
+- Update metadata ([`2275d8a`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2275d8a1de94521a5e88a4a128c90420be17ac98))
+
+
+
+ 
+
+
+- Update artifacts/replay notebooks with latest dependencies on jupyter5nfdi hub ([`c66c04d`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c66c04d9e3e3e68c82732f8506c87a60e63f144d))
+
+
+
+ 
+ 
+### Continuous integration
+ 
+
+
+- Fix duplicate toc warning ([`437d52b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/437d52b38e16ebd45d5bb491cb5d77e3a40f0315))
+
+
+
+ 
+ 
+### Documentation
+ 
+
+
+- Fix missing space in admonition ([`5d66aeb`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/5d66aeb752a617e6c829d9a1bebdcb91b68d9b65))
+
+
+
+ 
+ 
+### Features
+ 
+
+
+- Enable colab support ([`4a3e576`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4a3e57627ec0eb4826e69c4e5cded8df6b091cdf))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+
+- Make notebooks executable in colab ([`1da6096`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/1da6096a98ab1ea24bd141c29745be14eb00d5f4))
+
+
+
+ 
+
+
+- Move jupytrer book install to base image ([`64ec807`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/64ec8072f7f0431ca9f4a95c9b8ab74bc92cc006))
+
+
+
+ 
+ 
+ 
 ## v1.9.4 (2025-09-23)
  
 ### Bug fixes
