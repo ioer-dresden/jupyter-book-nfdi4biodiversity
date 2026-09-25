@@ -15,7 +15,6 @@ test:
     # activate default ci_env from registry image
     # contains anybadge
     - conda activate ci_env
-    - conda install -yq jupyter-book -c conda-forge
   allow_failure: true
   script:
     - jupyter-book config sphinx .
@@ -105,7 +104,6 @@ build:
       # activate default ci_env from registry image
       # contains anybadge
       - conda activate ci_env
-      - conda install jupyter-book -c conda-forge
   script:
       # checkout to release branch
       - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
