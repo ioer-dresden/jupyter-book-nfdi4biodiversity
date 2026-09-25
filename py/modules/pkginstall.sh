@@ -17,6 +17,8 @@ declare -A DIST_NAME_MAP=(
 declare -A IMPORT_NAME_MAP=(
     [adjusttext]="adjustText"
     [python-dotenv]="dotenv"
+    [scikit-learn]="sklearn"
+    [sklearn]="sklearn"
 )
 
 # 4  Helper: ask the same interpreter ($PYTHON_BIN) for a version
