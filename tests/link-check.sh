@@ -37,6 +37,7 @@ OPTIONS="--exclude 'reddit.com' \
          --exclude 'readthedocs.io' \
          --exclude 'ioer-fdz.de' \
          --exclude 'jupyter.org' \
+         --exclude 'jupyterbook.org' \
          --color=always \
          --ignore-fragments \
          --buffer-size=16384 \
