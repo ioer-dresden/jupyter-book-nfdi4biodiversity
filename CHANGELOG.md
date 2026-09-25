@@ -7,6 +7,71 @@
 
 
  
+## v1.10.2 (2026-09-25)
+ 
+### Bug fixes
+ 
+
+
+- Return true on using cache file, to prevent error message shown to user ([`6d97902`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/6d979020bd0acaadda549895e6d135ac6ec84598))
+
+
+
+ 
+
+
+- Cartopy shim version fallback (colab) ([`c10b182`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/c10b182a50634d7e52fafab59bbafa22737a1d79))
+
+
+
+ 
+
+
+- Sklearn/scikit-learn package install naming convention ([`35f2a28`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/35f2a284d5917295df6a437bc9e55e7963f44ed9))
+
+
+
+ 
+
+
+- Missing cartopy in 204 (colab) ([`9bdd5f0`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9bdd5f09bf47373dc15734bf8dde871534197936))
+
+
+
+ 
+
+
+- Ignore zip file structure entirely, to be backwards compatible with cache file ([`0c8ae00`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/0c8ae001a9d4581ce58fdb53a0a573e726a4cac7))
+
+
+
+ 
+
+
+- Add robust tilemap fallback in case multiple source tile providers fail during class ([`4e9c2f6`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/4e9c2f62d866c08aff715f21837fc5c8f1c5d1f5))
+
+
+
+ 
+ 
+### Chores
+ 
+
+
+- Rerun notebook 203 ([`cc32d24`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/cc32d249553c63bebbbbd375c40a55557276d85d))
+
+
+
+ 
+
+
+- Update/rerun notebook 202 ([`8c7c047`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/8c7c04763698adefa21c2cdff2d73bbe96939dda))
+
+
+
+ 
+ 
+ 
 ## v1.10.1 (2026-09-25)
  
 ### Bug fixes
