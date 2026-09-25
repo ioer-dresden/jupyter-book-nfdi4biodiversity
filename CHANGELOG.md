@@ -7,6 +7,50 @@
 
 
  
+## v1.10.1 (2026-09-25)
+ 
+### Bug fixes
+ 
+
+
+- Make chapter 202 fully compatible with colab (lowercase adjusttext, path-setup) ([`a0adddc`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/a0adddcbdac455551892ddd39f146b19882f3e77))
+
+
+
+ 
+
+
+- Capital letter package breaks pkginstall on colab ([`f855694`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f855694242fded6f83ec25f5cf9575b6431ad469))
+
+
+
+ 
+ 
+### Refactoring
+ 
+
+
+- Add colab support to chapter 205 ([`f2b28af`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/f2b28af2128778bedfbf9dc51b2228c0ae369bb8))
+
+
+
+ 
+
+
+- Replace deprecated sklearn with scikit-learn; add colab fallback for file dependencies ([`9cc55f9`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/9cc55f99f1dd8fa9455c1b9d91f25e3d044605cd))
+
+
+
+ 
+
+
+- Update chapter 203 to be self-runnable, especially regarding previous shapefile generation ([`2f58bbd`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/2f58bbdcf85b09f868601bc1e08b5eca269cdbd0))
+
+
+
+ 
+ 
+ 
 ## v1.10.0 (2026-09-25)
  
 ### Bug fixes
