@@ -83,6 +83,7 @@ build-staging:
       - cp .pandoc/*.png ._site
       - cp *.html ._site
       - cp -r resources/* ._site
+      - cp references.bib ._site
       - mv ._site _site
   artifacts:
     name: _site
@@ -144,6 +145,7 @@ build:
       - cp .pandoc/*.png ._site
       - cp *.html ._site
       - cp -r resources/* ._site
+      - cp references.bib ._site
       - mv ._site _site
   artifacts:
     name: _site
