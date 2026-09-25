@@ -759,7 +759,7 @@ def get_shapes(
     elif reference == "de":
         source_zip = "https://daten.gdz.bkg.bund.de/produkte/vg/vg2500/aktuell/"
         filename = "vg2500_12-31.utm32s.shape.zip"
-        shapes_name = "vg2500_12-31.utm32s.shape/vg2500/VG2500_LAN.shp"
+        shapes_name = "vg2500/VG2500_LAN.shp"
         col_name = "GEN"
     elif reference == "world":
         source_zip = "https://naciscdn.org/naturalearth/110m/cultural/"
@@ -779,7 +779,16 @@ def get_shapes(
             return gp.GeoDataFrame()
     else:
         print("Already exists")
-    shapes = gp.read_file(shape_dir / shapes_name)
+    # Look for target shapefile flexibly (in case folder nesting changes in upstream ZIPs)
+    target_file = shape_dir / shapes_name
+    if reference == "de" and not target_file.exists():
+        matches = list(shape_dir.glob("**/VG2500_LAN.shp"))
+        if matches:
+            target_file = matches[0]
+        else:
+            raise FileNotFoundError(f"Could not find VG2500_LAN.shp inside {shape_dir}")
+
+    shapes = gp.read_file(target_file)
     if clean_cols:
         drop_cols_except(df=shapes, columns_keep=["geometry", col_name])
     if normalize_cols:
