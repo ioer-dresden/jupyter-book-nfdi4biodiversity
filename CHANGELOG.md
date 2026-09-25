@@ -7,6 +7,19 @@
 
 
  
+## v1.10.3 (2026-09-25)
+ 
+### Bug fixes
+ 
+
+
+- Naming collision for cache/dependencies and live ([`77ee39b`](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/commit/77ee39bd6ed5cd5f2fce1b020954beb93c7a6b2b))
+
+
+
+ 
+ 
+ 
 ## v1.10.2 (2026-09-25)
  
 ### Bug fixes
