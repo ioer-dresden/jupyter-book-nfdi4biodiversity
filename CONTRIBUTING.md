@@ -23,7 +23,7 @@ This project is a collaborative team effort, and we want to make contributing as
 - [9. Reproducible Science in Action: Carto-Lab Docker](#reproducible-science-in-action-carto-lab-docker)
 
 
-(heading-target)=
+(overview-of-files)=
 # 1. Overview of files
 
 All documents are edited as Jupyter notebooks and can be found in the subfolder `notebooks/`, e.g.:
@@ -77,7 +77,7 @@ All documents are edited as Jupyter notebooks and can be found in the subfolder 
     -   The live, rendered version of these training materials is available at: [https://training.fdz.ioer.info/](https://training.fdz.ioer.info/)
     -   A public mirror of the development repository is available on GitHub: [https://github.com/ioer-dresden/jupyter-book-nfdi4biodiversity](https://github.com/ioer-dresden/jupyter-book-nfdi4biodiversity)
 
-(heading-target)=
+(publishing-process)=
 # 2. Publishing process
 
 Files are stored in [this git repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/). When changes are made to the notebook files, an automation is triggered to update the website at https://training.fdz.ioer.info (git branch `main`) and https://stag.training.fdz.ioer.info/ (git branch `staging`).
@@ -89,13 +89,12 @@ These two sites help to incrementally improve the training materials:
 Start working on the `staging` branch. We pull changes that are ready into the main (production) branch.
 
 The process for a single notebook change:
-```mermaid 
-%%{init: { 'theme':'forest', 'securityLevel': 'loose', 'sequence': {'useMaxWidth':false} } }%%
+```text
 flowchart LR;
    notebooks/01_introduction.ipynb-->01_introduction.md-->HTML-->Gitlab-CI-->Webserver-->target[Rendered Website]
 ```
 
-(heading-target)=
+(editing-files)=
 # 3. Editing files
 
 You _can_ edit these files from anywhere. However, depending on your knowledge of git, we suggest one of the following:
@@ -109,12 +108,12 @@ For IOER-Internal use only: In order to participate, [request access to the Gitl
 2. Edit files directly in [the Gitlab Repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/)
 3. Clone [the repository](https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/) locally and edit the Jupyter notebook files directly using your preferred environment. Only use this option if you are familiar with git!
 
-(heading-target)=
+(jupyter-collaborative-editing)=
 # 4. Jupyter Collaborative Editing
 
 Join a collaborative Jupyter session in your browser.
 
-(heading-target)=
+(start-with-editing-a-jupyter-notebook)=
 ## 4.1 Start with editing a Jupyter notebook
 
 ```{figure} resources/01_edit_files.gif
@@ -125,18 +124,18 @@ Start with editing a Jupyter notebook.
 
 Save changes to the notebook file with <kbd>CTRL+S</kbd>.
 
-(heading-target)=
+(open-the-jupyter-git-extension)=
 ## 4.2 Open the Jupyter git extension
 
 ```{figure} resources/02_git_extension.gif
-:name: edit-files
+:name: git-extension
 
 Find the JupyterLab Git extension.
 ```
 
 Note that we are on the git branch called `staging`. We can also see that the notebook `01_introduction.ipynb` has changes that are not yet commited.
 
-(heading-target)=
+(commit-changes)=
 ## 4.3 Commit changes
 
 ```{figure} resources/03_stage_changes.gif
@@ -147,7 +146,7 @@ Note that we are on the git branch called `staging`. We can also see that the no
 
 For all changed files you want to update, click the `+` icon. This is called `staging` in git.
 
-(heading-target)=
+(write-a-commit-message)=
 ## 4.4 Write a commit message
 
 ```{figure} resources/04_commit_message.gif
@@ -158,7 +157,7 @@ Write a commit message.
 
 Write a short description of what the changes are, then click `commit`. You may be asked to enter your name and email once.
 
-(heading-target)=
+(push-changes-to-remote)=
 ## 4.5 Push changes to remote
 
 If you see an orange dot next to the left icon, click to first `pull` changes:
@@ -174,7 +173,7 @@ Click on "Pull changes from remote"
 Click on "Push changes to remote".
 ```
 
-(heading-target)=
+(wait-for-the-website-to-update)=
 ## 4.6 Wait for the website to update
 
 Head to https://gitlab.hrz.tu-chemnitz.de/ioer/fdz/jupyter-book-nfdi4biodiversity/-/pipelines and wait until the Continuous Integration pipeline finished updating the website.
@@ -197,7 +196,7 @@ https://stag.training.fdz.ioer.info/
 The rendered training materials with the changed text.
 ```
 
-(heading-target)=
+(git-best-practices)=
 # 5. Git best practices
 
 - Commit _often_. After any change, commit changes and push to remote. This also ensures your data is backed up and always up to date.
@@ -205,14 +204,14 @@ The rendered training materials with the changed text.
 - If you want to maintain your work in progress, it is possible to store copies of notebooks under `tmp/` folder. Changes in this folder are ignored. Once you are happy with your
   progress, manually copy & paste cells or content to the original notebook files, to commit these changes.
 
-(heading-target)=
+(semantic-versioning)=
 # 6. Semantic Versioning
 
 The book is automatically versioned using the [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/). It follows the [Semantic Version Specification](https://semver.org/) (MAJOR.MINOR.PATCH). Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) for writing your commit messages (see also [Semantic Commit Message Conventions](https://semantic-release.gitbook.io/semantic-release#commit-message-format)). Our continuous integration will pick up commit messages, bump versions accordingly, and update [the Changelog](CHANGELOG).
 
 Since these training materials consists of a mixture of code, comments, documentation and results, we suggest to follow the below examples.
 
-(heading-target)=
+(commit-documentation)=
 ## Documentation, descriptions or any code comments changed
 
 Use:
@@ -228,7 +227,7 @@ docs: fixed typo
 
 These changes will not result in any version bump, but they will be listed as improvements under `Documentation` in the next release.
 
-(heading-target)=
+(commit-minor-fixes)=
 ## Minor code changes, bug fixes
 
 Use:
@@ -238,9 +237,8 @@ fix: issue with matplotlib and legend in figure 7
 
 This will result in a new `patch` release.
 
-(heading-target)=
-##  Significant code changes, larger changes to the book structure
-
+(commit-features)=
+## Significant code changes, larger changes to the book structure
 
 Use:
 ```yaml
@@ -249,7 +247,7 @@ feat: added an interactive map (folium) to chapter 7
 
 This will result in a new `minor` release.
 
-(heading-target)=
+(commit-ci)=
 ## Changes to the Continuous Integration
 
 Use:
@@ -259,13 +257,12 @@ ci: fix registry image not accessible
 
 These changes will not result in any version bump, but they will be listed as improvements under `Continuous Integration` in the next release.
 
-(heading-target)=
+(commit-other)=
 ## Other commit messages
 
-There are a number of other message types, such as `refactor`, `style`, (etc.). All of these will not cause a version bump and can be used if
-and can be used if it fits.
+There are a number of other message types, such as `refactor`, `style`, (etc.). All of these will not cause a version bump and can be used if it fits.
 
-(heading-target)=
+(formatting-conventions)=
 # 7. Formatting conventions
 
 We want to make sure that we systematically reuse certain visual elements in the training materials. This is a collection of agreed style conventions.
@@ -274,7 +271,7 @@ General conventions are:
 - Use short sentences. As a guide, use no more than 10 to 15 words.
 - Use the `.webp` format for figures. [Irfanview](https://www.irfanview.com/plugins.htm) with plugins comes with `webp` support, so it is easy to capture and save webp files.
 
-(heading-target)=
+(formatting-spelling)=
 ## Check language and spelling (DeepL/Grammarly check)
 
 Words convey meaning, so it is best to use simple and easy to understand sentences. Tools like [Grammarly](https://app.grammarly.com/) or [Linguee DeepL](https://www.deepl.com/) can help with this. Be sure to use American English for training materials.
@@ -285,7 +282,7 @@ Words convey meaning, so it is best to use simple and easy to understand sentenc
 Linguee DeepL Grammar Check.
 ```
 
-(heading-target)=
+(formatting-figures)=
 ## Figure and Table formatting
 
 See the [Jupyter Book docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels) on how to create Figures and Tables with caption.
@@ -304,8 +301,8 @@ GBIF Data Processing Documentation
 ``````
 ```````
 
-(heading-target)=
-## Cross-refererences
+(formatting-cross-references)=
+## Cross-references
 
 In order to not break cross-references, whenever using those, add an explicit cross-references anchor.
 These will stay the same even if headers (etc.) change:
@@ -322,7 +319,7 @@ Then use the anchor to create a cross-reference
 
 See [the docs](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels)
 
-(heading-target)=
+(formatting-attention)=
 ## Requires user action (attention call)
 
 Our goal is to make the training material interactive. The user can change certain parts of the code and this will affect the results of further processing.
@@ -330,6 +327,7 @@ Our goal is to make the training material interactive. The user can change certa
 To highlight where the user can make these changes, we use callouts (_admonitions_) with the `attention` flag. These callouts are highlighted in orange.
 Below is an example that uses a `dropdown` in addition to the `attention` to further pique the user's curiosity.
 
+(formatting-admonition-example)=
 ```````{admonition} See example
 :class: dropdown, hint
 ``````
@@ -339,11 +337,10 @@ Optionally replace "English Sparrow" with another location above
 ```
 ``````
 
-See in [action](content:references:admonition).
-
+See the example above.
 ```````
 
-(heading-target)=
+(formatting-admonitions)=
 ## Admonitions
 
 Admonitions can ease reading flows by highlighting certain paragraphs differently. 
@@ -390,9 +387,9 @@ Optionally replace "English Sparrow" with another location above
 ``````
 ```````
 
-In other cases, you may want to show images or other output rendered in a cell inside admonitions (e.g.). This is done with the `glue`-directive. See the [Jupyter book docs](https://jupyterbook.org/en/stable/content/executable/output-insert.html). There is also an example in the file `202_data_retrieval.ipynb`, [see the result here](content:references:glue-example).
+In other cases, you may want to show images or other output rendered in a cell inside admonitions (e.g.). This is done with the `glue`-directive. See the [Jupyter book docs](https://jupyterbook.org/en/stable/content/executable/output-insert.html). There is also an example in the file `202_data_retrieval_gbif.ipynb`.
 
-(heading-target)=
+(formatting-details-on-demand)=
 ## Overview first, details on demand
 
 Overview first, details on demand ([Schneiderman’s Mantra](https://hampdatavisualization.wordpress.com/2016/02/26/schneidermans-mantra/)): Admonitions with drop-down are a good way to hide too much information in Markdown cells.
@@ -407,6 +404,7 @@ For example, to hide a long cell output, add `hide-output` to cell metadata. You
 Add `hide-output` to a cell's metadata to hide its output with a drop-down link.
 ```
 
+(citations-references)=
 # 8. Citations, references
 
 Citations are managed with [sphinxcontrib-bibtex](https://github.com/mcmtroffaes/sphinxcontrib-bibtex). See the Jupyter Book docs [here](https://jupyterbook.org/en/stable/content/citations.html).
@@ -433,7 +431,7 @@ Depending on how you want to use the reference, these are some examples:
 
 will be rendered as (full author list, without *et al.*):
 
-> [Šálek, Riegert, and Grill (2015)](/notebooks/201_example_introduction.html#id9)
+> Šálek, Riegert, and Grill (2015)
 
 ```
 {cite:t}`fischer_2023_10377868`
@@ -441,20 +439,20 @@ will be rendered as (full author list, without *et al.*):
 
 will be rendered as (in-text):
 
-> [Fischer *et al.* (2023)](/notebooks/101_theory_chapters.html#id22).
+> Fischer *et al.* (2023)
 
 ```
 The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *({cite:alp}`wilkinson_fair_2016`)*
 ```
 
-will be rendered as (no parenthesis)
+will be rendered as (no parenthesis):
 
-> The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *([Wilkinson \*et al.\* 2016](/notebooks/101_theory_chapters.html#id23))* 
+> The **F**indable **A**cessible **I**nteroperable **R**eusable (**FAIR**) principles *(Wilkinson *et al.* 2016)*
 
 
 **4. Add a chapter bibliography**
 
-If you want to show a list of references used at the end of each notebook, add the follow to the last cell of your notebook:
+If you want to show a list of references used at the end of each notebook, add the following to the last cell of your notebook:
 ``````
 ## References
 
@@ -477,6 +475,7 @@ Create a new file `BIBLIOGRAPHY.md` and add:
 
 Link this file in the `_toc.yml`. This will list all references used throughout your book.
 
+(reproducible-science-in-action-carto-lab-docker)=
 # 9. Reproducible Science in Action: Carto-Lab Docker
 
 If you want to know more about the technical infrastructure and Reasearch Data Management (RDM) concept behind the training materials,
