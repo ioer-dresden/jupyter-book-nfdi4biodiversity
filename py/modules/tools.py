@@ -51,6 +51,20 @@ try:
 except ImportError:
     from adjusttext import adjust_text
 
+# --- Compatibility shim for Cartopy >= 0.23 with GeoViews ---
+try:
+    from cartopy import crs as ccrs
+    if hasattr(ccrs.CRS, "proj4_params") and hasattr(ccrs.CRS.proj4_params, "fget"):
+        _orig_proj4 = ccrs.CRS.proj4_params.fget
+        def _safe_proj4(self):
+            p = _orig_proj4(self).copy()
+            if "lon_0" not in p:
+                p["lon_0"] = getattr(self, "_central_longitude", 0.0)
+            return p
+        ccrs.CRS.proj4_params = property(_safe_proj4)
+except Exception:
+    pass
+
 # --- Globals ---
 OUTPUT = Path.cwd().parents[0] / "out"
 class DbConn(object):
